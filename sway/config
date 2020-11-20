@@ -9,6 +9,7 @@ input * {
 }
 
 input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
+    dwt enabled
     tap enabled
 }
 
