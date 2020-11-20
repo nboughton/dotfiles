@@ -1,0 +1,127 @@
+* {
+	font-size: 11px;
+	font-family: Roboto;
+}
+
+window#waybar {
+	/*background: #2e3440;*/
+	background: transparent;
+	color: #d8dee9;
+}
+
+#custom-pacman,
+#disk.1,
+#disk.2,
+#pulseaudio,
+#memory,
+#cpu {
+	font-family: "Symbols Nerd Font";
+}
+
+#workspaces,
+#mode,
+#taskbar,
+#idle_inhibitor,
+#custom-weather,
+#pulseaudio,
+#memory,
+#cpu,
+#clock,
+#battery,
+#backlight,
+#disk,
+#custom-pacman,
+#custom-aur,
+#custom-swap,
+#custom-spotify,
+#tray {
+	padding: 0px 7px 0px 7px;
+	margin-top: 6px;
+	/*border-radius: 4px 4px 4px 4px;*/
+	background: #5e81ac;
+	text-shadow: 1px 1px 1px #3b4252;
+}
+
+#tray {
+	margin-right: 10px;
+	border-radius: 0px 4px 4px 0px;
+}
+
+#workspaces {
+	margin-left: 10px;
+	border-radius: 4px 0px 0px 4px;
+}
+
+#mode {
+	background: #bf616a;
+}
+
+#disk.1,
+#memory {
+	padding-right: 3px;
+}
+#disk.2,
+#custom-swap {
+	padding-left: 3px;
+}
+
+#battery,
+#pulseaudio,
+#memory,
+#custom-swap,
+#custom-pacman,
+#custom-spotify {
+	background: #4c566a;
+}
+
+#cpu {
+	border-radius: 4px 0px 0px 4px;
+}
+
+#clock {
+	border-radius: 4px 0px 0px 4px;
+	margin-right: 0px;
+	padding-right: 5px;
+}
+#custom-pacman {
+	border-radius: 0px 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#custom-weather,
+#idle_inhibitor {
+	border-radius: 0px 4px 4px 0px;
+	margin-left: 0px;
+}
+
+#workspaces button {
+	padding: 0px 1px 0px 1px;
+	color: #4c566a;
+}
+#workspaces button.focused {
+	color: #d8dee9;
+}
+#workspaces button:hover {
+	background: #81a1c1;
+	border: #5e81ac;
+}
+
+/* Taskbar doesn't currently work
+#taskbar {
+	border-radius: 0px 8px 8px 0;
+	padding: 0 3px;
+	margin: 0 0px;
+	color: #ffffff;
+	background-color: rgba(120,118,117,0.3);
+}
+#taskbar button {
+	border-radius: 3px 3px 3px 3px;
+	padding: 0 0 0 3px;
+	margin: 3px 1;
+	color: #ffffff;
+	background-color: rgba(120,118,117,0.1);
+}
+#taskbar button.active {
+	background-color: rgba(120,118,117,0.8);
+}
+*/

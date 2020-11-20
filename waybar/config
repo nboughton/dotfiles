@@ -1,0 +1,142 @@
+// -*- mode: json -*-
+{
+	"layer": "bottom",
+	"position": "top",
+	"modules-left": [
+		"sway/workspaces",
+		//"wlr/taskbar",
+		"sway/mode",
+		"custom/spotify",
+		"idle_inhibitor"
+	],
+	"modules-center": [
+		"clock",
+		"custom/pacman",
+		"custom/weather"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"custom/swap",
+		"disk#1",
+		"disk#2",
+		"pulseaudio",
+		"backlight",
+		"battery",
+		"tray"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	},
+	"sway/mode": {
+		"format": "{}"
+	},
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": ["", ""],
+		"on-scroll-up": "brightnessctl set +5%",
+		"on-scroll-down": "brightnessctl set 5%-"
+	},
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-theme": "Tela-circle-grey-dark",
+		"icon-size": 11,
+		"on-click": "activate"
+	},
+	"clock": {
+		"format": "{:%a %d %b %H:%M}",
+		"tooltip": false
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%  {format_source}",
+		"format-bluetooth": "{icon} {volume}%  {format_source}",
+		"format-bluetooth-muted": " {icon}  {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"memory": {
+		"interval": 5,
+		"format": " {}%"
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "閭 {usage:2}%"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"disk#1": {
+		"interval": 5,
+		"format": "力 {percentage_used:2}%",
+		"path": "/"
+	},
+	"disk#2": {
+		"interval": 5,
+		"format": " {percentage_used:2}%",
+		"path": "/home"
+	},
+	"tray": {
+		"icon-size": 12,
+		"spacing": 10
+	},
+	"custom/pacman": {
+		"format": " {}",
+		"interval": 900, // every 15 minutes
+		"exec": "checkupdates | wc -l", // # of updates
+		"exec-if": "exit 0", // always run; consider advanced run conditions
+		"on-click": "~/.config/waybar/modules/update-system.sh; pkill -RTMIN+8 waybar", // update system
+		"signal": 8,
+		"tooltip": false
+	},
+	"custom/weather": {
+		"exec": "~/.config/waybar/modules/weather.sh",
+		"interval": 3600
+	},
+	"custom/swap": {
+		"format": " {}",
+		"interval": 5,
+		"exec": "free -h | grep Swap | awk '{print $3}'"
+	},
+	"custom/spotify": {
+		"interval": 1,
+		"return-type": "json",
+		"exec": "~/.config/waybar/modules/spotify.sh",
+		"exec-if": "pgrep spotify",
+		"escape": true
+	}
+}
