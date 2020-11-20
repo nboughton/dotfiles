@@ -40,6 +40,7 @@ exec_always {
     gsettings set org.gnome.desktop.interface document-font-name 'Roboto 10'
     gsettings set org.gnome.desktop.interface font-name 'Roboto 10'
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Bold 10'
+    gsettings set org.gnome.desktop.wm.preferences button-layout ''
 }
 
 #
