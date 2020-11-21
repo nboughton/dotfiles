@@ -3,6 +3,10 @@
 	font-family: Roboto;
 }
 
+window.eDP-1 * {
+	font-size: 13px;
+}
+
 window#waybar {
 	/*background: #2e3440;*/
 	background: transparent;
