@@ -28,8 +28,9 @@
 	"sway/workspaces": {
 		"disable-scroll": true,
  		"all-outputs": true,
- 		"format": "{icon}",
+ 		"format": "{name} {icon}",
 		"format-icons": {
+			"1": "",
 			"2": "",
 			"urgent": "",
 			"focused": "",
