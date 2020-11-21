@@ -27,7 +27,14 @@
 	],
 	"sway/workspaces": {
 		"disable-scroll": true,
-		"format": "{name}"
+ 		"all-outputs": true,
+ 		"format": "{icon}",
+		"format-icons": {
+			"2": "",
+			"urgent": "",
+			"focused": "",
+			"default": ""
+		}
 	},
 	"sway/mode": {
 		"format": "{}"

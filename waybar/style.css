@@ -94,16 +94,22 @@ window#waybar {
 	margin-left: 0px;
 }
 
+#workspaces {
+	padding: 0px;
+}
 #workspaces button {
-	padding: 0px 1px 0px 1px;
-	color: #4c566a;
+	padding: 0px 5px 0px 5px;
+	border-radius: 0px;
 }
 #workspaces button.focused {
-	color: #d8dee9;
+	background: #81a1c1;
 }
 #workspaces button:hover {
 	background: #81a1c1;
 	border: #5e81ac;
+}
+#workspaces button#sway-workspace-1 {
+	border-radius: 4px 0px 0px 4px;
 }
 
 /* Taskbar doesn't currently work
