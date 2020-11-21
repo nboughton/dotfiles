@@ -19,9 +19,6 @@ set $term alacritty
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
-# Default swaylock
-set $swaylock swaylock -f
-
 ### Output configuration
 output * bg /home/nick/Pictures/VEU9Nr4.png fill
 
@@ -42,9 +39,9 @@ exec_always {
 
 ### Idle configuration
 exec swayidle -w \
-          timeout 300 $swaylock \
+          timeout 300 'swaylock -f' \
           timeout 350 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep $swaylock
+          before-sleep 'swaylock -f'
 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -63,7 +60,7 @@ for_window [app_id=floater] floating enable
 for_window [app_id=catfish] floating enable
 for_window [app_id=zoom] floating enable
 for_window [app_id=pcmanfm] floating enable
-for_window [app_id=geary] floating enable
+#for_window [app_id=geary] floating enable
 for_window [app_id=pavucontrol] floating enable
 for_window [app_id=ristretto] floating enable
 
@@ -81,7 +78,7 @@ for_window [app_id=ristretto] floating enable
     bindsym $mod+d exec $menu
 
     # lock screen
-    bindsym $mod+l exec $swaylock
+    bindsym $mod+l exec swaylock -f
 
     # desktop search
     bindsym $mod+c exec catfish
