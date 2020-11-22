@@ -4,8 +4,7 @@
 	"position": "top",
 	"modules-left": [
 		"sway/workspaces",
-		//"wlr/taskbar",
-		//"sway/window",
+		"wlr/taskbar",
 		"sway/mode",
 		"custom/spotify",
 		"idle_inhibitor"
@@ -42,10 +41,6 @@
 	"sway/mode": {
 		"format": "{}"
 	},
-	"sway/window": {
-		"format": "{}",
-		"max-length": 15
-	},
 	"backlight": {
 		"format": "{icon} {percent}%",
 		"format-icons": ["", ""],
@@ -53,9 +48,10 @@
 		"on-scroll-down": "brightnessctl set 5%-"
 	},
 	"wlr/taskbar": {
+		"all-outputs": true,
 		"format": "{icon}",
-		"icon-theme": "Tela-circle-grey-dark",
-		"icon-size": 11,
+		"icon-theme": "DarK-svg",
+		"icon-size": 12,
 		"on-click": "activate"
 	},
 	"clock": {

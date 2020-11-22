@@ -117,22 +117,15 @@ window#waybar {
 	border-radius: 4px 0px 0px 4px;
 }
 
-/* Taskbar doesn't currently work
-#taskbar {
-	border-radius: 0px 8px 8px 0;
-	padding: 0 3px;
-	margin: 0 0px;
-	color: #ffffff;
-	background-color: rgba(120,118,117,0.3);
-}
+/*#taskbar {
+}*/
 #taskbar button {
-	border-radius: 3px 3px 3px 3px;
-	padding: 0 0 0 3px;
-	margin: 3px 1;
-	color: #ffffff;
-	background-color: rgba(120,118,117,0.1);
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 1px;
+	border-radius: 0px;
 }
 #taskbar button.active {
-	background-color: rgba(120,118,117,0.8);
+	background: #81a1c1;
 }
-*/
