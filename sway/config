@@ -60,9 +60,9 @@ for_window [app_id=floater] floating enable
 for_window [app_id=catfish] floating enable
 for_window [app_id=zoom] floating enable
 for_window [app_id=pcmanfm] floating enable
-#for_window [app_id=geary] floating enable
 for_window [app_id=pavucontrol] floating enable
 for_window [app_id=ristretto] floating enable
+for_window [app_id=".*"] border pixel
 
 ### Key bindings
 #

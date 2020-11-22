@@ -1,2 +1,3 @@
 #!/bin/bash
-curl wttr.in/?format="%C,+%t\n" | sed -e 's/,.*:/:/'
+report=$(curl wttr.in/?format="%C,+%t\n" | sed -e 's/,.*:/:/')
+echo $report

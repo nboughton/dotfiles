@@ -5,6 +5,7 @@
 	"modules-left": [
 		"sway/workspaces",
 		//"wlr/taskbar",
+		//"sway/window",
 		"sway/mode",
 		"custom/spotify",
 		"idle_inhibitor"
@@ -40,6 +41,10 @@
 	},
 	"sway/mode": {
 		"format": "{}"
+	},
+	"sway/window": {
+		"format": "{}",
+		"max-length": 15
 	},
 	"backlight": {
 		"format": "{icon} {percent}%",
