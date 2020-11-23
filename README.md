@@ -2,7 +2,7 @@
 
 * GTK Theme: https://github.com/nboughton/NordSur (use sharp branch for Sway to disable rounded window borders)
 * waybar taskbar icon theme: https://github.com/nboughton/DarK-fork
-* wallpaper: https://i.imgur.com/VEU9Nr4.png
+* wallpaper: https://i.imgur.com/jqRY0Ly.png
 
 ## Screenshot
 
