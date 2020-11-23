@@ -75,9 +75,12 @@ window#waybar {
 #memory,
 #taskbar,
 #custom-swap,
-#custom-pacman,
-#custom-spotify {
+#custom-pacman {
 	background: #4c566a;
+}
+
+#custom-spotify {
+	background: #3b4252;
 }
 
 #cpu {
