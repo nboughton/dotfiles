@@ -73,6 +73,7 @@ window#waybar {
 #battery,
 #pulseaudio,
 #memory,
+#taskbar,
 #custom-swap,
 #custom-pacman,
 #custom-spotify {
@@ -117,15 +118,17 @@ window#waybar {
 	border-radius: 4px 0px 0px 4px;
 }
 
-/*#taskbar {
-}*/
+#taskbar {
+	padding-left: 0px;
+	padding-right: 0px;
+}
 #taskbar button {
 	padding-top: 0px;
 	padding-bottom: 0px;
-	padding-left: 5px;
-	padding-right: 1px;
+	padding-left: 7px;
+	padding-right: 3px;
 	border-radius: 0px;
 }
 #taskbar button.active {
-	background: #81a1c1;
+	background: #b48ead;
 }
