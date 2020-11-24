@@ -21,7 +21,7 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
 ### Output configuration
 #output * bg /home/nick/Pictures/VEU9Nr4.png fill
-output * bg /home/nick/Pictures/nord.png fill
+output * bg /home/nick/Pictures/planet-nord.png fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
