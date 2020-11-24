@@ -116,6 +116,14 @@ for_window [app_id=".*"] border pixel
     bindsym --locked XF86AudioPrev exec playerctl previous
 
 #
+# Screenshots
+#
+    bindsym $mod+p       exec grimshot save active
+    bindsym $mod+Shift+p exec grimshot save area
+    bindsym $mod+Alt+p   exec grimshot save output
+    bindsym $mod+Ctrl+p  exec grimshot save window
+
+#
 # Moving around:
 #
     # Or use $mod+[up|down|left|right]
