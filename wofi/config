@@ -1,6 +1,8 @@
-show=run
+show=drun
 term=alacritty
-always_parse_args=true
 layer=overlay
-insensitive=true
+always_parse_args=true
+allow_images=true
+image_size=16
 width=25%
+insensitive=true

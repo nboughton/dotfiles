@@ -1,3 +1,11 @@
-#inner-box {
+#outer-box {
   padding: 5px;
+}
+
+#inner-box {
+  padding-top: 5px;
+}
+
+#img {
+  margin-right: 5px;
 }
