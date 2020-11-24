@@ -1,3 +1,3 @@
 #!/bin/bash
-alacritty --class floater -e yay --devel -Syu
+alacritty --class aptus-upgrade -e yay --devel -Syu
 

@@ -57,7 +57,7 @@ exec gammastep-indicator
 exec insync start
 
 ### Window config
-for_window [app_id=floater] floating enable
+for_window [app_id=aptus-upgrade] floating enable
 for_window [app_id=catfish] floating enable
 for_window [app_id=zoom] floating enable
 for_window [app_id=pcmanfm] floating enable
