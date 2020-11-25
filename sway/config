@@ -63,6 +63,7 @@ for_window [app_id=zoom] floating enable
 for_window [app_id=pcmanfm] floating enable
 for_window [app_id=pavucontrol] floating enable
 for_window [app_id=ristretto] floating enable
+for_window [app_id=ranger] floating enable
 for_window [app_id=".*"] border pixel
 
 ### Key bindings
@@ -84,6 +85,7 @@ for_window [app_id=".*"] border pixel
     # desktop search
     bindsym $mod+c exec catfish
 
+    bindsym $mod+Ctrl+r exec alacritty --class ranger -e ranger
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
