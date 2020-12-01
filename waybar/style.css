@@ -8,8 +8,7 @@ window.eDP-1 * {
 }
 
 window#waybar {
-	/*background: #2e3440;*/
-	background: transparent;
+	background: rgba(59,66,82, 0);
 	color: #d8dee9;
 }
 
@@ -41,10 +40,9 @@ window#waybar {
 #custom-spotify,
 #tray {
 	padding: 0px 7px 0px 7px;
-	margin-top: 6px;
-	/*border-radius: 4px 4px 4px 4px;*/
-	background: #5e81ac;
-	text-shadow: 1px 1px 1px #3b4252;
+	text-shadow: 1px 1px 1px #2e3440;
+	/*border-right: 1px solid #4c566a;*/
+	border-right: 1px solid rgba(59,66,82, 0.15);
 }
 
 #tray {
@@ -64,23 +62,17 @@ window#waybar {
 #disk.1,
 #memory {
 	padding-right: 3px;
+	border-right: none;
 }
 #disk.2,
 #custom-swap {
 	padding-left: 3px;
 }
 
-#battery,
-#pulseaudio,
-#memory,
-#taskbar,
-#custom-swap,
-#custom-pacman {
-	background: #4c566a;
-}
-
-#custom-spotify {
-	background: #3b4252;
+#idle_inhibitor,
+#custom-weather,
+#tray {
+	border-right: none;
 }
 
 #cpu {
@@ -105,20 +97,14 @@ window#waybar {
 
 #workspaces {
 	padding: 0px;
+	padding-right: 5px;
 }
 #workspaces button {
 	padding: 0px 5px 0px 5px;
-	border-radius: 0px;
+	border-radius: 0px 0px 4px 4px;
 }
 #workspaces button.focused {
 	background: #81a1c1;
-}
-#workspaces button:hover {
-	background: #81a1c1;
-	border: #5e81ac;
-}
-#workspaces button#sway-workspace-1 {
-	border-radius: 4px 0px 0px 4px;
 }
 
 #taskbar {
@@ -130,7 +116,7 @@ window#waybar {
 	padding-bottom: 0px;
 	padding-left: 7px;
 	padding-right: 3px;
-	border-radius: 0px;
+	border-radius: 0px 0px 4px 4px;
 }
 #taskbar button.active {
 	background: #b48ead;
