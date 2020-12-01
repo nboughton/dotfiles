@@ -4,25 +4,35 @@
 	"position": "top",
 	"modules-left": [
 		"sway/workspaces",
-		"wlr/taskbar",
 		"sway/mode",
+		"custom/separator",
+		"wlr/taskbar",
 		"custom/spotify",
+		"custom/separator",
 		"idle_inhibitor"
 	],
 	"modules-center": [
 		"clock",
+		"custom/separator",
 		"custom/pacman",
+		"custom/separator",
 		"custom/weather"
 	],
 	"modules-right": [
 		"cpu",
+		"custom/separator",
 		"memory",
 		"custom/swap",
+		"custom/separator",
 		"disk#1",
 		"disk#2",
+		"custom/separator",
 		"pulseaudio",
+		"custom/separator",
 		"backlight",
+		"custom/separator",
 		"battery",
+		"custom/separator",
 		"tray"
 	],
 	"sway/workspaces": {
@@ -149,5 +159,9 @@
 		"exec": "~/.config/waybar/modules/spotify.sh",
 		"exec-if": "pgrep spotify",
 		"escape": true
+	},
+	"custom/separator": {
+		"format": "|",
+		"tooltip": false
 	}
 }

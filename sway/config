@@ -41,7 +41,7 @@ exec_always {
 ### Idle configuration
 exec swayidle -w \
           timeout 300 'swaylock -f' \
-          timeout 350 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 305 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f'
 
 #
@@ -206,6 +206,8 @@ for_window [app_id=".*"] border pixel
 #
 # Resizing containers:
 #
+    bindsym $mod+r mode "resize"
+
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -220,7 +222,6 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
 
 #
 # Status Bar:
@@ -233,7 +234,7 @@ bar {
 #
 # gaps
 #
-gaps inner 10
+gaps inner 15
 #gaps outer 1
 smart_gaps off
 
