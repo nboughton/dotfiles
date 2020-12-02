@@ -137,7 +137,7 @@
 	},
 	"custom/pacman": {
 		"format": " {}",
-		"interval": 900, // every 15 minutes
+		"interval": 1800, // every 30 minutes
 		"exec": "checkupdates | wc -l", // # of updates
 		"exec-if": "exit 0", // always run; consider advanced run conditions
 		"on-click": "~/.config/waybar/modules/update-system.sh; pkill -RTMIN+8 waybar", // update system

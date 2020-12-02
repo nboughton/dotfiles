@@ -121,7 +121,7 @@ window#waybar {
 #taskbar button {
 	padding-top: 0px;
 	padding-bottom: 0px;
-	padding-left: 7px;
+	padding-left: 6px;
 	padding-right: 3px;
 	border-radius: 4px;
 }
