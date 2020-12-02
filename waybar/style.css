@@ -38,7 +38,6 @@ window#waybar {
 #custom-spotify,
 #custom-separator,
 #tray {
-	margin-top: 5px;
 	padding: 0px 7px 0px 7px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
@@ -49,15 +48,6 @@ window#waybar {
 	padding: 0px;
 }
 
-#tray {
-	margin-right: 10px;
-}
-
-#workspaces {
-	margin-left: 10px;
-	border-radius: 4px 0px 0px 4px;
-}
-
 #mode {
 	background: #bf616a;
 	border-radius: 4px;
@@ -66,7 +56,6 @@ window#waybar {
 #disk.1,
 #memory {
 	padding-right: 3px;
-	border-right: none;
 }
 #disk.2,
 #custom-swap {
@@ -100,13 +89,12 @@ window#waybar {
 
 #taskbar {
 	padding: 0px;
-	margin-left: 10px;
-	margin-bottom: 5px;
 }
 #taskbar button {
 	border-radius: 4px;
 	margin-left: 5px;
 	margin-right: 5px;
+	padding-right: 3px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.hover {
