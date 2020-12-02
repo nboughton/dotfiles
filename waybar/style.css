@@ -37,15 +37,21 @@ window#waybar {
 #custom-swap,
 #custom-spotify,
 #custom-separator,
+#taskbar,
 #tray {
+	background: #3b4252;
 	padding: 0px 7px 0px 7px;
 	text-shadow: 1px 1px 1px #2e3440;
+	border-radius: 4px;
 }
 
 #custom-separator {
-	color: #88c0d0;
-	text-shadow: 1px 1px 1px #4c566a;
+	color: #3b4252;
+	/*text-shadow: 1px 1px 1px #4c566a;*/
+	text-shadow: none;
+	background: none;
 	padding: 0px;
+	/*opacity: 0;*/
 }
 
 #mode {
@@ -75,9 +81,14 @@ window#waybar {
 	margin-left: 0px;
 }
 
+#tray,
+#custom-spotify {
+	margin-right: 5px;
+}
+
 #workspaces {
+	margin-left: 5px;
 	padding: 0px;
-	padding-right: 5px;
 }
 #workspaces button {
 	padding: 0px 5px 0px 5px;
@@ -89,17 +100,13 @@ window#waybar {
 
 #taskbar {
 	padding: 0px;
+	margin-left: 5px;
 }
 #taskbar button {
 	border-radius: 4px;
-	margin-left: 5px;
-	margin-right: 5px;
 	padding-right: 3px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
-#taskbar button.hover {
-	background: none;
-}
 #taskbar button.active {
-	background: #4c566a;
+	background: #81a1c1;
 }

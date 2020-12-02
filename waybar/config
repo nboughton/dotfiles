@@ -37,7 +37,7 @@
 	],
 	"sway/workspaces": {
 		"disable-scroll": true,
- 		"all-outputs": true,
+ 		"all-outputs": false,
  		"format": "{name} {icon}",
 		"format-icons": {
 			"1": "",
@@ -147,7 +147,7 @@
 		"exec": "free -h | grep Swap | awk '{print $3}'"
 	},
 	"custom/separator": {
-		"format": " ",
+		"format": "",
 		"tooltip": false
 	}
 },
