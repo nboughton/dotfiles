@@ -235,7 +235,8 @@ bar {
 # gaps
 #
 gaps inner 15
-#gaps outer 1
+gaps top -10
+gaps bottom -10
 smart_gaps off
 
 #

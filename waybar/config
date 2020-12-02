@@ -1,12 +1,11 @@
 // -*- mode: json -*-
-{
+[{
 	"layer": "bottom",
 	"position": "top",
 	"modules-left": [
 		"sway/workspaces",
 		"sway/mode",
 		"custom/separator",
-		"wlr/taskbar",
 		"custom/spotify",
 		"custom/separator",
 		"idle_inhibitor"
@@ -57,13 +56,6 @@
 		"format-icons": ["", ""],
 		"on-scroll-up": "brightnessctl set +5%",
 		"on-scroll-down": "brightnessctl set 5%-"
-	},
-	"wlr/taskbar": {
-		"all-outputs": true,
-		"format": "{icon}",
-		"icon-theme": "DarK-svg",
-		"icon-size": 12,
-		"on-click": "activate"
 	},
 	"clock": {
 		"format": "{:%a %d %b %H:%M}",
@@ -164,4 +156,19 @@
 		"format": " ",
 		"tooltip": false
 	}
-}
+},
+{
+	"layer": "bottom",
+	"position": "bottom",
+	"height": 15,
+	"modules-left": ["wlr/taskbar"],
+	"modules-center": [],
+	"modules-right": [],
+	"wlr/taskbar": {
+		"all-outputs": false,
+		"format": "{icon} {title}",
+		"icon-theme": "DarK-svg",
+		"icon-size": 12,
+		"on-click": "activate"
+	},
+}]

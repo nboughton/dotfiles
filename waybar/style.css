@@ -23,7 +23,6 @@ window#waybar {
 #workspaces,
 #mode,
 #window,
-#taskbar,
 #idle_inhibitor,
 #custom-weather,
 #pulseaudio,
@@ -52,7 +51,6 @@ window#waybar {
 
 #tray {
 	margin-right: 10px;
-	border-radius: 0px 4px 4px 0px;
 }
 
 #workspaces {
@@ -75,29 +73,16 @@ window#waybar {
 	padding-left: 3px;
 }
 
-#idle_inhibitor,
-#custom-weather,
-#tray {
-	border-right: none;
-}
-
-#cpu {
-	border-radius: 4px 0px 0px 4px;
-}
-
 #clock {
-	border-radius: 4px 0px 0px 4px;
 	margin-right: 0px;
 	padding-right: 5px;
 }
 #custom-pacman {
-	border-radius: 0px 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 }
 #custom-weather,
 #idle_inhibitor {
-	border-radius: 0px 4px 4px 0px;
 	margin-left: 0px;
 }
 
@@ -114,16 +99,19 @@ window#waybar {
 }
 
 #taskbar {
-	padding-left: 0px;
-	padding-right: 0px;
+	padding: 0px;
+	margin-left: 10px;
+	margin-bottom: 5px;
 }
 #taskbar button {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 6px;
-	padding-right: 3px;
 	border-radius: 4px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-shadow: 1px 1px 1px #2e3440;
+}
+#taskbar button.hover {
+	background: none;
 }
 #taskbar button.active {
-	background: #b48ead;
+	background: #4c566a;
 }
