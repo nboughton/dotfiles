@@ -241,10 +241,10 @@ smart_gaps off
 #
 # Titlebars
 #
-default_border pixel
-default_floating_border pixel
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders smart
-
+titlebar_padding 5
 #
 # Colors #93cee9
 #

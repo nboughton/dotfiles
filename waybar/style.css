@@ -40,7 +40,7 @@ window#waybar {
 #custom-spotify,
 #custom-separator,
 #tray {
-	margin-top: 6px;
+	margin-top: 5px;
 	padding: 0px 7px 0px 7px;
 	text-shadow: 1px 1px 1px #2e3440;
 }

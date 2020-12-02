@@ -161,7 +161,7 @@
 		"escape": true
 	},
 	"custom/separator": {
-		"format": "|",
+		"format": " ",
 		"tooltip": false
 	}
 }
