@@ -13,10 +13,9 @@ window#waybar {
 }
 
 #custom-pacman,
-#disk.1,
-#disk.2,
 #pulseaudio,
 #memory,
+#disk.2,
 #cpu {
 	font-family: "Symbols Nerd Font";
 }

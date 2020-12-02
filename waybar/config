@@ -97,7 +97,7 @@
 	},
 	"cpu": {
 		"interval": 1,
-		"format": "閭 {usage:2}%"
+		"format": " {usage:2}%"
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
@@ -123,7 +123,7 @@
 	},
 	"disk#1": {
 		"interval": 5,
-		"format": "力 {percentage_used:2}%",
+		"format": "  {percentage_used:2}%",
 		"path": "/"
 	},
 	"disk#2": {
