@@ -99,7 +99,7 @@ window#waybar {
 	border-radius: 5px;
 }
 #workspaces button.focused {
-	background: #81a1c1;
+	background: #5e81ac;
 }
 
 #taskbar {
@@ -112,5 +112,5 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: #81a1c1;
+	background: #5e81ac;
 }

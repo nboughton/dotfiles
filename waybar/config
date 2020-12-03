@@ -164,10 +164,12 @@
 	"modules-right": ["custom/spotify"],
 	"wlr/taskbar": {
 		"all-outputs": false,
-		"format": "{icon}",
+		"format": "{icon} {title:.15}...",
 		"icon-theme": "DarK-svg",
 		"icon-size": 12,
-		"on-click": "activate"
+		"on-click": "activate",
+		"on-middle-click": "close",
+		"on-right-click": "minimize"
 	},
 	"custom/spotify": {
 		"interval": 1,
