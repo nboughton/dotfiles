@@ -7,9 +7,9 @@
 	"margin-left": 10,
 	"modules-left": [
 		"sway/workspaces",
-		"sway/mode",
 		"custom/separator",
-		"idle_inhibitor"
+		"idle_inhibitor",
+		"sway/mode"
 	],
 	"modules-center": [
 		"clock",
@@ -148,6 +148,7 @@
 	},
 	"custom/separator": {
 		"format": "",
+		//"rotate": 90,
 		"tooltip": false
 	}
 },

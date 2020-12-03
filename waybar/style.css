@@ -8,11 +8,12 @@ window.eDP-1 * {
 }
 
 window#waybar {
-	background: rgba(59,66,82, 0);
 	color: #d8dee9;
+	background: none;
 }
 
 #custom-pacman,
+#custom-separator,
 #pulseaudio,
 #memory,
 #disk.2,
@@ -39,33 +40,36 @@ window#waybar {
 #custom-separator,
 #taskbar,
 #tray {
-	background: #3b4252;
+	background: #4c566a;
 	padding: 0px 7px 0px 7px;
 	text-shadow: 1px 1px 1px #2e3440;
-	border-radius: 4px;
+	border-radius: 5px;
 }
 
 #custom-separator {
-	color: #3b4252;
-	/*text-shadow: 1px 1px 1px #4c566a;*/
+	color: #4c566a;
 	text-shadow: none;
 	background: none;
 	padding: 0px;
-	/*opacity: 0;*/
 }
 
 #mode {
+	margin-left: 5px;
 	background: #bf616a;
-	border-radius: 4px;
+	border-radius: 5px;
 }
 
 #disk.1,
 #memory {
 	padding-right: 3px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 #disk.2,
 #custom-swap {
 	padding-left: 3px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
 #clock {
@@ -92,7 +96,7 @@ window#waybar {
 }
 #workspaces button {
 	padding: 0px 5px 0px 5px;
-	border-radius: 4px;
+	border-radius: 5px;
 }
 #workspaces button.focused {
 	background: #81a1c1;
@@ -103,7 +107,7 @@ window#waybar {
 	margin-left: 5px;
 }
 #taskbar button {
-	border-radius: 4px;
+	border-radius: 5px;
 	padding-right: 3px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
