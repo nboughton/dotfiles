@@ -7,24 +7,29 @@
 	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
+		"custom/separator",
 		"idle_inhibitor",
+		"custom/separator",
 		"sway/mode",
 	],
 	"modules-center": [
-		"clock",
-		"custom/pacman",
-		"custom/weather"
+		"custom/pacman"
 	],
 	"modules-right": [
 		"cpu",
+		"custom/separator",
 		"memory",
-		//"custom/swap",
-		//"disk#1",
-		//"disk#2",
-		"tray",
+		"custom/swap",
+		"custom/separator",
+		"disk#1",
+		"disk#2",
+		"custom/separator",
+		"backlight",
+		"custom/separator",
+		"battery",
+		"custom/separator",
 		"pulseaudio",
-		//"backlight",
-		"battery"
+		"clock"
 	],
 	"sway/workspaces": {
 		"disable-scroll": true,
@@ -115,10 +120,6 @@
 		"format": " {percentage_used:2}%",
 		"path": "/home"
 	},
-	"tray": {
-		"icon-size": 12,
-		"spacing": 10
-	},
 	"custom/pacman": {
 		"format": " {}",
 		"interval": 1800, // every 30 minutes
@@ -127,10 +128,6 @@
 		"on-click": "~/.config/waybar/modules/update-system.sh; pkill -RTMIN+8 waybar", // update system
 		"signal": 8,
 		"tooltip": false
-	},
-	"custom/weather": {
-		"exec": "~/.config/waybar/modules/weather.sh",
-		"interval": 3600
 	},
 	"custom/swap": {
 		"format": " {}",
@@ -149,18 +146,25 @@
 	"margin-right": 5,
 	"margin-left": 5,
 	"margin-bottom": 5,
-	"modules-left": ["wlr/taskbar"],
+	"modules-left": ["custom/weather", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["custom/spotify"],
+	"modules-right": ["tray", "custom/spotify"],
 	"wlr/taskbar": {
 		"all-outputs": false,
-		"active-first": true,
 		"format": "{icon} {title:.15}...",
 		"icon-theme": "DarK-svg",
 		"icon-size": 12,
 		"on-click": "activate",
 		"on-middle-click": "close",
 		"on-right-click": "minimize"
+	},
+	"tray": {
+		"icon-size": 12,
+		"spacing": 10
+	},
+	"custom/weather": {
+		"exec": "~/.config/waybar/modules/weather.sh",
+		"interval": 3600
 	},
 	"custom/spotify": {
 		"interval": 1,

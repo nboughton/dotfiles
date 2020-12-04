@@ -3,12 +3,6 @@
 	font-family: Roboto;
 }
 
-/*
-window.eDP-1 * {
-	font-size: 12px;
-}
-*/
-
 window#waybar {
 	color: #d8dee9;
 	background: rgba(46,52,64, 0.75);
@@ -70,15 +64,21 @@ window#waybar {
 	padding-left: 3px;
 }
 
-#battery,
+#clock,
 #custom-spotify {
 	background: rgba(94,129,172, 0.75);
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
 
-#pulseaudio {
+#custom-pacman {
 	background: rgba(94,129,172, 0.75);
+}
+
+#custom-weather {
+	background: rgba(94,129,172, 0.75);
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
 }
 
 #workspaces {
@@ -102,10 +102,10 @@ window#waybar {
 #taskbar button {
 	border-radius: 0px;
 	padding-right: 3px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
 	background: rgba(94,129,172, 0.75);
-	border-top-left-radius: 7px;
-	border-bottom-left-radius: 7px;
 }
