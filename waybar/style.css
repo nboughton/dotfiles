@@ -107,5 +107,6 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(94,129,172, 0.75);
+	/*background: rgba(94,129,172, 0.75);*/
+	background: rgba(180, 142, 173, 0.5);
 }
