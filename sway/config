@@ -23,8 +23,10 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 #output * bg /home/nick/Pictures/VEU9Nr4.png fill
 #output * bg /home/nick/Pictures/Starry\ Sky\ wallpapers\ Snowy\ Mountain\ Starry\ Sky\ stock\ photos.jpg fill
 #output * bg /home/nick/Pictures/Rainy-Day-Wallpaper.jpg fill
-output * bg /home/nick/Pictures/803094.jpg fill
+#output * bg /home/nick/Pictures/803094.jpg fill
 #output * bg /home/nick/Pictures/EmtJwQGXEAI99ZS.jpg fill
+output * bg /home/nick/Pictures/SBKjnxm.jpeg fill
+#output * bg /home/nick/Pictures/ark_bryggan_big.jpg fill
 #output * bg /home/nick/Pictures/Nord_minimalism_colorful-1928527.png fill
 #output * bg /home/nick/Pictures/59bsn5hgnojy.jpg fill
 
@@ -59,7 +61,7 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec nm-applet --indicator
 exec gammastep-indicator
-exec insync start
+#exec insync start
 
 ### Window config
 for_window [app_id=aptus-upgrade] floating enable
@@ -241,9 +243,8 @@ bar {
 #
 # gaps
 #
-gaps inner 15
-gaps top -10
-gaps bottom -10
+gaps inner 10
+gaps outer -5
 smart_gaps off
 
 #

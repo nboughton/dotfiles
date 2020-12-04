@@ -49,3 +49,5 @@ libreoffice/
 evince/
 Thunar/
 transmission/
+pipewire-media-session/
+systemd/

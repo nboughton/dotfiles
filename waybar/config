@@ -3,41 +3,32 @@
 	"layer": "bottom",
 	"position": "top",
 	"margin-top": 5,
-	"margin-right": 10,
-	"margin-left": 10,
+	"margin-right": 5,
+	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
-		"custom/separator",
 		"idle_inhibitor",
-		"sway/mode"
+		"sway/mode",
 	],
 	"modules-center": [
 		"clock",
-		"custom/separator",
 		"custom/pacman",
-		"custom/separator",
 		"custom/weather"
 	],
 	"modules-right": [
 		"cpu",
-		"custom/separator",
 		"memory",
-		"custom/swap",
-		"custom/separator",
-		"disk#1",
-		"disk#2",
-		"custom/separator",
+		//"custom/swap",
+		//"disk#1",
+		//"disk#2",
+		"tray",
 		"pulseaudio",
-		"custom/separator",
-		"backlight",
-		"custom/separator",
-		"battery",
-		"custom/separator",
-		"tray"
+		//"backlight",
+		"battery"
 	],
 	"sway/workspaces": {
 		"disable-scroll": true,
- 		"all-outputs": false,
+ 		"all-outputs": true,
  		"format": "{name} {icon}",
 		"format-icons": {
 			"1": "",
@@ -60,7 +51,7 @@
 	},
 	"clock": {
 		"format": "{:%a %d %b %H:%M}",
-		"tooltip": false
+		"tooltip": true
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%  {format_source}",
@@ -155,15 +146,15 @@
 {
 	"layer": "bottom",
 	"position": "bottom",
-	"height": 15,
-	"margin-right": 10,
-	"margin-left": 10,
+	"margin-right": 5,
+	"margin-left": 5,
 	"margin-bottom": 5,
 	"modules-left": ["wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["custom/spotify"],
 	"wlr/taskbar": {
 		"all-outputs": false,
+		"active-first": true,
 		"format": "{icon} {title:.15}...",
 		"icon-theme": "DarK-svg",
 		"icon-size": 12,

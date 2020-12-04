@@ -3,13 +3,16 @@
 	font-family: Roboto;
 }
 
+/*
 window.eDP-1 * {
 	font-size: 12px;
 }
+*/
 
 window#waybar {
 	color: #d8dee9;
-	background: none;
+	background: rgba(46,52,64, 0.75);
+	border-radius: 7px;
 }
 
 #custom-pacman,
@@ -40,10 +43,9 @@ window#waybar {
 #custom-separator,
 #taskbar,
 #tray {
-	/*background: #4c566a;*/
 	padding: 0px 7px 0px 7px;
 	text-shadow: 1px 1px 1px #2e3440;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 #custom-separator {
@@ -57,61 +59,53 @@ window#waybar {
 #mode {
 	margin-left: 5px;
 	background: #bf616a;
-	border-radius: 5px;
 }
 
 #disk.1,
 #memory {
 	padding-right: 3px;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
 }
 #disk.2,
 #custom-swap {
 	padding-left: 3px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
 }
 
-#clock {
-	margin-right: 0px;
-	padding-right: 5px;
-}
-#custom-pacman {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-#custom-weather,
-#idle_inhibitor {
-	margin-left: 0px;
-}
-
-#tray,
+#battery,
 #custom-spotify {
-	margin-right: 5px;
+	background: rgba(94,129,172, 0.75);
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+#pulseaudio {
+	background: rgba(94,129,172, 0.75);
 }
 
 #workspaces {
-	margin-left: 5px;
 	padding: 0px;
 }
 #workspaces button {
 	padding: 0px 5px 0px 5px;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 #workspaces button.focused {
 	background: #5e81ac;
 }
+#workspaces button#sway-workspace-1 {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
 
 #taskbar {
 	padding: 0px;
-	margin-left: 5px;
 }
 #taskbar button {
-	border-radius: 5px;
+	border-radius: 0px;
 	padding-right: 3px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: #5e81ac;
+	background: rgba(94,129,172, 0.75);
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
 }
