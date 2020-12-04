@@ -21,7 +21,12 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
 ### Output configuration
 #output * bg /home/nick/Pictures/VEU9Nr4.png fill
-output * bg /home/nick/Pictures/Starry\ Sky\ wallpapers\ Snowy\ Mountain\ Starry\ Sky\ stock\ photos.jpg fill
+#output * bg /home/nick/Pictures/Starry\ Sky\ wallpapers\ Snowy\ Mountain\ Starry\ Sky\ stock\ photos.jpg fill
+#output * bg /home/nick/Pictures/Rainy-Day-Wallpaper.jpg fill
+output * bg /home/nick/Pictures/803094.jpg fill
+#output * bg /home/nick/Pictures/EmtJwQGXEAI99ZS.jpg fill
+#output * bg /home/nick/Pictures/Nord_minimalism_colorful-1928527.png fill
+#output * bg /home/nick/Pictures/59bsn5hgnojy.jpg fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -64,6 +69,8 @@ for_window [app_id=pcmanfm] floating enable
 for_window [app_id=pavucontrol] floating enable
 for_window [app_id=ristretto] floating enable
 for_window [app_id=ranger] floating enable
+for_window [app_id=transmission-gtk] floating enable
+for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 for_window [app_id=".*"] border pixel
 
 ### Key bindings

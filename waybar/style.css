@@ -4,7 +4,7 @@
 }
 
 window.eDP-1 * {
-	font-size: 13px;
+	font-size: 12px;
 }
 
 window#waybar {
@@ -40,7 +40,7 @@ window#waybar {
 #custom-separator,
 #taskbar,
 #tray {
-	background: #4c566a;
+	/*background: #4c566a;*/
 	padding: 0px 7px 0px 7px;
 	text-shadow: 1px 1px 1px #2e3440;
 	border-radius: 5px;
@@ -51,6 +51,7 @@ window#waybar {
 	text-shadow: none;
 	background: none;
 	padding: 0px;
+	opacity: 0;
 }
 
 #mode {
