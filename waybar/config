@@ -1,8 +1,8 @@
 // -*- mode: json -*-
 [{
 	"layer": "bottom",
-	"position": "top",
-	"margin-top": 5,
+	"position": "bottom",
+	"margin-bottom": 5,
 	"margin-right": 5,
 	"margin-left": 5,
 	"modules-left": [
@@ -86,7 +86,7 @@
 	},
 	"cpu": {
 		"interval": 1,
-		"format": " {usage:2}%"
+		"format": " {usage:2}%"
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
@@ -142,10 +142,10 @@
 },
 {
 	"layer": "bottom",
-	"position": "bottom",
+	"position": "top",
 	"margin-right": 5,
 	"margin-left": 5,
-	"margin-bottom": 5,
+	"margin-top": 5,
 	"modules-left": ["custom/weather", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["tray", "custom/spotify"],
