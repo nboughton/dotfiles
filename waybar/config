@@ -7,13 +7,10 @@
 	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
-		"custom/separator",
 		"idle_inhibitor",
-		"custom/separator",
 		"sway/mode",
 	],
 	"modules-center": [
-		"custom/pacman"
 	],
 	"modules-right": [
 		"cpu",
@@ -24,11 +21,12 @@
 		"disk#1",
 		"disk#2",
 		"custom/separator",
-		//"backlight",
-		//"custom/separator",
-		"battery",
-		"custom/separator",
 		"pulseaudio",
+		"custom/separator",
+		"backlight",
+		"custom/separator",
+		"battery",
+		"custom/pacman",
 		"clock"
 	],
 	"sway/workspaces": {
@@ -135,7 +133,7 @@
 		"exec": "free -h | grep Swap | awk '{print $3}'"
 	},
 	"custom/separator": {
-		"format": "",
+		"format": "|",
 		//"rotate": 90,
 		"tooltip": false
 	}
@@ -151,15 +149,16 @@
 	"modules-right": ["tray", "custom/spotify"],
 	"wlr/taskbar": {
 		"all-outputs": false,
+		//"format": "{title:.15}...",
 		"format": "{icon} {title:.15}...",
 		"icon-theme": "DarK-svg",
-		"icon-size": 12,
+		"icon-size": 11,
 		"on-click": "activate",
 		"on-middle-click": "close",
 		"on-right-click": "minimize"
 	},
 	"tray": {
-		"icon-size": 12,
+		"icon-size": 11,
 		"spacing": 10
 	},
 	"custom/weather": {

@@ -42,12 +42,11 @@ window#waybar {
 	text-shadow: none;
 	background: none;
 	padding: 0px;
-	opacity: 0;
+	/*opacity: 0;*/
 }
 
 #mode {
-	margin-left: 5px;
-	background: #bf616a;
+	background: rgba(191, 97, 106, 0.75);
 }
 
 #disk.1,
@@ -67,7 +66,8 @@ window#waybar {
 }
 
 #custom-pacman {
-	background: rgba(94,129,172, 0.75);
+	/*background: rgba(94,129,172, 0.75);*/
+	background: rgba(163,190,140, 0.75);
 }
 
 #custom-weather {
@@ -103,4 +103,14 @@ window#waybar {
 }
 #taskbar button.active {
 	background: rgba(180, 142, 173, 0.7);
+}
+
+#idle_inhibitor {
+	margin: 0px;
+}
+#idle_inhibitor.activated {
+	background: rgba(163, 190, 140, 0.75);
+}
+#idle_inhibitor.deactivated {
+	background: rgba(208, 135, 112, 0.75);
 }

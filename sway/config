@@ -49,7 +49,9 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 # autumn road
 #output * bg /home/nick/Pictures/Forests_Autumn_Roads_Trees_Foliage_Fog_557212_1920x1080.jpg fill
 # Rowboat
-output * bg /home/nick/Pictures/eNHamv.jpg fill
+#output * bg /home/nick/Pictures/eNHamv.jpg fill
+# minimal blue sunset
+output * bg /home/nick/Pictures/8895blnusy261.jpg fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -274,12 +276,12 @@ smart_gaps off
 default_border pixel 2
 default_floating_border normal
 hide_edge_borders smart
-titlebar_padding 5
+titlebar_padding 5 2
 #
 # Colors #93cee9
 #
 # class                     border  backgr. text  indicator child_border
-    client.focused          #2e3440 #2e3440 #d8dee9 #5e81ac #5e81ac
+    client.focused          #5e81ac #2e3440 #d8dee9 #5e81ac #5e81ac
     client.focused_inactive #3b4252 #3b4252 #d8dee9 #4c566a #4c566a
     client.unfocused        #434c5e #434c5e #d8dee9 #4c566a #4c566a
     client.urgent           #bf616a #bf616a #d8dee9 #d08770 #d08770
