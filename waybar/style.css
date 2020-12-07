@@ -65,6 +65,10 @@ window#waybar {
 	border-bottom-right-radius: 7px;
 }
 
+#tray {
+	background: rgba(76, 86, 106, 0.75);
+}
+
 #custom-pacman.no-updates {
 	background: rgba(163, 190, 140, 0.75);
 }

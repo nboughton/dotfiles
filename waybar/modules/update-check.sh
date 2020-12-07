@@ -1,5 +1,5 @@
 #!/bin/bash
-updates=$(yay --devel -Qqu)
+updates=$(yay --devel -Qu)
 text=$(echo $updates | wc -l)
 alt=$text
 tooltip=$updates

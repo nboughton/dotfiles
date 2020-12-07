@@ -159,7 +159,7 @@
 		"on-right-click": "minimize"
 	},
 	"tray": {
-		"icon-size": 11,
+		"icon-size": 12,
 		"spacing": 10
 	},
 	"custom/weather": {
