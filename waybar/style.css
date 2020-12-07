@@ -1,6 +1,6 @@
 * {
 	font-size: 11px;
-	font-family: "Roboto", "Font Awesome 5 Brands", "Font Awesome 5 Free";
+	font-family: "Roboto", "Font Awesome 5 Free";
 }
 
 window#waybar {
@@ -74,7 +74,6 @@ window#waybar {
 }
 #custom-pacman.updates {
 	background: rgba(180, 142, 173, 0.75);
-	/*background: rgba(208, 135, 112, 0.75);*/
 }
 
 #custom-weather {
