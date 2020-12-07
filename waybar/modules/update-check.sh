@@ -1,6 +1,6 @@
 #!/bin/bash
 updates=$(yay --devel -Qmu)
-text=$(echo $updates | wc -l)
+text=$(printf $($updates | wc -l))
 alt=$text
 tooltip=$updates
 percentage=$text
