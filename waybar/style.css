@@ -65,9 +65,12 @@ window#waybar {
 	border-bottom-right-radius: 7px;
 }
 
-#custom-pacman {
-	/*background: rgba(94,129,172, 0.75);*/
-	background: rgba(163,190,140, 0.75);
+#custom-pacman.no-updates {
+	background: rgba(163, 190, 140, 0.75);
+}
+#custom-pacman.updates {
+	background: rgba(180, 142, 173, 0.75);
+	/*background: rgba(208, 135, 112, 0.75);*/
 }
 
 #custom-weather {
