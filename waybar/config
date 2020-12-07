@@ -84,7 +84,7 @@
 	},
 	"cpu": {
 		"interval": 1,
-		"format": " {usage:2}%"
+		"format": " {usage:2}%"
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
