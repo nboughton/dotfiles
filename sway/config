@@ -94,7 +94,7 @@ for_window [app_id=ristretto] floating enable
 for_window [app_id=ranger] floating enable
 for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
-for_window [app_id=".*"] border pixel
+#for_window [app_id=".*"] border normal
 
 ### Key bindings
 #
@@ -272,7 +272,7 @@ smart_gaps off
 # Titlebars
 #
 default_border pixel 2
-default_floating_border pixel 2
+default_floating_border normal
 hide_edge_borders smart
 titlebar_padding 5
 #

@@ -1,6 +1,6 @@
 * {
 	font-size: 11px;
-	font-family: Roboto;
+	font-family: "Roboto", "Font Awesome 5 Brands", "Font Awesome 5 Free";
 }
 
 window#waybar {
@@ -9,12 +9,7 @@ window#waybar {
 	border-radius: 7px;
 }
 
-#custom-pacman,
-#custom-separator,
-#pulseaudio,
-#memory,
-#disk.2,
-#cpu {
+#custom-pacman {
 	font-family: "Symbols Nerd Font";
 }
 
@@ -89,7 +84,7 @@ window#waybar {
 	border-radius: 0px;
 }
 #workspaces button.focused {
-	background: #5e81ac;
+	background: rgba(94,129,172, 0.75);
 }
 #workspaces button#sway-workspace-1 {
 	border-top-left-radius: 7px;
@@ -97,7 +92,7 @@ window#waybar {
 }
 
 #taskbar {
-	padding: 0px;
+	padding-left: 0px;
 }
 #taskbar button {
 	border-radius: 0px;
@@ -107,5 +102,5 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(180, 142, 173, 0.5);
+	background: rgba(180, 142, 173, 0.7);
 }

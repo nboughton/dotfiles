@@ -117,7 +117,7 @@
 	},
 	"disk#2": {
 		"interval": 5,
-		"format": " {percentage_used:2}%",
+		"format": "  {percentage_used:2}%",
 		"path": "/home"
 	},
 	"custom/pacman": {
