@@ -78,6 +78,9 @@ window#waybar {
 #custom-pacman.updates {
 	background: rgba(180, 142, 173, 0.75);
 }
+#custom-pacman.error {
+	background: rgba(191, 97, 106, 0.75);
+}
 
 #custom-weather {
 	background: rgba(94,129,172, 0.75);
