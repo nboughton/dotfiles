@@ -51,7 +51,9 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 # Rowboat
 #output * bg /home/nick/Pictures/eNHamv.jpg fill
 # minimal blue sunset
-output * bg /home/nick/Pictures/8895blnusy261.jpg fill
+#output * bg /home/nick/Pictures/8895blnusy261.jpg fill
+# stalenhag, quiet big lad
+output * bg /home/nick/Pictures/oluit9ej7iu51.png fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
