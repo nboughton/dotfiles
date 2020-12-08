@@ -122,9 +122,9 @@
 		"format": " {}",
 		"return-type": "json",
 		"interval": 3600, // every hour
-		"exec": "go run ~/.config/waybar/modules/update-check.go",
-		"exec-if": "exit 0",
-		"on-click": "~/.config/waybar/modules/update-system.sh; pkill -RTMIN+8 waybar",
+		"exec": "go run ~/.config/waybar/modules/updates/update-check.go",
+		"exec-if": "~/.config/waybar/modules/updates/update-run.sh",
+		"on-click": "~/.config/waybar/modules/updates/update-system.sh; pkill -RTMIN+8 waybar",
 		"signal": 8,
 		"tooltip": true
 	},
