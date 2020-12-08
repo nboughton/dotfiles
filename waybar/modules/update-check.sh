@@ -1,8 +1,9 @@
 #!/bin/bash
-updates=$(yay --devel -Qmu)
-text=$(printf $($updates | wc -l))
+aur_updates=$(yay --devel -Qqmu)
+pac_updates=$(checkupdates | awk '{print $1}')
+text=$(printf "${aur_updates}${pac_updates}" | wc -l)
 alt=$text
-tooltip=$updates
+tooltip=$(printf "${pac_updates}${aur_updates}" | sed ':a;N;$!ba;s/\n/\\n/g')
 percentage=$text
 class="no-updates"
 
