@@ -20,7 +20,7 @@ func main() {
 	o := jsonOutput{}
 
 	pac, err := exec.Command("checkupdates").CombinedOutput()
-	if err.Error() == "exit status 1" {
+	if err != nil && err.Error() == "exit status 1" {
 		o.Tooltip = err.Error()
 		o.Class = "error"
 	}

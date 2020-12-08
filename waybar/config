@@ -121,10 +121,10 @@
 	"custom/pacman": {
 		"format": " {}",
 		"return-type": "json",
-		"interval": 3600, // every 30 minutes
+		"interval": 3600, // every hour
 		"exec": "go run ~/.config/waybar/modules/update-check.go",
 		"exec-if": "exit 0",
-		"on-click": "~/.config/waybar/modules/update-system.sh; pkill -RTMIN+8 waybar", // update system
+		"on-click": "~/.config/waybar/modules/update-system.sh; pkill -RTMIN+8 waybar",
 		"signal": 8,
 		"tooltip": true
 	},
@@ -135,7 +135,6 @@
 	},
 	"custom/separator": {
 		"format": "|",
-		//"rotate": 90,
 		"tooltip": false
 	}
 },
@@ -150,7 +149,6 @@
 	"modules-right": ["tray", "custom/spotify"],
 	"wlr/taskbar": {
 		"all-outputs": false,
-		//"format": "{title:.15}...",
 		"format": "{icon} {title:.15}...",
 		"icon-theme": "DarK-svg",
 		"icon-size": 12,
@@ -163,6 +161,7 @@
 		"spacing": 10
 	},
 	"custom/weather": {
+		"format": "{:.20}",
 		"exec": "~/.config/waybar/modules/weather.sh",
 		"interval": 3600
 	},
