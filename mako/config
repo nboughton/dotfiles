@@ -6,6 +6,6 @@ text-color=#d8dee9
 border-color=#434c5e
 border-radius=7
 max-icon-size=32
-default-timeout=0
+default-timeout=30000
 anchor=top-right
 margin=20
