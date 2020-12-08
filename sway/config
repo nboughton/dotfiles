@@ -96,7 +96,7 @@ for_window [app_id=ristretto] floating enable
 for_window [app_id=ranger] floating enable
 for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
-#for_window [app_id=".*"] border normal
+for_window [app_id=".*"] border pixel 2
 
 ### Key bindings
 #

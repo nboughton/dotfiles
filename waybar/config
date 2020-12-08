@@ -153,7 +153,7 @@
 		//"format": "{title:.15}...",
 		"format": "{icon} {title:.15}...",
 		"icon-theme": "DarK-svg",
-		"icon-size": 11,
+		"icon-size": 12,
 		"on-click": "activate",
 		"on-middle-click": "close",
 		"on-right-click": "minimize"
