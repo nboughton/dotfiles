@@ -45,7 +45,7 @@ window#waybar {
 }
 
 #mode {
-	background: rgba(191, 97, 106, 0.75);
+	background: rgba(191, 97, 106, 0.6);
 }
 
 #disk.1,
@@ -59,25 +59,25 @@ window#waybar {
 
 #clock,
 #custom-spotify {
-	background: rgba(94,129,172, 0.75);
+	background: rgba(94,129,172, 0.6);
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
 
 #custom-pacman.no-updates,
 #custom-aurcheck.no-updates {
-	background: rgba(163, 190, 140, 0.75);
+	background: rgba(163, 190, 140, 0.6);
 }
 #custom-pacman.updates,
 #custom-aurcheck.updates {
-	background: rgba(180, 142, 173, 0.75);
+	background: rgba(180, 142, 173, 0.6);
 }
 #custom-pacman.error {
-	background: rgba(191, 97, 106, 0.75);
+	background: rgba(191, 97, 106, 0.6);
 }
 
 #custom-weather {
-	background: rgba(94,129,172, 0.75);
+	background: rgba(94,129,172, 0.6);
 	border-top-left-radius: 7px;
 	border-bottom-left-radius: 7px;
 }
@@ -90,7 +90,7 @@ window#waybar {
 	border-radius: 0px;
 }
 #workspaces button.focused {
-	background: rgba(94,129,172, 0.75);
+	background: rgba(94,129,172, 0.6);
 }
 #workspaces button#sway-workspace-1 {
 	border-top-left-radius: 7px;
@@ -108,15 +108,15 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(180, 142, 173, 0.7);
+	background: rgba(180, 142, 173, 0.6);
 }
 
 #idle_inhibitor {
 	margin: 0px;
 }
 #idle_inhibitor.activated {
-	background: rgba(163, 190, 140, 0.75);
+	background: rgba(163, 190, 140, 0.6);
 }
 #idle_inhibitor.deactivated {
-	background: rgba(208, 135, 112, 0.75);
+	background: rgba(208, 135, 112, 0.6);
 }
