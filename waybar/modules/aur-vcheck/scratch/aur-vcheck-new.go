@@ -10,6 +10,7 @@ import (
 
 	"github.com/esiqveland/notify"
 	"github.com/godbus/dbus/v5"
+	"github.com/nboughton/dotfiles/waybar/modules/gobar"
 	regex "github.com/nboughton/go-utils/regex/common"
 )
 

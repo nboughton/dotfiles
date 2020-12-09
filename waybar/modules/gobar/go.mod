@@ -1,4 +1,4 @@
-module github.com/nboughton/dotfiles/waybar/gobar
+module github.com/nboughton/dotfiles/waybar/modules/gobar
 
 go 1.15
 
