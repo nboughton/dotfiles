@@ -7,6 +7,9 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+
+	"github.com/esiqveland/notify"
+	"github.com/godbus/dbus/v5"
 )
 
 type jsonOutput struct {
@@ -48,6 +51,33 @@ func main() {
 		if n > 0 {
 			o.Class = "updates"
 			o.Tooltip = strings.Join(updates, "\n")
+
+			conn, err := dbus.SessionBusPrivate()
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			if err = conn.Auth(nil); err != nil {
+				log.Fatal(err)
+			}
+
+			if err = conn.Hello(); err != nil {
+				log.Fatal(err)
+			}
+
+			// Send notification
+			log.Println("Sending notification")
+			notify.SendNotification(conn, notify.Notification{
+				AppName:       "PACMAN UPDATES",
+				ReplacesID:    uint32(0),
+				AppIcon:       "mail-message-new",
+				Summary:       "Package Updates Available",
+				Body:          o.Tooltip,
+				Hints:         map[string]dbus.Variant{},
+				ExpireTimeout: 10000,
+			})
+
+			conn.Close()
 		}
 
 		o.Text = fmt.Sprintf("%d", n)
