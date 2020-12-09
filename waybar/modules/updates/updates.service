@@ -3,5 +3,5 @@ Description=Check for Pacman and AUR/git package updates
 
 [Service]
 Type=oneshot
-WorkingDirectory=/home/nick/.config/waybar/modules/updates
-ExecStart=go run /home/nick/.config/waybar/modules/updates/update-check.go
+WorkingDirectory=%h/.config/waybar/modules/updates
+ExecStart=go run %h/.config/waybar/modules/updates/update-check.go
