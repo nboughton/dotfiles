@@ -16,14 +16,6 @@ type config struct {
 	Versions []string `json:"versions,omitempty"`
 }
 
-type jsonOutput struct {
-	Text       string `json:"text,omitempty"`
-	Alt        string `json:"alt,omitempty"`
-	Tooltip    string `json:"tooltip,omitempty"`
-	Class      string `json:"class,omitempty"`
-	Percentage int    `json:"percentage,omitempty"`
-}
-
 var outfile = fmt.Sprintf("%s/tmp/aur-vcheck.json", os.Getenv(("HOME")))
 
 func main() {
