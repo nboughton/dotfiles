@@ -19,8 +19,8 @@ type JSONOutput struct {
 	Percentage int    `json:"percentage,omitempty"`
 }
 
-func (j JSONOutput) Write(o io.Writer) {
-	json.NewEncoder(o).Encode(j)
+func (j JSONOutput) Write(o io.Writer) error {
+	return json.NewEncoder(o).Encode(j)
 }
 
 // Module wraps summary and json data
