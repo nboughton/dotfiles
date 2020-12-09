@@ -126,7 +126,7 @@
 		"interval": 5, 
 		"exec": "cat ~/tmp/updates.json",
 		"exec-if": "exit 0",
-		"on-click": "~/.config/waybar/modules/updates/update-system.sh; systemctl --user restart updates.timer; pkill -RTMIN+8 waybar",
+		"on-click": "~/.config/waybar/modules/updates/update-system.sh; systemctl --user start updates.service; pkill -RTMIN+8 waybar",
 		"signal": 8,
 		"tooltip": true
 	},
@@ -134,6 +134,7 @@
 		"format": " {}",
 		"return-type": "json",
 		"exec": "cat ~/tmp/aur-vcheck.json",
+		"on-click": "systemctl --user start vcheck.service",
 		"interval": 5,
 		"tooltip": true
 	},
