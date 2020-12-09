@@ -1,0 +1,9 @@
+[Unit]
+Description=Check for new upstream AUR versions of maintained NPM packages
+
+[Service]
+User=nick
+Type=oneshot
+Environment=DISPLAY=:0.0
+Environment=XAUTHORITY=/home/nick/.Xauthority
+ExecStart=go run /home/nick/.config/waybar/modules/aur-vcheck/aur-vcheck.go  /home/nick/.config/waybar/modules/aur-vcheck/config.json

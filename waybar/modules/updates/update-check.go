@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -15,6 +16,8 @@ type jsonOutput struct {
 	Class      string `json:"class,omitempty"`
 	Percentage int    `json:"percentage,omitempty"`
 }
+
+var outfile = fmt.Sprintf("%s/tmp/updates.json", os.Getenv(("HOME")))
 
 func main() {
 	o := jsonOutput{}
@@ -52,7 +55,12 @@ func main() {
 		o.Percentage = n
 	}
 
-	json.NewEncoder(os.Stdout).Encode(o)
+	f, err := os.Create(outfile)
+	if err != nil {
+		log.Println(err)
+	}
+	json.NewEncoder(f).Encode(o)
+	f.Close()
 }
 
 func removeEmptyLines(list []string) []string {

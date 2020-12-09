@@ -1,0 +1,8 @@
+{
+  "versions": [
+    "@vue/cli@4.5.8",
+    "@vue/cli-service-global@4.5.8",
+    "@quasar/cli@1.1.2",
+    "@quasar/icongenie@2.3.3"
+  ]
+}

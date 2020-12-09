@@ -26,7 +26,7 @@ window#waybar {
 #backlight,
 #disk,
 #custom-pacman,
-#custom-aur,
+#custom-aurcheck,
 #custom-swap,
 #custom-spotify,
 #custom-separator,
@@ -64,10 +64,12 @@ window#waybar {
 	border-bottom-right-radius: 7px;
 }
 
-#custom-pacman.no-updates {
+#custom-pacman.no-updates,
+#custom-aurcheck.no-updates {
 	background: rgba(163, 190, 140, 0.75);
 }
-#custom-pacman.updates {
+#custom-pacman.updates,
+#custom-aurcheck.updates {
 	background: rgba(180, 142, 173, 0.75);
 }
 #custom-pacman.error {

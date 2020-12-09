@@ -28,6 +28,7 @@
 		"custom/separator",
 		"battery",
 		"custom/pacman",
+		"custom/aurcheck",
 		"clock"
 	],
 	"sway/workspaces": {
@@ -122,11 +123,18 @@
 	"custom/pacman": {
 		"format": " {}",
 		"return-type": "json",
-		"interval": 3600, // every hour
-		"exec": "go run ~/.config/waybar/modules/updates/update-check.go",
-		"exec-if": "~/.config/waybar/modules/updates/update-run.sh",
-		"on-click": "~/.config/waybar/modules/updates/update-system.sh; pkill -RTMIN+8 waybar",
+		"interval": 5, 
+		"exec": "cat ~/tmp/updates.json",
+		"exec-if": "exit 0",
+		"on-click": "~/.config/waybar/modules/updates/update-system.sh; systemctl --user restart updates.timer; pkill -RTMIN+8 waybar",
 		"signal": 8,
+		"tooltip": true
+	},
+	"custom/aurcheck": {
+		"format": " {}",
+		"return-type": "json",
+		"exec": "cat ~/tmp/aur-vcheck.json",
+		"interval": 5,
 		"tooltip": true
 	},
 	"custom/swap": {
