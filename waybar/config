@@ -1,5 +1,6 @@
 // -*- mode: json -*-
 [{
+	//"output": "eDP-1",
 	"layer": "bottom",
 	"position": "bottom",
 	"margin-bottom": 5,
