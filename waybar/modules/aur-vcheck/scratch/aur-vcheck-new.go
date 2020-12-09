@@ -8,8 +8,6 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/esiqveland/notify"
-	"github.com/godbus/dbus/v5"
 	"github.com/nboughton/dotfiles/waybar/modules/gobar"
 	regex "github.com/nboughton/go-utils/regex/common"
 )
@@ -64,57 +62,30 @@ func main() {
 		}
 	}
 
-	if len(out) > 0 {
-		m := gobar.Module{}
-		log.Println("Connecting to DBUS")
-		conn, err := dbus.SessionBusPrivate()
-		if err != nil {
-			log.Fatal(err)
-		}
+	n := len(out)
+	m := gobar.Module{
+		Name:    "AUR VERSION CHECK",
+		Summary: "AUR NPM Packages Out Of Date",
+		JSON: gobar.JSONOutput{
+			Text:       fmt.Sprintf("%d", n),
+			Alt:        fmt.Sprintf("%d", n),
+			Tooltip:    strings.Join(out, "\n"),
+			Class:      "no-updates",
+			Percentage: n,
+		},
+	}
 
-		if err = conn.Auth(nil); err != nil {
-			log.Fatal(err)
-		}
-
-		if err = conn.Hello(); err != nil {
-			log.Fatal(err)
-		}
-
-		// Send notification
-		log.Println("Sending notification")
-		notify.SendNotification(conn, notify.Notification{
-			AppName:       "AUR VCHECK",
-			ReplacesID:    uint32(0),
-			AppIcon:       "mail-message-new",
-			Summary:       "AUR NPM Packages Need Updating",
-			Body:          strings.Join(out, "\n"),
-			Hints:         map[string]dbus.Variant{},
-			ExpireTimeout: 10000,
-		})
-
-		conn.Close()
+	if n > 0 {
+		m.JSON.Class = "updates"
+		m.Notify(m.JSON.Tooltip, 10000)
 	}
 
 	// Write output for waybar module
-	n := len(out)
-	o := jsonOutput{
-		Text:    fmt.Sprintf("%d", n),
-		Alt:     fmt.Sprintf("%d", n),
-		Tooltip: strings.Join(out, "\n"),
-	}
-	if n > 0 {
-		o.Class = "updates"
-		o.Percentage = n
-	} else {
-		o.Class = "no-updates"
-		o.Percentage = 0
-	}
-
 	f, err = os.Create(outfile)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	json.NewEncoder(f).Encode(o)
+	m.JSON.Write(f)
 	f.Close()
 }

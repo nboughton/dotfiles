@@ -31,7 +31,7 @@ type Module struct {
 }
 
 // Notify via DBUS
-func (m Module) Notify(body string, expire int) error {
+func (m Module) Notify(body string, expire int32) error {
 	conn, err := dbus.SessionBusPrivate()
 	if err != nil {
 		return err
@@ -54,7 +54,7 @@ func (m Module) Notify(body string, expire int) error {
 		Summary:       m.Summary,
 		Body:          body,
 		Hints:         map[string]dbus.Variant{},
-		ExpireTimeout: 10000,
+		ExpireTimeout: expire,
 	})
 
 	return err
