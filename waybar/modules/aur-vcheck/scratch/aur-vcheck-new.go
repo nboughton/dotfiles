@@ -76,11 +76,13 @@ func main() {
 	}
 
 	if n > 0 {
+		log.Println("Sending DBUS notification")
 		m.JSON.Class = "updates"
 		m.Notify(m.JSON.Tooltip, 10000)
 	}
 
 	// Write output for waybar module
+	log.Println("Writing JSON output")
 	f, err = os.Create(outfile)
 	if err != nil {
 		log.Println(err)
