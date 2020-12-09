@@ -1,15 +1,13 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
 	"os"
 	"os/exec"
 	"strings"
 
-	"github.com/esiqveland/notify"
-	"github.com/godbus/dbus/v5"
+	"github.com/nboughton/dotfiles/waybar/modules/gobar"
 )
 
 type jsonOutput struct {
@@ -23,74 +21,56 @@ type jsonOutput struct {
 var outfile = fmt.Sprintf("%s/tmp/updates.json", os.Getenv(("HOME")))
 
 func main() {
-	o := jsonOutput{}
-
-	pac, err := exec.Command("checkupdates").CombinedOutput()
-	if err != nil && err.Error() == "exit status 1" {
-		o.Tooltip = err.Error()
-		o.Class = "error"
+	m := gobar.Module{
+		Name:    "PACMAN UPDATES",
+		Summary: "Updates Available",
+		JSON:    gobar.JSONOutput{},
 	}
 
+	log.Println("Checking Arch repos")
+	pac, err := exec.Command("checkupdates").CombinedOutput()
+	if err != nil && err.Error() == "exit status 1" {
+		m.JSON.Tooltip = err.Error()
+		m.JSON.Class = "error"
+	}
+
+	log.Println("Checking AUR and devel")
 	aur, err := exec.Command("yay", "--devel", "-Qu").CombinedOutput()
 	if err != nil {
-		o.Tooltip += err.Error()
-		o.Class = "error"
+		m.JSON.Tooltip += err.Error()
+		m.JSON.Class = "error"
 	}
 
 	updates := append(strings.Split(string(pac), "\n"), strings.Split(string(aur), "\n")...)
 	updates = removeEmptyLines(updates)
 
 	n := len(updates)
+	m.JSON.Text = fmt.Sprintf("%d", n)
+	m.JSON.Alt = fmt.Sprintf("%d", n)
+	m.JSON.Percentage = n
 
-	if o.Class == "error" {
-		o.Text = "!"
-		o.Alt = "!"
-		o.Percentage = 0
+	if m.JSON.Class == "error" {
+		m.JSON.Text = "!"
+		m.JSON.Alt = "!"
+		m.JSON.Percentage = 0
 	} else {
-		o.Class = "no-updates"
+		m.JSON.Class = "no-updates"
 		if n > 0 {
-			o.Class = "updates"
-			o.Tooltip = strings.Join(updates, "\n")
-
-			conn, err := dbus.SessionBusPrivate()
-			if err != nil {
-				log.Fatal(err)
-			}
-
-			if err = conn.Auth(nil); err != nil {
-				log.Fatal(err)
-			}
-
-			if err = conn.Hello(); err != nil {
-				log.Fatal(err)
-			}
-
-			// Send notification
-			log.Println("Sending notification")
-			notify.SendNotification(conn, notify.Notification{
-				AppName:       "PACMAN UPDATES",
-				ReplacesID:    uint32(0),
-				AppIcon:       "mail-message-new",
-				Summary:       "Package Updates Available",
-				Body:          o.Tooltip,
-				Hints:         map[string]dbus.Variant{},
-				ExpireTimeout: 10000,
-			})
-
-			conn.Close()
+			m.JSON.Class = "updates"
+			m.JSON.Tooltip = strings.Join(updates, "\n")
+			log.Println("Sending DBUS notification")
+			m.Notify(m.JSON.Tooltip, 10000)
 		}
-
-		o.Text = fmt.Sprintf("%d", n)
-		o.Alt = fmt.Sprintf("%d", n)
-		o.Percentage = n
 	}
 
+	log.Println("Writing JSON file")
 	f, err := os.Create(outfile)
 	if err != nil {
 		log.Println(err)
+		return
 	}
-	json.NewEncoder(f).Encode(o)
-	f.Close()
+	defer f.Close()
+	m.JSON.Write(f)
 }
 
 func removeEmptyLines(list []string) []string {

@@ -88,6 +88,6 @@ func main() {
 		log.Println(err)
 		return
 	}
+	defer f.Close()
 	m.JSON.Write(f)
-	f.Close()
 }
