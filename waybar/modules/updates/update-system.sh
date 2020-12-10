@@ -1,3 +1,4 @@
 #!/bin/bash
-alacritty --class aptus-upgrade -e yay --devel -Syu
+yay --devel -Syu
+read -rsp $'Press any key to continue...\n' -n1 key
 

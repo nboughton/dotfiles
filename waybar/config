@@ -2,8 +2,8 @@
 [{
 	//"output": "eDP-1",
 	"layer": "bottom",
-	"position": "bottom",
-	"margin-bottom": 5,
+	"position": "top",
+	"margin-top": 5,
 	"margin-right": 5,
 	"margin-left": 5,
 	"modules-left": [
@@ -126,12 +126,12 @@
 		"interval": 5, 
 		"exec": "cat ~/tmp/updates.json",
 		"exec-if": "exit 0",
-		"on-click": "~/.config/waybar/modules/updates/update-system.sh; systemctl --user start updates.service; pkill -RTMIN+8 waybar",
+		"on-click": "alacritty --class aptus-upgrade -e ~/.config/waybar/modules/updates/update-system.sh; systemctl --user start updates.service; pkill -RTMIN+8 waybar",
 		"signal": 8,
 		"tooltip": true
 	},
 	"custom/aurcheck": {
-		"format": " {}",
+		"format": "  {}",
 		"return-type": "json",
 		"exec": "cat ~/tmp/aur-vcheck.json",
 		"on-click": "systemctl --user start vcheck.service",
@@ -150,10 +150,10 @@
 },
 {
 	"layer": "bottom",
-	"position": "top",
+	"position": "bottom",
 	"margin-right": 5,
 	"margin-left": 5,
-	"margin-top": 5,
+	"margin-bottom": 5,
 	"modules-left": ["custom/weather", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["tray", "custom/spotify"],
