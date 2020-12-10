@@ -13,6 +13,7 @@ window#waybar {
 	font-family: "Symbols Nerd Font";
 }
 
+/* Base styling for modules */
 #workspaces,
 #mode,
 #window,
@@ -26,7 +27,7 @@ window#waybar {
 #backlight,
 #disk,
 #custom-pacman,
-#custom-aurcheck,
+#custom-auroch,
 #custom-swap,
 #custom-spotify,
 #custom-separator,
@@ -37,6 +38,7 @@ window#waybar {
 	border-radius: 0px;
 }
 
+/* Separator */
 #custom-separator {
 	color: #d8dee9;
 	background: none;
@@ -44,10 +46,37 @@ window#waybar {
 	opacity: 0.3;
 }
 
-#mode {
-	background: rgba(191, 97, 106, 0.6);
+/* TOP BAR (left)*/
+#workspaces {
+	padding: 0px;
+}
+#workspaces button {
+	padding: 0px 5px 0px 5px;
+	border-radius: 0px;
+}
+#workspaces button#sway-workspace-1 {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+#workspaces button.focused {
+	background: rgba(94,129,172, 0.7);
 }
 
+#idle_inhibitor {
+	margin: 0px;
+}
+#idle_inhibitor.activated {
+	background: rgba(163, 190, 140, 0.6);
+}
+#idle_inhibitor.deactivated {
+	background: rgba(208, 135, 112, 0.6);
+}
+
+#mode {
+	background: rgba(191, 97, 106, 0.7);
+}
+
+/* TOP BAR (right) */
 #disk.1,
 #memory {
 	padding-right: 3px;
@@ -57,42 +86,27 @@ window#waybar {
 	padding-left: 3px;
 }
 
-#clock,
-#custom-spotify {
-	background: rgba(94,129,172, 0.6);
+#custom-pacman.no-updates,
+#custom-auroch.no-updates {
+	background: rgba(163, 190, 140, 0.7);
+}
+#custom-pacman.updates,
+#custom-auroch.updates {
+	background: rgba(180, 142, 173, 0.7);
+}
+#custom-pacman.error {
+	background: rgba(191, 97, 106, 0.7);
+}
+
+#tray {
+	background: rgba(94,129,172, 0.7);
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
 
-#custom-pacman.no-updates,
-#custom-aurcheck.no-updates {
-	background: rgba(163, 190, 140, 0.6);
-}
-#custom-pacman.updates,
-#custom-aurcheck.updates {
-	background: rgba(180, 142, 173, 0.6);
-}
-#custom-pacman.error {
-	background: rgba(191, 97, 106, 0.6);
-}
-
+/* BOTTOM BAR (left to right)*/
 #custom-weather {
-	background: rgba(94,129,172, 0.6);
-	border-top-left-radius: 7px;
-	border-bottom-left-radius: 7px;
-}
-
-#workspaces {
-	padding: 0px;
-}
-#workspaces button {
-	padding: 0px 5px 0px 5px;
-	border-radius: 0px;
-}
-#workspaces button.focused {
-	background: rgba(94,129,172, 0.6);
-}
-#workspaces button#sway-workspace-1 {
+	background: rgba(94,129,172, 0.7);
 	border-top-left-radius: 7px;
 	border-bottom-left-radius: 7px;
 }
@@ -108,15 +122,11 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(180, 142, 173, 0.6);
+	background: rgba(180, 142, 173, 0.7);
 }
 
-#idle_inhibitor {
-	margin: 0px;
-}
-#idle_inhibitor.activated {
-	background: rgba(163, 190, 140, 0.6);
-}
-#idle_inhibitor.deactivated {
-	background: rgba(208, 135, 112, 0.6);
+#custom-spotify {
+	background: rgba(94,129,172, 0.7);
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
 }
