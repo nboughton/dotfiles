@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -10,13 +11,14 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/google/go-github/github"
 	"github.com/mikkeloscar/aur"
 	"github.com/nboughton/dotfiles/waybar/modules/gobar"
 )
 
 const (
 	npm         = "npm"
-	github      = "github"
+	ghub        = "github"
 	errClass    = "error"
 	npmRegistry = "https://registry.npmjs.org/"
 )
@@ -79,6 +81,24 @@ func (p *pkg) getNpmVer() error {
 	return nil
 }
 
+func (p *pkg) getGithubVer() error {
+	c := github.NewClient(nil)
+
+	// Get repo owner and repo name
+	parts := strings.Split(p.UpstreamName, "/")
+	owner, repo := parts[0], parts[1]
+
+	rel, _, err := c.Repositories.GetLatestRelease(context.Background(), owner, repo)
+	if err != nil {
+		return err
+	}
+
+	// Strip "v" prefix if there is one
+	p.UpstreamVer = regexp.MustCompile(`^v`).ReplaceAllString(rel.GetTagName(), "")
+
+	return nil
+}
+
 func main() {
 	packages := []*pkg{
 		{
@@ -101,6 +121,26 @@ func main() {
 			UpstreamName: "@quasar/icongenie",
 			UpstreamType: npm,
 		},
+		{
+			AurName:      "swnt",
+			UpstreamName: "nboughton/swnt",
+			UpstreamType: ghub,
+		},
+		{
+			AurName:      "myzt",
+			UpstreamName: "nboughton/myzt",
+			UpstreamType: ghub,
+		},
+		{
+			AurName:      "plymouth-theme-arch-charge-gdm",
+			UpstreamName: "nboughton/plymouth-theme-arch-charge-gdm",
+			UpstreamType: ghub,
+		},
+		{
+			AurName:      "devd",
+			UpstreamName: "cortesi/devd",
+			UpstreamType: ghub,
+		},
 	}
 
 	var (
@@ -111,17 +151,22 @@ func main() {
 
 	class = "no-updates"
 	for _, p := range packages {
-		log.Printf("Checking package: %s\n", p.AurName)
 		if err = p.getAurVer(); err != nil {
 			class = errClass
 			break
 
 		}
 
-		// I'll add a switch or if block here to retrieve ver data from non-npm sources when I have some to care about
-		if err = p.getNpmVer(); err != nil {
-			class = errClass
-			break
+		if p.UpstreamType == npm {
+			if err = p.getNpmVer(); err != nil {
+				class = errClass
+				break
+			}
+		} else if p.UpstreamType == ghub {
+			if err = p.getGithubVer(); err != nil {
+				class = errClass
+				break
+			}
 		}
 
 		log.Printf("%s %s -> %s\n", p.AurName, p.AurVer, p.UpstreamVer)
