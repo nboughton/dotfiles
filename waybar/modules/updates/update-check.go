@@ -10,14 +10,6 @@ import (
 	"github.com/nboughton/dotfiles/waybar/modules/gobar"
 )
 
-type jsonOutput struct {
-	Text       string `json:"text,omitempty"`
-	Alt        string `json:"alt,omitempty"`
-	Tooltip    string `json:"tooltip,omitempty"`
-	Class      string `json:"class,omitempty"`
-	Percentage int    `json:"percentage,omitempty"`
-}
-
 var outfile = fmt.Sprintf("%s/tmp/updates.json", os.Getenv(("HOME")))
 
 func main() {
