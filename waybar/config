@@ -150,9 +150,9 @@
 	"margin-right": 5,
 	"margin-left": 5,
 	"margin-bottom": 5,
-	"modules-left": ["custom/weather", "wlr/taskbar"],
+	"modules-left": ["custom/weather", "idle_inhibitor", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["idle_inhibitor", "custom/spotify"],
+	"modules-right": ["custom/spotify"],
 	"wlr/taskbar": {
 		"all-outputs": false,
 		"format": "{icon} {title:.15}...",

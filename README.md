@@ -2,9 +2,9 @@
 
 * GTK Theme: https://github.com/nboughton/NordSur (use sharp branch for Sway to disable rounded window borders)
 * waybar taskbar icon theme: https://github.com/nboughton/DarK-fork
-* wallpaper: https://i.imgur.com/3RCodwU.jpg
+* wallpaper: https://i.imgur.com/2fcDiJA.png
 
-Most people probably want to disable the custom/aurcheck module in the waybar config as it's pretty specific to me for letting me know when AUR NPM packages that I maintain are out of date.
+Most people probably want to disable the custom/auroch module in the waybar config as it's pretty specific to me for letting me know when AUR NPM packages that I maintain are out of date.
 
 If you want to use the custom/pacman module you'll need Go and Yay installed. You'll also need to do the following:
 
