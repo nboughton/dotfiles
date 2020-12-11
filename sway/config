@@ -53,7 +53,11 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 # minimal blue sunset
 #output * bg /home/nick/Pictures/8895blnusy261.jpg fill
 # stalenhag, quiet big lad
-output * bg /home/nick/Pictures/oluit9ej7iu51.png fill
+#output * bg /home/nick/Pictures/oluit9ej7iu51.png fill
+# A beautiful view
+#output * bg /home/nick/Pictures/7fr8hgzkaf461.jpg fill
+# Lake by night
+output * bg /home/nick/Pictures/8dbo97lzo5461.jpg fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -94,7 +98,7 @@ for_window [app_id=catfish] floating enable
 for_window [app_id=zoom] floating enable
 for_window [app_id=pcmanfm] floating enable
 for_window [app_id=pavucontrol] floating enable
-for_window [app_id=ristretto] floating enable
+for_window [app_id=eog] floating enable
 for_window [app_id=ranger] floating enable
 for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
