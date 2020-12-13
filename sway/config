@@ -20,44 +20,7 @@ set $term alacritty
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
 ### Output configuration
-# Arch logo
-#output * bg /home/nick/Pictures/VEU9Nr4.png fill
-# Starry Mountain
-#output * bg /home/nick/Pictures/Starry\ Sky\ wallpapers\ Snowy\ Mountain\ Starry\ Sky\ stock\ photos.jpg fill
-# Sad robot rainy day
-#output * bg /home/nick/Pictures/Rainy-Day-Wallpaper.jpg fill
-# Mountain symmetry
-#output * bg /home/nick/Pictures/803094-1.jpg fill
-# Carpark robot man (Stalenhag_
-#output * bg /home/nick/Pictures/EmtJwQGXEAI99ZS.jpg fill
-# Pine cone
-#output * bg /home/nick/Pictures/tr1xr97470361.jpg fill
-# White mountains
-#output * bg /home/nick/Pictures/SBKjnxm.jpeg fill
-# Robot man at the pier
-#output * bg /home/nick/Pictures/ark_bryggan_big.jpg fill
-# Rainbow nord
-#output * bg /home/nick/Pictures/Nord_minimalism_colorful-1928527.png fill
-# Hexagon nord sky
-#output * bg /home/nick/Pictures/59bsn5hgnojy.jpg fill
-# Autumn
-#output * bg /home/nick/Pictures/Autumn-8.jpg fill
-# Snow on branches
-#output * bg /home/nick/Pictures/snow-branches.jpg fill
-# icy branches
-#output * bg /home/nick/Pictures/cb8cba93eff131b9adca42f384418dc0.jpg fill
-# autumn road
-#output * bg /home/nick/Pictures/Forests_Autumn_Roads_Trees_Foliage_Fog_557212_1920x1080.jpg fill
-# Rowboat
-#output * bg /home/nick/Pictures/eNHamv.jpg fill
-# minimal blue sunset
-#output * bg /home/nick/Pictures/8895blnusy261.jpg fill
-# stalenhag, quiet big lad
-#output * bg /home/nick/Pictures/oluit9ej7iu51.png fill
-# A beautiful view
-#output * bg /home/nick/Pictures/7fr8hgzkaf461.jpg fill
-# Lake by night
-output * bg /home/nick/Pictures/8dbo97lzo5461.jpg fill
+output * bg /home/nick/Pictures/Wallpapers/tu6cqny3ffu31.jpg fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -88,6 +51,7 @@ exec swayidle -w \
 ### Autostart
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
+exec autotiling
 exec nm-applet --indicator
 exec gammastep-indicator
 exec insync start
@@ -102,7 +66,9 @@ for_window [app_id=eog] floating enable
 for_window [app_id=ranger] floating enable
 for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
+for_window [app_id=Alacritty] floating enable
 for_window [app_id=".*"] border pixel
+#for_window [app_id=".*"] floating enable
 
 ### Key bindings
 #

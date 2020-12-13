@@ -8,6 +8,7 @@
 	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
+		"idle_inhibitor",
 		"sway/mode",
 	],
 	"modules-center": [
@@ -43,6 +44,13 @@
 			"urgent": "",
 			"focused": "",
 			"default": ""
+		}
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
 		}
 	},
 	"sway/mode": {
@@ -120,7 +128,7 @@
 	"custom/pacman": {
 		"format": " {}",
 		"return-type": "json",
-		"interval": 5, 
+		"interval": 5,
 		"exec": "cat ~/tmp/updates.json",
 		"exec-if": "exit 0",
 		"on-click": "alacritty --class aptus-upgrade -e ~/.config/waybar/modules/updates/update-system.sh; systemctl --user start updates.service",
@@ -150,7 +158,7 @@
 	"margin-right": 5,
 	"margin-left": 5,
 	"margin-bottom": 5,
-	"modules-left": ["custom/weather", "idle_inhibitor", "wlr/taskbar"],
+	"modules-left": ["custom/weather", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["custom/spotify"],
 	"wlr/taskbar": {
@@ -166,13 +174,6 @@
 		"format": "{:.20}",
 		"exec": "~/.config/waybar/modules/weather.sh",
 		"interval": 3600
-	},
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "",
-			"deactivated": ""
-		}
 	},
 	"custom/spotify": {
 		"interval": 1,
