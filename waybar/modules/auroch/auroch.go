@@ -185,7 +185,9 @@ func (p *pkg) getNpmVer() error {
 	// Copy the keys into an array and sort it, last item should be most recent
 	v := []string{}
 	for key := range n.Versions {
-		v = append(v, key)
+		if !regexp.MustCompile(`(alpha|beta)`).MatchString(key) {
+			v = append(v, key)
+		}
 	}
 
 	sort.Strings(v)
