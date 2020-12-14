@@ -20,7 +20,9 @@ set $term alacritty
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
 ### Output configuration
-output * bg /home/nick/Pictures/Wallpapers/tu6cqny3ffu31.jpg fill
+#output * bg /home/nick/Pictures/Wallpapers/tu6cqny3ffu31.jpg fill
+#output * bg /home/nick/Pictures/Wallpapers/cf863cb7189443c5782ae6b0519d863f.jpg fill
+output * bg /home/nick/Pictures/Wallpapers/wl0fdl62lik41.jpg fill
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface

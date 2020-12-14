@@ -10,7 +10,7 @@ import (
 	"github.com/nboughton/dotfiles/waybar/modules/gobar"
 )
 
-var outfile = fmt.Sprintf("%s/tmp/updates.json", os.Getenv(("HOME")))
+var outfile = fmt.Sprintf("%s/tmp/updates.json", os.Getenv("HOME"))
 
 func main() {
 	m := gobar.Module{

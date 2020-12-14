@@ -5,11 +5,11 @@
 
 window#waybar {
 	color: #d8dee9;
-	background: rgba(76, 86, 106, 0.75);
+	background: linear-gradient(90deg, rgba(180, 142, 173, 0.5) 0%, rgba(94,129,172, 0.5) 50%, rgba(163, 190, 140, 0.5) 100%);
 	border-radius: 7px;
 }
 
-#custom-pacman {
+#custom-updates {
 	font-family: "Symbols Nerd Font";
 }
 
@@ -26,7 +26,7 @@ window#waybar {
 #battery,
 #backlight,
 #disk,
-#custom-pacman,
+#custom-updates,
 #custom-auroch,
 #custom-swap,
 #custom-spotify,
@@ -59,24 +59,18 @@ window#waybar {
 	border-bottom-left-radius: 7px;
 }
 #workspaces button.focused {
-	background: rgba(94,129,172, 0.7);
+	background: rgba(180, 142, 173, 0.5);
 }
 
 #idle_inhibitor {
 	margin: 0px;
 }
-#idle_inhibitor.activated {
-	background: rgba(163, 190, 140, 0.6);
-}
-#idle_inhibitor.deactivated {
-	background: rgba(208, 135, 112, 0.6);
-}
 
 #mode {
-	background: rgba(191, 97, 106, 0.7);
+	background: rgba(191, 97, 106, 0.5);
 }
 
-/* TOP BAR (right) */
+/* TOP BAR (right/center) */
 #disk.1,
 #memory {
 	padding-right: 3px;
@@ -86,27 +80,30 @@ window#waybar {
 	padding-left: 3px;
 }
 
-#custom-pacman.no-updates,
+/*
+#custom-updates.no-updates,
 #custom-auroch.no-updates {
 	background: rgba(163, 190, 140, 0.7);
 }
-#custom-pacman.updates,
+*/
+#custom-updates.updates,
 #custom-auroch.updates {
-	background: rgba(180, 142, 173, 0.7);
+	background: rgba(180, 142, 173, 0.5);
 }
-#custom-pacman.error {
-	background: rgba(191, 97, 106, 0.7);
+#custom-updates.error,
+#custom-auroch.error {
+	background: rgba(191, 97, 106, 0.5);
 }
 
 #tray {
-	background: rgba(94,129,172, 0.7);
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
 
 /* BOTTOM BAR (left to right)*/
 #custom-weather {
-	background: rgba(94,129,172, 0.7);
+	padding-top: 5px;
+	padding-bottom: 5px;
 	border-top-left-radius: 7px;
 	border-bottom-left-radius: 7px;
 }
@@ -122,11 +119,10 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(180, 142, 173, 0.7);
+	background: rgba(180, 142, 173, 0.5);
 }
 
 #custom-spotify {
-	background: rgba(94,129,172, 0.7);
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 }

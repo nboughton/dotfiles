@@ -25,6 +25,119 @@ const (
 
 var outfile = fmt.Sprintf("%s/tmp/auroch.json", os.Getenv("HOME"))
 
+var packages = []*pkg{
+	{
+		AurName:      "vue-cli",
+		UpstreamName: "@vue/cli",
+		UpstreamType: npm,
+	},
+	{
+		AurName:      "vue-cli-service-global",
+		UpstreamName: "@vue/cli-service-global",
+		UpstreamType: npm,
+	},
+	{
+		AurName:      "quasar-cli",
+		UpstreamName: "@quasar/cli",
+		UpstreamType: npm,
+	},
+	{
+		AurName:      "quasar-icongenie",
+		UpstreamName: "@quasar/icongenie",
+		UpstreamType: npm,
+	},
+	{
+		AurName:      "swnt",
+		UpstreamName: "nboughton/swnt",
+		UpstreamType: ghub,
+	},
+	{
+		AurName:      "myzt",
+		UpstreamName: "nboughton/myzt",
+		UpstreamType: ghub,
+	},
+	{
+		AurName:      "plymouth-theme-arch-charge-gdm",
+		UpstreamName: "nboughton/plymouth-theme-arch-charge-gdm",
+		UpstreamType: ghub,
+	},
+	{
+		AurName:      "devd",
+		UpstreamName: "cortesi/devd",
+		UpstreamType: ghub,
+	},
+}
+
+func main() {
+	var (
+		out   []string
+		class string
+		err   error
+	)
+
+	class = "no-updates"
+	for _, p := range packages {
+		if err = p.getAurVer(); err != nil {
+			class = errClass
+			break
+
+		}
+
+		if p.UpstreamType == npm {
+			if err = p.getNpmVer(); err != nil {
+				class = errClass
+				break
+			}
+		} else if p.UpstreamType == ghub {
+			if err = p.getGithubVer(); err != nil {
+				class = errClass
+				break
+			}
+		}
+
+		log.Printf("%s %s -> %s\n", p.AurName, p.AurVer, p.UpstreamVer)
+		if p.AurVer != p.UpstreamVer {
+			out = append(out, fmt.Sprintf("%s %s -> %s", p.AurName, p.AurVer, p.UpstreamVer))
+		}
+	}
+
+	n := len(out)
+
+	txt := fmt.Sprintf("%d", n)
+	if class == errClass {
+		txt = "!"
+	}
+
+	if n > 0 {
+		class = "updates"
+	}
+
+	m := gobar.Module{
+		Name:    "AUROCH",
+		Summary: "Outdated AUR Packages",
+		JSON: gobar.JSONOutput{
+			Text:       txt,
+			Alt:        txt,
+			Class:      class,
+			Tooltip:    strings.Join(out, "\n"),
+			Percentage: n,
+		},
+	}
+
+	if n > 0 {
+		log.Println("Sending DBUS Notification")
+		m.Notify(m.JSON.Tooltip, 10000)
+	}
+
+	log.Println("Writing JSON data")
+	f, err := os.Create(outfile)
+	if err != nil {
+		log.Fatalf("could not open %s for writing", outfile)
+	}
+	defer f.Close()
+	m.JSON.Write(f)
+}
+
 // Define relevant package data
 type pkg struct {
 	AurName      string `json:"aur_name,omitempty"` // Name on the AUR (i.e vue-cli)
@@ -97,117 +210,4 @@ func (p *pkg) getGithubVer() error {
 	p.UpstreamVer = regexp.MustCompile(`^v`).ReplaceAllString(rel.GetTagName(), "")
 
 	return nil
-}
-
-func main() {
-	packages := []*pkg{
-		{
-			AurName:      "vue-cli",
-			UpstreamName: "@vue/cli",
-			UpstreamType: npm,
-		},
-		{
-			AurName:      "vue-cli-service-global",
-			UpstreamName: "@vue/cli-service-global",
-			UpstreamType: npm,
-		},
-		{
-			AurName:      "quasar-cli",
-			UpstreamName: "@quasar/cli",
-			UpstreamType: npm,
-		},
-		{
-			AurName:      "quasar-icongenie",
-			UpstreamName: "@quasar/icongenie",
-			UpstreamType: npm,
-		},
-		{
-			AurName:      "swnt",
-			UpstreamName: "nboughton/swnt",
-			UpstreamType: ghub,
-		},
-		{
-			AurName:      "myzt",
-			UpstreamName: "nboughton/myzt",
-			UpstreamType: ghub,
-		},
-		{
-			AurName:      "plymouth-theme-arch-charge-gdm",
-			UpstreamName: "nboughton/plymouth-theme-arch-charge-gdm",
-			UpstreamType: ghub,
-		},
-		{
-			AurName:      "devd",
-			UpstreamName: "cortesi/devd",
-			UpstreamType: ghub,
-		},
-	}
-
-	var (
-		out   []string
-		class string
-		err   error
-	)
-
-	class = "no-updates"
-	for _, p := range packages {
-		if err = p.getAurVer(); err != nil {
-			class = errClass
-			break
-
-		}
-
-		if p.UpstreamType == npm {
-			if err = p.getNpmVer(); err != nil {
-				class = errClass
-				break
-			}
-		} else if p.UpstreamType == ghub {
-			if err = p.getGithubVer(); err != nil {
-				class = errClass
-				break
-			}
-		}
-
-		log.Printf("%s %s -> %s\n", p.AurName, p.AurVer, p.UpstreamVer)
-		if p.AurVer != p.UpstreamVer {
-			out = append(out, fmt.Sprintf("%s %s -> %s", p.AurName, p.AurVer, p.UpstreamVer))
-		}
-	}
-
-	n := len(out)
-
-	txt := fmt.Sprintf("%d", n)
-	if class == errClass {
-		txt = "!"
-	}
-
-	if n > 0 {
-		class = "updates"
-	}
-
-	m := gobar.Module{
-		Name:    "AUROCH",
-		Summary: "Outdated AUR Packages",
-		JSON: gobar.JSONOutput{
-			Text:       txt,
-			Alt:        txt,
-			Class:      class,
-			Tooltip:    strings.Join(out, "\n"),
-			Percentage: n,
-		},
-	}
-
-	if n > 0 {
-		log.Println("Sending DBUS Notification")
-		m.Notify(m.JSON.Tooltip, 10000)
-	}
-
-	log.Println("Writing JSON data")
-	f, err := os.Create(outfile)
-	if err != nil {
-		log.Fatalf("could not open %s for writing", outfile)
-	}
-	defer f.Close()
-	m.JSON.Write(f)
 }

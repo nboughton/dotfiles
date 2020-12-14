@@ -8,27 +8,26 @@
 	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
-		"idle_inhibitor",
-		"sway/mode",
+		"sway/mode"
 	],
 	"modules-center": [
-		"clock"
-	],
-	"modules-right": [
 		"cpu",
 		"custom/separator",
 		"memory",
 		"custom/swap",
 		"custom/separator",
+		"clock",
+		"custom/separator",
 		"disk#1",
 		"disk#2",
 		"custom/separator",
+		"battery"
+	],
+	"modules-right": [
+		"idle_inhibitor",
 		"backlight",
-		"custom/separator",
-		"battery",
-		"custom/separator",
 		"pulseaudio",
-		"custom/pacman",
+		"custom/updates",
 		"custom/auroch",
 		"tray"
 	],
@@ -125,13 +124,13 @@
 		"format": "  {percentage_used:2}%",
 		"path": "/home"
 	},
-	"custom/pacman": {
+	"custom/updates": {
 		"format": " {}",
 		"return-type": "json",
 		"interval": 5,
 		"exec": "cat ~/tmp/updates.json",
 		"exec-if": "exit 0",
-		"on-click": "alacritty --class aptus-upgrade -e ~/.config/waybar/modules/updates/update-system.sh; systemctl --user start updates.service",
+		"on-click": "alacritty --class aptus-upgrade -e ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
 		"tooltip": true
 	},
 	"custom/auroch": {
