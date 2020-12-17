@@ -22,7 +22,9 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 ### Output configuration
 #output * bg /home/nick/Pictures/Wallpapers/tu6cqny3ffu31.jpg fill
 #output * bg /home/nick/Pictures/Wallpapers/cf863cb7189443c5782ae6b0519d863f.jpg fill
-output * bg /home/nick/Pictures/Wallpapers/wl0fdl62lik41.jpg fill
+#output * bg /home/nick/Pictures/Wallpapers/75wp704qzj561.jpg fill
+output * bg /home/nick/Pictures/Wallpapers/803094-1.jpg fill
+
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -69,6 +71,7 @@ for_window [app_id=ranger] floating enable
 for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 for_window [app_id=Alacritty] floating enable
+for_window [app_id=foot] floating enable
 for_window [app_id=".*"] border pixel
 #for_window [app_id=".*"] floating enable
 
