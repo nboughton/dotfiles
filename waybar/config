@@ -8,7 +8,8 @@
 	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
-		"sway/mode"
+		"sway/mode",
+		"idle_inhibitor"
 	],
 	"modules-center": [
 		"cpu",
@@ -24,11 +25,10 @@
 		"battery"
 	],
 	"modules-right": [
-		"idle_inhibitor",
-		"backlight",
-		"pulseaudio",
 		"custom/updates",
 		"custom/auroch",
+		"backlight",
+		"pulseaudio",
 		"tray"
 	],
 	"sway/workspaces": {
@@ -170,7 +170,7 @@
 		"on-right-click": "minimize"
 	},
 	"custom/weather": {
-		"format": "{:.20}",
+		"format": "{}",
 		"exec": "~/.config/waybar/modules/weather.sh",
 		"interval": 3600
 	},

@@ -14,7 +14,7 @@ input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
 set $mod Mod4
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
@@ -34,8 +34,8 @@ exec_always {
     gsettings set $gnome-schema document-font-name 'Roboto 10'
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Bold 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
-    gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg -e
+    gsettings set org.gnome.desktop.default-applications.terminal exec $term
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 }
 
 
