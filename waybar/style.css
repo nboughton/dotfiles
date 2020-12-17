@@ -5,9 +5,9 @@
 
 window#waybar {
 	color: #d8dee9;
-	/*background: linear-gradient(90deg, rgba(180, 142, 173, 0.7) 0%, rgba(94,129,172, 0.7) 50%, rgba(163, 190, 140, 0.7) 100%);*/
-	background: rgba(76,86,106,0);
-	border-radius: 7px;
+	/*background: rgba(76,86,106,0.7);*/
+	background: none;
+	border-radius: 4px;
 }
 
 #custom-updates {
@@ -55,16 +55,11 @@ window#waybar {
 }
 #workspaces button {
 	padding: 0px 5px 0px 5px;
-	/*border-radius: 0px;*/
 }
-/*
-#workspaces button#sway-workspace-1 {
-	border-top-left-radius: 7px;
-	border-bottom-left-radius: 7px;
-}
-*/
 #workspaces button.focused {
-	background: rgba(180, 142, 173, 0.7);
+	border-radius: 4px;
+	/*background: rgba(180, 142, 173, 0.7);*/
+	background: rgba(94,129,172,0.7);
 }
 
 #idle_inhibitor {
@@ -114,38 +109,29 @@ window#waybar {
 	border-bottom-left-radius: 0px;
 }
 
-/*
-#tray {
-	border-top-right-radius: 7px;
-	border-bottom-right-radius: 7px;
-}
-*/
-
 /* BOTTOM BAR (left to right)*/
 #custom-weather {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	/*border-top-left-radius: 7px;
-	border-bottom-left-radius: 7px;*/
 }
 
 #taskbar {
 	padding-left: 0px;
 }
 #taskbar button {
-	/*border-radius: 0px;*/
+	border-radius: 4px;
 	padding-right: 3px;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(180, 142, 173, 0.7);
+	/*background: rgba(180, 142, 173, 0.7);*/
+	background: rgba(94,129,172,0.7);
 }
 
 /*
 #custom-spotify {
-	border-top-right-radius: 7px;
-	border-bottom-right-radius: 7px;
+	background: rgba(94,129,172,0.7);
 }
 */
