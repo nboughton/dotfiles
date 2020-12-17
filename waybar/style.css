@@ -32,6 +32,8 @@ window#waybar {
 #custom-swap,
 #custom-spotify,
 #custom-separator,
+#custom-shutdown,
+#custom-reboot,
 #taskbar,
 #tray {
 	padding: 0px 7px 0px 7px;
@@ -44,7 +46,7 @@ window#waybar {
 	color: #d8dee9;
 	background: none;
 	padding: 0px;
-	opacity: 0.3;
+	opacity: 0;
 }
 
 /* TOP BAR (left)*/
@@ -81,6 +83,10 @@ window#waybar {
 #disk.2,
 #custom-swap {
 	padding-left: 3px;
+}
+
+#clock {
+	background: rgba(94,129,172,0.7);
 }
 
 #custom-updates.checking,

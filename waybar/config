@@ -8,8 +8,10 @@
 	"margin-left": 5,
 	"modules-left": [
 		"sway/workspaces",
-		"sway/mode",
-		"idle_inhibitor"
+		"custom/separator",
+		"idle_inhibitor",
+		"custom/separator",
+		"sway/mode"
 	],
 	"modules-center": [
 		"cpu",
@@ -25,11 +27,17 @@
 		"battery"
 	],
 	"modules-right": [
+		"tray",
+		"custom/separator",
 		"custom/updates",
 		"custom/auroch",
+		"custom/separator",
 		"backlight",
+		"custom/separator",
 		"pulseaudio",
-		"tray"
+		"custom/separator",
+		"custom/reboot",
+		"custom/shutdown"
 	],
 	"sway/workspaces": {
 		"disable-scroll": true,
@@ -147,7 +155,17 @@
 		"exec": "free -h | grep Swap | awk '{print $3}'"
 	},
 	"custom/separator": {
-		"format": "|",
+		"format": "",
+		"tooltip": false
+	},
+	"custom/shutdown": {
+		"format": "",
+		"on-click": "shutdown -h now",
+		"tooltip": false
+	},
+	"custom/reboot": {
+		"format": "",
+		"on-click": "shutdown -r now",
 		"tooltip": false
 	}
 },
