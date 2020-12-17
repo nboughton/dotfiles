@@ -83,7 +83,10 @@ window#waybar {
 	padding-left: 3px;
 }
 
-
+#custom-updates.checking,
+#custom-auroch.checking {
+	background: rgba(235,203,139,0.7);
+}
 #custom-updates.no-updates,
 #custom-auroch.no-updates {
 	background: rgba(163, 190, 140, 0.7);

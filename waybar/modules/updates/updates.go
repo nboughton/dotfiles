@@ -13,10 +13,25 @@ import (
 var outfile = fmt.Sprintf("%s/tmp/updates.json", os.Getenv("HOME"))
 
 func main() {
+	// Write temp json while checking to indicate
+	f, err := os.Create(outfile)
+	if err != nil {
+		log.Fatalf("could not open %s for writing", outfile)
+	}
+
+	t := gobar.JSONOutput{
+		Text:       "",
+		Alt:        "",
+		Tooltip:    "Checking for updates",
+		Class:      "checking",
+		Percentage: 0,
+	}
+	t.Write(f)
+	f.Close()
+
 	m := gobar.Module{
 		Name:    "PACMAN UPDATES",
 		Summary: "Updates Available",
-		JSON:    gobar.JSONOutput{},
 	}
 
 	log.Println("Checking Arch repos")
@@ -56,7 +71,7 @@ func main() {
 	}
 
 	log.Println("Writing JSON file")
-	f, err := os.Create(outfile)
+	f, err = os.Create(outfile)
 	if err != nil {
 		log.Println(err)
 		return

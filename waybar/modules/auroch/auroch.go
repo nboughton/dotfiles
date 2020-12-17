@@ -69,10 +69,25 @@ var packages = []*pkg{
 }
 
 func main() {
+	// Write temp json while checking to indicate
+	f, err := os.Create(outfile)
+	if err != nil {
+		log.Fatalf("could not open %s for writing", outfile)
+	}
+
+	t := gobar.JSONOutput{
+		Text:       "",
+		Alt:        "",
+		Tooltip:    "Checking for updates",
+		Class:      "checking",
+		Percentage: 0,
+	}
+	t.Write(f)
+	f.Close()
+
 	var (
 		out   []string
 		class string
-		err   error
 	)
 
 	class = "no-updates"
@@ -130,7 +145,7 @@ func main() {
 	}
 
 	log.Println("Writing JSON data")
-	f, err := os.Create(outfile)
+	f, err = os.Create(outfile)
 	if err != nil {
 		log.Fatalf("could not open %s for writing", outfile)
 	}
