@@ -137,7 +137,7 @@
 		"return-type": "json",
 		"interval": 5,
 		"exec": "cat ~/tmp/updates.json",
-		"exec-if": "exit 0",
+		"exec-if": "file  ~/tmp/updates.json",
 		"on-click": "alacritty --class aptus-upgrade -e ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
 		"tooltip": true
 	},
@@ -145,6 +145,7 @@
 		"format": "  {}",
 		"return-type": "json",
 		"exec": "cat ~/tmp/auroch.json",
+		"exec-if": "file  ~/tmp/auroch.json",
 		"on-click": "systemctl --user start auroch.service",
 		"interval": 5,
 		"tooltip": true
