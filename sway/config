@@ -76,9 +76,10 @@ for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 for_window [app_id=Alacritty] floating enable
 for_window [app_id=foot] floating enable
-for_window [app_id=".*"] border pixel
+for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
 #for_window [app_id=".*"] floating enable
+for_window [app_id=".*"] border pixel 4
 
 ### Key bindings
 #
@@ -255,7 +256,7 @@ smart_gaps off
 #
 # Titlebars
 #
-default_border pixel 2
+default_border pixel 4
 default_floating_border normal
 hide_edge_borders smart
 titlebar_padding 5 2

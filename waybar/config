@@ -160,12 +160,12 @@
 	},
 	"custom/shutdown": {
 		"format": "",
-		"on-click": "shutdown -h now",
+		"on-click": "~/.config/waybar/modules/shutdown.sh",
 		"tooltip": false
 	},
 	"custom/reboot": {
 		"format": "",
-		"on-click": "shutdown -r now",
+		"on-click": "~/.config/waybar/modules/reboot.sh",
 		"tooltip": false
 	}
 },
