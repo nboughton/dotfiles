@@ -4,7 +4,7 @@
 * waybar taskbar icon theme: https://github.com/nboughton/DarK-fork
 * wallpaper: https://i.imgur.com/2fcDiJA.png
 
-Most people probably want to disable the custom/auroch module in the waybar config as it's pretty specific to me for letting me know when AUR NPM packages that I maintain are out of date.
+Most people probably want to disable the custom/auroch module in the waybar config as it's pretty specific to me for letting me know when AUR packages that I maintain are out of date.
 
 If you want to use the custom/pacman module you'll need Go and Yay installed. You'll also need to do the following:
 
@@ -12,6 +12,8 @@ If you want to use the custom/pacman module you'll need Go and Yay installed. Yo
 * Symlink the updates.timer and updates.service files from waybar/modules/updates/ into ~/.config/systemd/user
 * Run ````systemctl --user daemon-reload````
 * Run ````systemctl --user enable updates.timer````
+
+The reboot/shutdown buttons require Zenity to provide a confirmation dialog.
 
 ## Screenshot
 
