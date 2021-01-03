@@ -179,19 +179,19 @@
 	"modules-left": ["custom/weather", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["custom/spotify"],
-	"wlr/taskbar": {
-		"all-outputs": false,
-		"format": "{icon} {title:.15}...",
-		"icon-theme": "DarK-svg",
-		"icon-size": 12,
-		"on-click": "activate",
-		"on-middle-click": "close",
-		"on-right-click": "minimize"
-	},
 	"custom/weather": {
 		"format": "{}",
 		"exec": "~/.config/waybar/modules/weather.sh",
 		"interval": 3600
+	},
+	"wlr/taskbar": {
+		"all-outputs": false,
+		"format": "{icon} {title:.15}...",
+		"icon-theme": "DarK-svg",
+		"icon-size": 10,
+		"on-click": "activate",
+		"on-middle-click": "close",
+		"on-right-click": "minimize"
 	},
 	"custom/spotify": {
 		"interval": 1,

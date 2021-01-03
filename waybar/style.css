@@ -116,7 +116,7 @@ window#waybar {
 }
 
 #taskbar {
-	padding-left: 0px;
+	padding: 0px;
 }
 #taskbar button {
 	border-radius: 4px;
@@ -126,7 +126,6 @@ window#waybar {
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	/*background: rgba(180, 142, 173, 0.7);*/
 	background: rgba(94,129,172,0.7);
 }
 
