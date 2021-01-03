@@ -19,17 +19,6 @@ set $term foot
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
-### Output configuration
-#output * bg /home/nick/Pictures/Wallpapers/tu6cqny3ffu31.jpg fill
-#output * bg /home/nick/Pictures/Wallpapers/cf863cb7189443c5782ae6b0519d863f.jpg fill
-#output * bg /home/nick/Pictures/Wallpapers/nordiverse fill
-#output * bg /home/nick/Pictures/Wallpapers/planet-nord.png fill
-#output * bg /home/nick/Pictures/Wallpapers/DKHLXmG.png fill
-#output * bg /home/nick/Pictures/Wallpapers/wild.png fill
-#output * bg /home/nick/Pictures/Wallpapers/moon.png fill
-output * bg /home/nick/Pictures/Wallpapers/oluit9ej7iu51.png fill
-
-
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -57,6 +46,7 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Autostart
+exec ~/.azotebg
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec autotiling
