@@ -1,13 +1,15 @@
 // -*- mode: json -*-
-[{
+{
 	//"output": "eDP-1",
 	"layer": "bottom",
 	"position": "top",
-	"margin-top": 5,
-	"margin-right": 5,
-	"margin-left": 5,
+	"margin-top": 10,
+	"margin-right": 10,
+	"margin-left": 10,
 	"modules-left": [
 		"sway/workspaces",
+		"custom/separator",
+		"wlr/taskbar",
 		"custom/separator",
 		"idle_inhibitor",
 		"custom/separator",
@@ -28,6 +30,8 @@
 	],
 	"modules-right": [
 		"tray",
+		"custom/separator",
+		"custom/weather",
 		"custom/separator",
 		"custom/updates",
 		"custom/auroch",
@@ -53,6 +57,15 @@
 			"default": ""
 		}
 	},
+	"wlr/taskbar": {
+		"all-outputs": false,
+		"format": "{icon}",
+		"icon-theme": "DarK-svg",
+		"icon-size": 16,
+		"on-click": "activate",
+		"on-middle-click": "close",
+		"on-right-click": "minimize"
+	},
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
@@ -64,7 +77,7 @@
 		"format": "{}"
 	},
 	"tray": {
-		"icon-size": 12,
+		"icon-size": 14,
 		"spacing": 10
 	},
 	"backlight": {
@@ -168,30 +181,11 @@
 		"format": "",
 		"on-click": "~/.config/waybar/modules/reboot.sh",
 		"tooltip": false
-	}
-},
-{
-	"layer": "bottom",
-	"position": "bottom",
-	"margin-right": 5,
-	"margin-left": 5,
-	"margin-bottom": 5,
-	"modules-left": ["custom/weather", "wlr/taskbar"],
-	"modules-center": [],
-	"modules-right": ["custom/spotify"],
+	},
 	"custom/weather": {
 		"format": "{}",
 		"exec": "~/.config/waybar/modules/weather.sh",
 		"interval": 3600
-	},
-	"wlr/taskbar": {
-		"all-outputs": false,
-		"format": "{icon} {title:.15}...",
-		"icon-theme": "DarK-svg",
-		"icon-size": 10,
-		"on-click": "activate",
-		"on-middle-click": "close",
-		"on-right-click": "minimize"
 	},
 	"custom/spotify": {
 		"interval": 1,
@@ -200,4 +194,14 @@
 		"exec-if": "pgrep spotify",
 		"escape": true
 	}
-}]
+}
+//{
+//	"layer": "bottom",
+//	"position": "bottom",
+//	"margin-right": 5,
+//	"margin-left": 5,
+//	"margin-bottom": 5,
+//	"modules-left": ["custom/weather"],
+//	"modules-center": [],
+//	"modules-right": ["custom/spotify"],
+//}

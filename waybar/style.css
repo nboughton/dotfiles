@@ -5,9 +5,9 @@
 
 window#waybar {
 	color: #d8dee9;
-	/*background: rgba(76,86,106,0.7);*/
-	background: none;
-	border-radius: 4px;
+	background: #2e3440;
+	border-radius: 16px;
+	border: 2px solid #5e81ac;
 }
 
 #custom-updates {
@@ -36,101 +36,92 @@ window#waybar {
 #custom-reboot,
 #taskbar,
 #tray {
-	padding: 0px 7px 0px 7px;
+	padding: 0px 10px 0px 10px;
+	margin: 5px 0px 5px 0px;
 	text-shadow: 1px 1px 1px #2e3440;
-	border-radius: 4px;
+	/*border: 2px solid #2e3440;*/
+	border-radius: 10px;
+	background: #4c566a;
 }
 
 /* Separator */
 #custom-separator {
-	color: #d8dee9;
-	background: none;
-	padding: 0px;
+	background: #4c566a;
 	opacity: 0;
+	padding: 0px;
 }
 
 /* TOP BAR (left)*/
 #workspaces {
+	margin-left: 5px;
 	padding: 0px;
 }
 #workspaces button {
 	padding: 0px 5px 0px 5px;
+	border-radius: 10px;
 }
 #workspaces button.focused {
-	border-radius: 4px;
-	/*background: rgba(180, 142, 173, 0.7);*/
-	background: rgba(94,129,172,0.7);
-}
-
-#idle_inhibitor {
-	margin: 0px;
+	background: rgba(94, 129, 172, 0.8)
 }
 
 #mode {
-	background: rgba(191, 97, 106, 0.7);
+	background: rgba(191, 97, 106, 0.8)
 }
 
 /* TOP BAR (right/center) */
 #disk.1,
-#memory {
-	padding-right: 3px;
+#memory,
+#custom-reboot,
+#custom-updates {
+	padding-right: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-right: 0px;
 }
 #disk.2,
-#custom-swap {
-	padding-left: 3px;
+#custom-swap,
+#custom-shutdown,
+#custom-auroch {
+	padding-left: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-left: 0px;
+}
+
+#custom-shutdown {
+	margin-right: 5px;
 }
 
 #clock {
-	background: rgba(94,129,172,0.7);
+	background: rgba(94, 129, 172, 0.8)
 }
 
 #custom-updates.checking,
 #custom-auroch.checking {
-	background: rgba(235,203,139,0.7);
+	background: rgba(235, 203, 139, 0.8)
 }
 #custom-updates.no-updates,
 #custom-auroch.no-updates {
-	background: rgba(163, 190, 140, 0.7);
+	background: rgba(163, 190, 140, 0.8)
 }
 #custom-updates.updates,
 #custom-auroch.updates {
-	background: rgba(180, 142, 173, 0.7);
+	background: rgba(180, 142, 173, 0.8)
 }
 #custom-updates.error,
 #custom-auroch.error {
-	background: rgba(191, 97, 106, 0.7);
-}
-#custom-updates {
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-#custom-auroch {
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-}
-
-/* BOTTOM BAR (left to right)*/
-#custom-weather {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	background: rgba(191, 97, 106, 0.8)
 }
 
 #taskbar {
 	padding: 0px;
 }
 #taskbar button {
-	border-radius: 4px;
-	padding-right: 3px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	border-radius: 10px;
+	margin: 0px;
+	padding: 0px 5px 0px 5px;
 	text-shadow: 1px 1px 1px #2e3440;
 }
 #taskbar button.active {
-	background: rgba(94,129,172,0.7);
+	background: rgba(94, 129, 172, 0.8);
 }
-
-/*
-#custom-spotify {
-	background: rgba(94,129,172,0.7);
-}
-*/

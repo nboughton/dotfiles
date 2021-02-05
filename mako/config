@@ -1,7 +1,7 @@
 layer=top
 font=Roboto 11
 max-visible=5
-anchor=top-center
+anchor=top-right
 icon-path=~/.icons/DarK-svg
 
 width=400
@@ -13,7 +13,7 @@ max-icon-size=32
 
 background-color=#4c566add
 text-color=#d8dee9
-border-color=#434c5e
+border-color=#5e81ac
 
 default-timeout=10000
 ignore-timeout=1

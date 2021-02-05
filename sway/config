@@ -12,10 +12,8 @@ input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-
 # Your preferred terminal emulator
 set $term alacritty
-
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
@@ -23,14 +21,14 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Nordic-darker'
-    gsettings set $gnome-schema icon-theme 'Tela-circle-grey-dark'
+    gsettings set $gnome-schema icon-theme 'Tela-circle-black-dark'
     gsettings set $gnome-schema font-name 'Roboto 10'
     gsettings set $gnome-schema monospace-font-name 'Roboto Mono 10'
     gsettings set $gnome-schema document-font-name 'Roboto 10'
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Bold 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
 }
 
 
@@ -67,8 +65,8 @@ for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 for_window [app_id=Alacritty] floating enable
 for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
-#for_window [app_id=".*"] floating enable
-for_window [app_id=".*"] border pixel 4
+for_window [name="Firefox — Sharing Indicator"] floating enable
+for_window [app_id=".*"] border pixel 2
 
 ### Key bindings
 #
@@ -89,7 +87,7 @@ for_window [app_id=".*"] border pixel 4
     # desktop search
     bindsym $mod+c exec catfish
 
-    bindsym $mod+Ctrl+r exec alacritty --class ranger -e ranger
+    bindsym $mod+Ctrl+r exec $term --class ranger -e ranger
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -128,6 +126,7 @@ for_window [app_id=".*"] border pixel 4
     bindsym $mod+Shift+p exec grimshot save area
     bindsym $mod+Alt+p   exec grimshot save output
     bindsym $mod+Ctrl+p  exec grimshot save window
+    bindsym $mod+g       exec alacritty -e ~/bin/swayrec
 
 #
 # Moving around:
@@ -239,15 +238,15 @@ bar {
 # gaps
 #
 gaps inner 10
-gaps outer -5
 smart_gaps off
 
 #
 # Titlebars
 #
-default_border pixel 4
+default_border pixel 2
 default_floating_border normal
-hide_edge_borders smart
+hide_edge_borders none
+titlebar_border_thickness 2
 titlebar_padding 5 2
 #
 # Colors #93cee9

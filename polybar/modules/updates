@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "$(cat ~/tmp/updates.json | jq -r '.text')"

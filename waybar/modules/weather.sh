@@ -1,3 +1,3 @@
 #!/bin/bash
-report=$(curl wttr.in/?format="%C,+%t")
+report=$(curl -q wttr.in/?format="%C,+%t" 2>/dev/null)
 echo $report

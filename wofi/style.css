@@ -1,5 +1,11 @@
+#window {
+	border-radius: 20px;
+	border: 2px solid #5e81ac;
+}
+
 #outer-box {
   padding: 5px;
+  margin: 10px
 }
 
 #inner-box {

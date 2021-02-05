@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"os"
 	"regexp"
-	"sort"
 	"strings"
 
 	"github.com/google/go-github/github"
@@ -164,7 +163,9 @@ type pkg struct {
 
 // Just the bit of NPM registry info that I care about
 type npmInfo struct {
-	Versions map[string]interface{} `json:"versions,omitempty"`
+	DistTags struct {
+		Latest string `json:"latest,omitempty"`
+	} `json:"dist-tags,omitempty"`
 }
 
 // Retrieve the version of the current AUR package
@@ -197,16 +198,7 @@ func (p *pkg) getNpmVer() error {
 		return err
 	}
 
-	// Copy the keys into an array and sort it, last item should be most recent
-	v := []string{}
-	for key := range n.Versions {
-		if !regexp.MustCompile(`(alpha|beta)`).MatchString(key) {
-			v = append(v, key)
-		}
-	}
-
-	sort.Strings(v)
-	p.UpstreamVer = v[len(v)-1]
+	p.UpstreamVer = n.DistTags.Latest
 
 	return nil
 }

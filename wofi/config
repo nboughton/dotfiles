@@ -1,4 +1,5 @@
 show=drun
+prompt=
 term=alacritty
 layer=overlay
 always_parse_args=true
@@ -6,3 +7,4 @@ allow_images=true
 image_size=16
 width=25%
 insensitive=true
+key_expand=Shift_L-Right
