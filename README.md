@@ -3,6 +3,7 @@
 * GTK Theme: Nordic-darker
 * waybar taskbar icon theme: https://github.com/nboughton/DarK-fork (use grep+sed to replace colour ids in the SVG src and then rebuild the SVG icons to get colours)
 * wallpaper: https://github.com/dxnst/nord-backgrounds
+* Font: Kanit
 
 Most people probably want to disable the custom/auroch module in the waybar config as it's pretty specific to me for letting me know when AUR packages that I maintain are out of date.
 
