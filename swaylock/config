@@ -1,8 +1,8 @@
-image=/home/nick/Pictures/Wallpapers/7duujinh1ca61.jpg
+image=/home/nick/build/nord-backgrounds/avogadr.io/1920x1080/caffeine.png
 font=Kanit Medium
 indicator-radius=100
 indicator-thickness=20
-indicator-idle-visible
+#indicator-idle-visible
 
 inside-color=4c566aee
 inside-clear-color=b48eadee
