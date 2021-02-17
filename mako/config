@@ -1,5 +1,5 @@
 layer=top
-font=Roboto 11
+font=Kanit Regular 11
 max-visible=5
 anchor=top-right
 icon-path=~/.icons/DarK-svg
@@ -7,12 +7,12 @@ icon-path=~/.icons/DarK-svg
 width=400
 height=150
 margin=20
-border-size=2
+border-size=3
 border-radius=10
 max-icon-size=32
 
 background-color=#4c566add
-text-color=#d8dee9
+text-color=#8fbcbb
 border-color=#5e81ac
 
 default-timeout=10000

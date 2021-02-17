@@ -20,12 +20,13 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
+    #gsettings set $gnome-schema gtk-theme 'NordSur-dark'
     gsettings set $gnome-schema gtk-theme 'Nordic-darker'
     gsettings set $gnome-schema icon-theme 'Tela-circle-black-dark'
-    gsettings set $gnome-schema font-name 'Roboto 10'
-    gsettings set $gnome-schema monospace-font-name 'Roboto Mono 10'
-    gsettings set $gnome-schema document-font-name 'Roboto 10'
-    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Bold 10'
+    gsettings set $gnome-schema font-name 'Kanit Light 10'
+    gsettings set $gnome-schema monospace-font-name 'JetBrains Mono 10'
+    gsettings set $gnome-schema document-font-name 'Kanit Light 10'
+    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Kanit Light 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
     gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
@@ -65,7 +66,8 @@ for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 for_window [app_id=Alacritty] floating enable
 for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
-for_window [name="Firefox — Sharing Indicator"] floating enable
+for_window [title="Firefox — Sharing Indicator"] floating enable
+for_window [app_id=file-roller] floating enable
 for_window [app_id=".*"] border pixel 2
 
 ### Key bindings
@@ -243,6 +245,7 @@ smart_gaps off
 #
 # Titlebars
 #
+font pango:KanitMedium 10
 default_border pixel 2
 default_floating_border normal
 hide_edge_borders none
@@ -252,9 +255,9 @@ titlebar_padding 5 2
 # Colors #93cee9
 #
 # class                     border  backgr. text  indicator child_border
-    client.focused          #5e81ac #2e3440 #d8dee9 #5e81ac #5e81ac
-    client.focused_inactive #3b4252 #3b4252 #d8dee9 #4c566a #4c566a
-    client.unfocused        #434c5e #434c5e #d8dee9 #4c566a #4c566a
-    client.urgent           #bf616a #bf616a #d8dee9 #d08770 #d08770
+    client.focused          #5e81ac #2e3440 #8fbcbb #5e81ac #5e81ac
+    client.focused_inactive #3b4252 #3b4252 #5e81ac #4c566a #4c566a
+    client.unfocused        #434c5e #434c5e #5e81ac #4c566a #4c566a
+    client.urgent           #bf616a #bf616a #bf616a #d08770 #d08770
 
 include /etc/sway/config.d/*

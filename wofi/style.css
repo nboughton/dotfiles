@@ -1,6 +1,12 @@
 #window {
-	border-radius: 20px;
+	border-radius: 10px;
 	border: 2px solid #5e81ac;
+}
+
+#text {
+	color: #8fbcbb;
+	font-family: "Kanit Regular";
+	text-shadow: 1px 1px 1px #2e3440;
 }
 
 #outer-box {

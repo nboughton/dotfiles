@@ -53,3 +53,4 @@ pipewire-media-session/
 systemd/
 gedit/
 tilix/
+QtProject.conf

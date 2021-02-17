@@ -39,7 +39,7 @@ font-2 = siji:pixelsize=10;2
 
 modules-left = i3 xwindow
 modules-center = cpu memory swap date root_storage home_storage battery
-modules-right = updates my-updates weather backlight-acpi pulseaudio powermenu
+modules-right = covid updates my-updates backlight-acpi pulseaudio powermenu
 
 tray-position = right
 tray-padding = 2
@@ -62,6 +62,11 @@ exec-if = file ~/tmp/auroch.json
 interval = 5
 click-left = systemctl --user start auroch.service
 label = " %output%"
+
+[module/covid]
+type = custom/script
+exec = ~/.config/polybar/modules/covid
+interval = 3600
 
 [module/weather]
 type = custom/script

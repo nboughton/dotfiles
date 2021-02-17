@@ -1,0 +1,2 @@
+#!/bin/bash
+~/.config/waybar/modules/covid/covid-checker ltla E07000012 | jq -jr '[.class, .text] | join(" ")' | sed -e 's/DOWN//' | sed -e 's/UP//' 
