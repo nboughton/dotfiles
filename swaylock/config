@@ -3,6 +3,7 @@ font=Kanit Medium
 indicator-radius=100
 indicator-thickness=20
 #indicator-idle-visible
+#no-unlock-indicator
 
 inside-color=4c566aee
 inside-clear-color=b48eadee
@@ -24,3 +25,11 @@ text-clear-color=2e3440ee
 text-ver-color=2e3440ee
 text-wrong-color=2e3440ee
 
+# Swaylock Effects options
+fade-in=1
+grace=5
+indicator
+clock
+screenshots
+#effect-pixelate=5
+effect-blur=5x10

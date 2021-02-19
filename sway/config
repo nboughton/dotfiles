@@ -21,8 +21,9 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
     #gsettings set $gnome-schema gtk-theme 'NordSur-dark'
-    gsettings set $gnome-schema gtk-theme 'Nordic-darker'
-    gsettings set $gnome-schema icon-theme 'Tela-circle-black-dark'
+    gsettings set $gnome-schema gtk-theme 'oomox-Nord'
+    #gsettings set $gnome-schema icon-theme 'oomox-Nord'
+    gsettings set $gnome-schema icon-theme 'DarK-lb'
     gsettings set $gnome-schema font-name 'Kanit Light 10'
     gsettings set $gnome-schema monospace-font-name 'JetBrains Mono 10'
     gsettings set $gnome-schema document-font-name 'Kanit Light 10'

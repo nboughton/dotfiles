@@ -101,7 +101,8 @@ window#waybar.top {
 }
 #workspaces button {
 	color: @lightblue;
-	padding: 1px 5px 0px 7px;
+	margin: 0;
+	padding: 1px 5px 0px 5px;
 	border-radius: 6px;
 }
 #workspaces button.focused {
@@ -179,13 +180,16 @@ window#waybar.top {
 #taskbar,
 #tray,
 #window {
-	padding: 0px;
-	margin: 3px 5px 5px 5px;;
+	margin: 5px;
+	padding: 0;
+}
+#taskbar {
+	margin-top: 3px;
 }
 #taskbar button {
 	color: @lightblue;
 	border-radius: 6px;
-	padding-top: 5px;
+	padding: 5px 2px 0px 2px;
 }
 #taskbar button.active {
 	background: @nord3;
