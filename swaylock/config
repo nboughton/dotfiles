@@ -7,7 +7,7 @@ indicator-thickness=20
 
 inside-color=4c566aee
 inside-clear-color=b48eadee
-inside-ver-color=a3be8cee
+inside-ver-color=8fbcbbee
 inside-wrong-color=bf616aee
 line-uses-inside
 
@@ -16,7 +16,7 @@ layout-border-color=434c5eee
 
 ring-color=8fbcbbee
 ring-clear-color=ebcb8bee
-ring-ver-color=a3be8cee
+ring-ver-color=8fbcbbee
 ring-wrong-color=bf616aee
 separator-color=5e81acee
 
@@ -26,6 +26,8 @@ text-ver-color=2e3440ee
 text-wrong-color=2e3440ee
 
 # Swaylock Effects options
+timestr=%H:%M
+datestr=%a %d %b
 fade-in=1
 grace=5
 indicator

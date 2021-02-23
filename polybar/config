@@ -1,8 +1,8 @@
 [colors]
 background = #2e3440
 background-alt = #3b4252
-foreground = #d8dee9
-foreground-alt = #e5e9f0
+foreground = #8fbcbb
+foreground-alt = #88c0d0
 primary = #5e81ac
 secondary = #81a1c1
 alert = #bf616a
@@ -33,13 +33,13 @@ padding-right = 2
 module-margin-left = 3
 module-margin-right = 3
 
-font-0 = roboto:fontformat=truetype:size=8:antialias=true;2
+font-0 = kanitMedium:fontformat=truetype:size=8:antialias=true;2
 font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
 font-2 = siji:pixelsize=10;2
 
 modules-left = i3 xwindow
 modules-center = cpu memory swap date root_storage home_storage battery
-modules-right = covid updates my-updates backlight-acpi pulseaudio powermenu
+modules-right = covid weather updates my-updates backlight-acpi pulseaudio powermenu
 
 tray-position = right
 tray-padding = 2

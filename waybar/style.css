@@ -56,10 +56,6 @@ window#waybar.top {
 	border-bottom-left-radius: 0px;
 }
 
-/*#custom-updates {
-	font-family: "Symbols Nerd Font";
-}*/
-
 /* Base styling for modules */
 #workspaces,
 #mode,
@@ -85,7 +81,6 @@ window#waybar.top {
 #tray {
 	padding: 1px 10px 0px 10px;
 	margin: 5px 0px 5px 0px;
-	/*text-shadow: 1px 1px 1px black;*/
 	border-radius: 6px;
 	background: @bgkgrey;
 }
@@ -136,18 +131,6 @@ window#waybar.top {
 	margin-right: 5px;
 }
 
-#clock {
-	color: @lightblue;
-}
-
-/*#custom-swap,
-#battery.good,
-#cpu.good,
-#disk.1.good,
-#disk.2.good,
-#memory.good {
-	background: rgba(163, 190, 140, 0.7);
-}*/
 #battery.warning,
 #cpu.warning,
 #custom-updates.checking,
@@ -157,18 +140,21 @@ window#waybar.top {
 #memory.warning {
 	color: @yellow;
 }
+
 #battery.critical,
 #cpu.critical,
-#custom-updates.error,
 #custom-auroch.error,
+#custom-covid.UP,
+#custom-updates.error,
 #disk.1.critical,
 #disk.2.critical,
 #memory.critical {
 	color: @orange;
 }
 
-#custom-updates.no-updates,
-#custom-auroch.no-updates {
+#custom-auroch.no-updates,
+#custom-covid.DOWN,
+#custom-updates.no-updates {
 	color: @green;
 }
 #custom-updates.updates,
@@ -189,7 +175,7 @@ window#waybar.top {
 #taskbar button {
 	color: @lightblue;
 	border-radius: 6px;
-	padding: 5px 2px 0px 2px;
+	padding: 5px 3px 1px 3px;
 }
 #taskbar button.active {
 	background: @nord3;
@@ -200,10 +186,3 @@ window#waybar.top {
 	padding: 5px 0px 5px 0px;
 }
 
-#custom-covid.DOWN {
-	color: @green;
-}
-
-#custom-covid.UP {
-	color: @orange;
-}

@@ -30,6 +30,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id ~/.screenlayout/default.sh 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id ~/.fehbg
+exec --no-startup-id redshift-gtk
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork

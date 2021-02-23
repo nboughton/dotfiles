@@ -1,4 +1,5 @@
 * {
+    font-family: "Kanit Medium";
     selected-normal-foreground:  #e5e9f0;
     foreground:                  #d8dee9;
     normal-foreground:           @foreground;
