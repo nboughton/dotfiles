@@ -41,9 +41,10 @@
 
 window#waybar {
 	color: @lightblue;
-	background: @bgkdark;
+	/*background: @bgkdark;*/
+	background: none;
 	border-radius: 10px;
-	border: 2px solid @darkblue;
+	/*border: 2px solid @darkblue;*/
 }
 
 window#waybar.left {
@@ -55,6 +56,16 @@ window#waybar.left {
 window#waybar.top {
 	border-bottom-left-radius: 0px;
 }
+
+/*
+.modules-left,
+.modules-center,
+.modules-right {
+	background: @bgkgrey;
+	border-radius: 10px;
+	border: 2px solid @darkblue;
+}
+*/
 
 /* Base styling for modules */
 #workspaces,
@@ -83,6 +94,7 @@ window#waybar.top {
 	margin: 5px 0px 5px 0px;
 	border-radius: 6px;
 	background: @bgkgrey;
+	/*border: 2px solid @darkblue;*/
 }
 
 #custom-separator {
@@ -181,8 +193,7 @@ window#waybar.top {
 	background: @nord3;
 }
 
-#tray,
-#window {
-	padding: 5px 0px 5px 0px;
+#tray {
+	padding: 7px;
 }
 

@@ -13,7 +13,7 @@ max-icon-size=32
 
 background-color=#2e3440ee
 text-color=#8fbcbb
-border-color=#5e81ac
+border-color=#8fbcbb
 
 default-timeout=10000
 ignore-timeout=1

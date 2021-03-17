@@ -4,10 +4,10 @@
 	"layer": "bottom",
 	"position": "left",
 	"margin-top": 0,
-	"margin-left": 10,
-	"margin-bottom": 10,
+	"margin-left": 0,
+	"margin-bottom": 0,
 	"modules-left": ["wlr/taskbar"],
-	"modules-center": ["sway/window"],
+	//"modules-center": ["sway/window"],
 	"modules-right": ["tray"],
 	"wlr/taskbar": {
 		"all-outputs": false,
@@ -29,9 +29,9 @@
 {
 	"layer": "bottom",
 	"position": "top",
-	"margin-top": 10,
-	"margin-right": 10,
-	"margin-left": 10,
+	"margin-top": 0,
+	"margin-right": 0,
+	"margin-left": 0,
 	"modules-left": [
 		"sway/workspaces",
 		"custom/separator",

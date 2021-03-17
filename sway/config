@@ -69,6 +69,8 @@ for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [app_id=file-roller] floating enable
+for_window [app_id="Vivaldi-stable" title="Open Files"] floating enable
+for_window [app_id=gedit] floating enable
 for_window [app_id=".*"] border pixel 2
 
 ### Key bindings
@@ -86,9 +88,6 @@ for_window [app_id=".*"] border pixel 2
 
     # lock screen
     bindsym $mod+l exec swaylock -f
-
-    # desktop search
-    bindsym $mod+c exec catfish
 
     bindsym $mod+Ctrl+r exec $term --class ranger -e ranger
     # Drag floating windows by holding down $mod and left mouse button.
@@ -113,7 +112,7 @@ for_window [app_id=".*"] border pixel 2
     bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     #bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     # My keyboard doesn't have a micmute button
-    bindsym $mod+Alt+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+    bindsym $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
@@ -240,7 +239,9 @@ bar {
 #
 # gaps
 #
-gaps inner 10
+gaps inner 5
+#gaps right 5
+#gaps bottom 5
 smart_gaps off
 
 #
@@ -256,7 +257,7 @@ titlebar_padding 5 2
 # Colors #93cee9
 #
 # class                     border  backgr. text  indicator child_border
-    client.focused          #5e81ac #2e3440 #8fbcbb #5e81ac #5e81ac
+    client.focused          #8FBCBB #2e3440 #8fbcbb #8FBCBB #8FBCBB
     client.focused_inactive #3b4252 #3b4252 #5e81ac #4c566a #4c566a
     client.unfocused        #434c5e #434c5e #5e81ac #4c566a #4c566a
     client.urgent           #bf616a #bf616a #bf616a #d08770 #d08770
