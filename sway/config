@@ -21,7 +21,7 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
     #gsettings set $gnome-schema gtk-theme 'NordSur-dark'
-    gsettings set $gnome-schema gtk-theme 'oomox-Nord'
+    gsettings set $gnome-schema gtk-theme 'oomox-wal'
     #gsettings set $gnome-schema icon-theme 'oomox-Nord'
     gsettings set $gnome-schema icon-theme 'DarK-lb'
     gsettings set $gnome-schema font-name 'Kanit Light 10'
@@ -253,13 +253,15 @@ default_floating_border normal
 hide_edge_borders none
 titlebar_border_thickness 2
 titlebar_padding 5 2
+
 #
-# Colors #93cee9
+# Colors
 #
-# class                     border  backgr. text  indicator child_border
-    client.focused          #8FBCBB #2e3440 #8fbcbb #8FBCBB #8FBCBB
-    client.focused_inactive #3b4252 #3b4252 #5e81ac #4c566a #4c566a
-    client.unfocused        #434c5e #434c5e #5e81ac #4c566a #4c566a
-    client.urgent           #bf616a #bf616a #bf616a #d08770 #d08770
+include ~/.cache/wal/colors-sway
+# class                     border      backgr.     text        indicator child_border
+    client.focused          $color6     $background $foreground $color8   $color6
+    client.focused_inactive $color6     $background $foreground $color8   $color6
+    client.unfocused        $color3     $background $color5     $color5   $color3
+    client.urgent           $foreground $background $color6     $color5   $foreground
 
 include /etc/sway/config.d/*

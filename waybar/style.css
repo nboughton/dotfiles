@@ -1,38 +1,4 @@
-/* Polar Night */
-@define-color nord0 #2e3440;
-@define-color nord1 #3b4252;
-@define-color nord2 #434c5e;
-@define-color nord3 #4c566a;
-
-/* Snow Storm */
-@define-color nord4 #d8dee9;
-@define-color nord5 #e5e9f0;
-@define-color nord6 #eceff4;
-
-/* Frost */
-@define-color nord7 #8fbcbb;
-@define-color nord8 #88c0d0;
-@define-color nord9 #81a1c1;
-@define-color nord10 #5e81ac;
-
-/* Aurora */
-@define-color nord11 #bf616a;
-@define-color nord12 #d08770;
-@define-color nord13 #ebcb8b;
-@define-color nord14 #a3be8c;
-@define-color nord15 #b48ead;
-
-/* Simple color names */
-@define-color bgkdark   @nord0;
-@define-color bgkgrey   @nord2;
-@define-color text      @nord4;
-@define-color lightblue @nord7;
-@define-color darkblue  @nord10;
-@define-color red       @nord11;
-@define-color orange    @nord12;
-@define-color yellow    @nord13;
-@define-color green     @nord14;
-@define-color purple    @nord15;
+@import "/home/nick/.cache/wal/colors-waybar.css";
 
 * {
 	font-size: 12px;
@@ -40,11 +6,9 @@
 }
 
 window#waybar {
-	color: @lightblue;
-	/*background: @bgkdark;*/
+	color: @color8;
 	background: none;
 	border-radius: 10px;
-	/*border: 2px solid @darkblue;*/
 }
 
 window#waybar.left {
@@ -56,16 +20,6 @@ window#waybar.left {
 window#waybar.top {
 	border-bottom-left-radius: 0px;
 }
-
-/*
-.modules-left,
-.modules-center,
-.modules-right {
-	background: @bgkgrey;
-	border-radius: 10px;
-	border: 2px solid @darkblue;
-}
-*/
 
 /* Base styling for modules */
 #workspaces,
@@ -93,8 +47,7 @@ window#waybar.top {
 	padding: 1px 10px 0px 10px;
 	margin: 5px 0px 5px 0px;
 	border-radius: 6px;
-	background: @bgkgrey;
-	/*border: 2px solid @darkblue;*/
+	background: @background;
 }
 
 #custom-separator {
@@ -107,17 +60,17 @@ window#waybar.top {
 	padding: 0px;
 }
 #workspaces button {
-	color: @lightblue;
+	color: @color8;
 	margin: 0;
 	padding: 1px 5px 0px 5px;
 	border-radius: 6px;
 }
 #workspaces button.focused {
-	color: @purple;
+	color: @color14;
 }
 
 #mode {
-	color: @red;
+	color: @color14;
 }
 
 #disk.1,
@@ -144,34 +97,34 @@ window#waybar.top {
 }
 
 #battery.warning,
+#custom-covid.UP,
 #cpu.warning,
 #custom-updates.checking,
 #custom-auroch.checking,
 #disk.1.warning,
 #disk.2.warning,
 #memory.warning {
-	color: @yellow;
+	color: @color5;
 }
 
 #battery.critical,
 #cpu.critical,
 #custom-auroch.error,
-#custom-covid.UP,
 #custom-updates.error,
 #disk.1.critical,
 #disk.2.critical,
 #memory.critical {
-	color: @orange;
+	color: @color6;
 }
 
 #custom-auroch.no-updates,
 #custom-covid.DOWN,
 #custom-updates.no-updates {
-	color: @green;
+	color: @color14;
 }
 #custom-updates.updates,
 #custom-auroch.updates {
-	color: @purple;
+	color: @color5;
 }
 
 
@@ -185,12 +138,12 @@ window#waybar.top {
 	margin-top: 3px;
 }
 #taskbar button {
-	color: @lightblue;
+	color: @color8;
 	border-radius: 6px;
 	padding: 5px 3px 1px 3px;
 }
 #taskbar button.active {
-	background: @nord3;
+	background: @color2;
 }
 
 #tray {

@@ -1,12 +1,14 @@
+@import "/home/nick/.cache/wal/colors-waybar.css";
+
 #window {
 	border-radius: 10px;
-	border: 2px solid #8fbcbb;
+	border: 2px solid @color6;
 }
 
 #text {
 	color: #8fbcbb;
 	font-family: "Kanit Regular";
-	text-shadow: 1px 1px 1px #2e3440;
+	text-shadow: 1px 1px 1px @background;
 }
 
 #outer-box {

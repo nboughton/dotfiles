@@ -11,9 +11,9 @@ border-size=3
 border-radius=10
 max-icon-size=32
 
-background-color=#0f2222ee
-text-color=#a1cbd7
-border-color=#238F9E
+background-color={background}ee
+text-color={foreground}
+border-color={color6}
 
 default-timeout=10000
 ignore-timeout=1
