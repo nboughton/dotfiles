@@ -26,16 +26,6 @@ var outfile = fmt.Sprintf("%s/tmp/auroch.json", os.Getenv("HOME"))
 
 var packages = []*pkg{
 	{
-		AurName:      "vue-cli",
-		UpstreamName: "@vue/cli",
-		UpstreamType: npm,
-	},
-	{
-		AurName:      "vue-cli-service-global",
-		UpstreamName: "@vue/cli-service-global",
-		UpstreamType: npm,
-	},
-	{
 		AurName:      "quasar-cli",
 		UpstreamName: "@quasar/cli",
 		UpstreamType: npm,

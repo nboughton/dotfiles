@@ -1,12 +1,19 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
+/* Works well with the haishoku palette ripper */
+@define-color text    @color5;
+@define-color warn    @color6;
+@define-color crit    @color7;
+@define-color accent  @color1;
+@define-color hilight @color2;
+
 * {
 	font-size: 12px;
 	font-family: "Kanit Medium", "Font Awesome 5 Free";
 }
 
 window#waybar {
-	color: @color8;
+	color: @text;
 	background: none;
 	border-radius: 10px;
 }
@@ -60,17 +67,17 @@ window#waybar.top {
 	padding: 0px;
 }
 #workspaces button {
-	color: @color8;
+	color: @text;
 	margin: 0;
 	padding: 1px 5px 0px 5px;
 	border-radius: 6px;
 }
 #workspaces button.focused {
-	color: @color14;
+	color: @hilight;
 }
 
 #mode {
-	color: @color14;
+	color: @warn;
 }
 
 #disk.1,
@@ -104,7 +111,7 @@ window#waybar.top {
 #disk.1.warning,
 #disk.2.warning,
 #memory.warning {
-	color: @color5;
+	color: @warn;
 }
 
 #battery.critical,
@@ -114,17 +121,17 @@ window#waybar.top {
 #disk.1.critical,
 #disk.2.critical,
 #memory.critical {
-	color: @color6;
+	color: @crit;
 }
 
 #custom-auroch.no-updates,
 #custom-covid.DOWN,
 #custom-updates.no-updates {
-	color: @color14;
+	color: @text;
 }
 #custom-updates.updates,
 #custom-auroch.updates {
-	color: @color5;
+	color: @accent;
 }
 
 
@@ -138,12 +145,12 @@ window#waybar.top {
 	margin-top: 3px;
 }
 #taskbar button {
-	color: @color8;
+	color: @accent;
 	border-radius: 6px;
 	padding: 5px 3px 1px 3px;
 }
 #taskbar button.active {
-	background: @color2;
+	background: @accent;
 }
 
 #tray {

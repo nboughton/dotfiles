@@ -13,17 +13,15 @@ input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    #gsettings set $gnome-schema gtk-theme 'NordSur-dark'
-    gsettings set $gnome-schema gtk-theme 'oomox-wal'
-    #gsettings set $gnome-schema icon-theme 'oomox-Nord'
-    gsettings set $gnome-schema icon-theme 'DarK-lb'
+    gsettings set $gnome-schema gtk-theme 'wal'
+    gsettings set $gnome-schema icon-theme 'Zafiro'
     gsettings set $gnome-schema font-name 'Kanit Light 10'
     gsettings set $gnome-schema monospace-font-name 'JetBrains Mono 10'
     gsettings set $gnome-schema document-font-name 'Kanit Light 10'
@@ -46,7 +44,6 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Autostart
-exec ~/.azotebg
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec persway -a -o 1
@@ -56,7 +53,6 @@ exec insync start
 
 ### Window config
 for_window [app_id=aptus-upgrade] floating enable
-for_window [app_id=catfish] floating enable
 for_window [app_id=zoom] floating enable
 for_window [app_id=pcmanfm] floating enable
 for_window [app_id=pavucontrol] floating enable
@@ -65,6 +61,7 @@ for_window [app_id=ranger] floating enable
 for_window [app_id=transmission-gtk] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 for_window [app_id=Alacritty] floating enable
+for_window [app_id=kitty] floating enable
 for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
@@ -128,7 +125,7 @@ for_window [app_id=".*"] border pixel 2
     bindsym $mod+Shift+p exec grimshot save area
     bindsym $mod+Alt+p   exec grimshot save output
     bindsym $mod+Ctrl+p  exec grimshot save window
-    bindsym $mod+g       exec alacritty -e ~/bin/swayrec
+    bindsym $mod+g       exec $term ~/bin/swayrec
 
 #
 # Moving around:
@@ -255,13 +252,15 @@ titlebar_border_thickness 2
 titlebar_padding 5 2
 
 #
-# Colors
+# Colors & background
 #
 include ~/.cache/wal/colors-sway
-# class                     border      backgr.     text        indicator child_border
-    client.focused          $color6     $background $foreground $color8   $color6
-    client.focused_inactive $color6     $background $foreground $color8   $color6
-    client.unfocused        $color3     $background $color5     $color5   $color3
-    client.urgent           $foreground $background $color6     $color5   $foreground
+output "*" background $wallpaper fill
+
+# class                     border      backgr.     text        indicator   child_border
+    client.focused          $color1     $background $foreground $color1     $color1
+    client.focused_inactive $color3     $background $foreground $color3     $color3
+    client.unfocused        $color2     $background $color1     $color2     $color2
+    client.urgent           $foreground $background $color7     $foreground $foreground
 
 include /etc/sway/config.d/*
