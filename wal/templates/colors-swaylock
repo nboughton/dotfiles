@@ -1,0 +1,37 @@
+image=/home/nick/build/nord-backgrounds/avogadr.io/1920x1080/caffeine.png
+font=Kanit Medium
+indicator-radius=100
+indicator-thickness=20
+#indicator-idle-visible
+#no-unlock-indicator
+
+inside-color={background.strip}ee
+inside-clear-color={color2.strip}ee
+inside-ver-color={color6.strip}ee
+inside-wrong-color={color2.strip}ee
+line-uses-inside
+
+key-hl-color={color4.strip}ee
+layout-border-color={color4.strip}ee
+
+ring-color={color6.strip}ee
+ring-clear-color={color2.strip}ee
+ring-ver-color={color6.strip}ee
+ring-wrong-color={color2.strip}ee
+separator-color={color5.strip}ee
+
+text-color={foreground.strip}
+text-clear-color={foreground.strip}
+text-ver-color={foreground.strip}
+text-wrong-color={foreground.strip}
+
+# Swaylock Effects options
+timestr=%H:%M
+datestr=%a %d %b
+fade-in=1
+grace=5
+indicator
+clock
+screenshots
+#effect-pixelate=5
+effect-blur=5x10
