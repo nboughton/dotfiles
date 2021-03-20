@@ -1,15 +1,16 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
-/* Works well with the haishoku palette ripper */
-@define-color text    @color5;
-@define-color warn    @color6;
-@define-color crit    @color7;
+/* Usually works well with haishoku */
+@define-color text    @foreground;
+@define-color warn    @color4;
+@define-color crit    @color6;
 @define-color accent  @color1;
-@define-color hilight @color2;
+@define-color hilight @color3;
 
 * {
 	font-size: 12px;
 	font-family: "Kanit Medium", "Font Awesome 5 Free";
+	/*font-family: "Kanit Medium", "Siji";*/
 }
 
 window#waybar {
@@ -26,6 +27,15 @@ window#waybar.left {
 
 window#waybar.top {
 	border-bottom-left-radius: 0px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	background: @background;
+	padding: 0px 10px 0px 10px;
+	margin: 5px;
+	border-radius: 6px;
 }
 
 /* Base styling for modules */
@@ -51,10 +61,7 @@ window#waybar.top {
 #custom-covid,
 #taskbar,
 #tray {
-	padding: 1px 10px 0px 10px;
-	margin: 5px 0px 5px 0px;
-	border-radius: 6px;
-	background: @background;
+	padding: 0 10px 0 10px;
 }
 
 #custom-separator {
@@ -63,13 +70,13 @@ window#waybar.top {
 }
 
 #workspaces {
-	margin-left: 5px;
 	padding: 0px;
+	margin-left: 0px;
 }
 #workspaces button {
 	color: @text;
 	margin: 0;
-	padding: 1px 5px 0px 5px;
+	padding: 0px 5px 0px 5px;
 	border-radius: 6px;
 }
 #workspaces button.focused {
@@ -97,10 +104,6 @@ window#waybar.top {
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
 	border-left: 0px;
-}
-
-#custom-shutdown {
-	margin-right: 5px;
 }
 
 #battery.warning,
@@ -131,7 +134,7 @@ window#waybar.top {
 }
 #custom-updates.updates,
 #custom-auroch.updates {
-	color: @accent;
+	color: @hilight;
 }
 
 
@@ -147,7 +150,7 @@ window#waybar.top {
 #taskbar button {
 	color: @accent;
 	border-radius: 6px;
-	padding: 5px 3px 1px 3px;
+	padding: 7px 3px 0px 3px;
 }
 #taskbar button.active {
 	background: @accent;

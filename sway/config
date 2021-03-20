@@ -20,15 +20,15 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'wal'
-    gsettings set $gnome-schema icon-theme 'Zafiro'
-    gsettings set $gnome-schema font-name 'Kanit Light 10'
+    gsettings set $gnome-schema gtk-theme 'oomox-walmat'
+    gsettings set $gnome-schema icon-theme 'oomox-walmat'
+    gsettings set $gnome-schema font-name 'Roboto 10'
     gsettings set $gnome-schema monospace-font-name 'JetBrains Mono 10'
-    gsettings set $gnome-schema document-font-name 'Kanit Light 10'
-    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Kanit Light 10'
+    gsettings set $gnome-schema document-font-name 'Roboto 10'
+    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 }
 
 
@@ -258,7 +258,7 @@ include ~/.cache/wal/colors-sway
 output "*" background $wallpaper fill
 
 # class                     border      backgr.     text        indicator   child_border
-    client.focused          $color1     $background $foreground $color1     $color1
+    client.focused          $color6     $background $foreground $color6     $color6
     client.focused_inactive $color3     $background $foreground $color3     $color3
     client.unfocused        $color2     $background $color1     $color2     $color2
     client.urgent           $foreground $background $color7     $foreground $foreground
