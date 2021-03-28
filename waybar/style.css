@@ -1,41 +1,43 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
-/* Usually works well with haishoku */
 @define-color text    @foreground;
-@define-color warn    @color4;
+@define-color warn    @color5;
 @define-color crit    @color6;
-@define-color accent  @color1;
-@define-color hilight @color3;
+@define-color accent  @color4;
+@define-color hilight @color4;
 
 * {
 	font-size: 12px;
-	font-family: "Kanit Medium", "Font Awesome 5 Free";
+	font-family: "Source Code Pro Medium", "Font Awesome 5 Free";
+	/*font-weight: bold;*/
 	/*font-family: "Kanit Medium", "Siji";*/
 }
 
 window#waybar {
 	color: @text;
-	background: none;
 	border-radius: 10px;
 }
 
 window#waybar.left {
+	background: @background;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
 	border-top: none;
+	margin: 0;
 }
 
 window#waybar.top {
+	background: @background;
 	border-bottom-left-radius: 0px;
+	margin: 0;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-	background: @background;
-	padding: 0px 10px 0px 10px;
-	margin: 5px;
-	border-radius: 6px;
+	/*background: @color6;*/
+	margin: 0;
+	padding: 0;
 }
 
 /* Base styling for modules */
@@ -61,7 +63,7 @@ window#waybar.top {
 #custom-covid,
 #taskbar,
 #tray {
-	padding: 0 10px 0 10px;
+	padding: 0px 10px 0 10px;
 }
 
 #custom-separator {
@@ -141,8 +143,8 @@ window#waybar.top {
 #taskbar,
 #tray,
 #window {
-	margin: 5px;
 	padding: 0;
+	margin: 0 3px 0 3px;
 }
 #taskbar {
 	margin-top: 3px;
@@ -150,13 +152,13 @@ window#waybar.top {
 #taskbar button {
 	color: @accent;
 	border-radius: 6px;
-	padding: 7px 3px 0px 3px;
+	padding: 8px 3px 0px 3px;
 }
 #taskbar button.active {
 	background: @accent;
 }
 
 #tray {
-	padding: 7px;
+	padding: 0 3px 10px 3px;
 }
 

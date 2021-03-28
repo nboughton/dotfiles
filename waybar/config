@@ -4,10 +4,10 @@
 	"layer": "bottom",
 	"position": "left",
 	"margin-top": 0,
-	"margin-left": 0,
-	"margin-bottom": 0,
+	"margin-left": 5,
+	"margin-bottom": 5,
 	"modules-left": ["wlr/taskbar"],
-	//"modules-center": ["sway/window"],
+	"modules-center": ["sway/mode"],
 	"modules-right": ["tray"],
 	"wlr/taskbar": {
 		"all-outputs": false,
@@ -21,6 +21,10 @@
 	"sway/window": {
 		"rotate": 90
 	},
+	"sway/mode": {
+		"format": "{}",
+		"rotate": 90
+	},
 	"tray": {
 		"icon-size": 14,
 		"spacing": 10
@@ -29,30 +33,28 @@
 {
 	"layer": "bottom",
 	"position": "top",
-	"margin-top": 0,
-	"margin-right": 0,
-	"margin-left": 0,
+	"margin-top": 5,
+	"margin-right": 5,
+	"margin-left": 5,
+	"modules-center": [
+		"clock",
+	],
 	"modules-left": [
 		"sway/workspaces",
 		"custom/separator",
-		"idle_inhibitor",
-		"custom/separator",
-		"sway/mode"
-	],
-	"modules-center": [
-		"cpu",
-		"custom/separator",
-		"memory",
-		"custom/swap",
-		"custom/separator",
-		"clock",
+		"battery",
 		"custom/separator",
 		"disk#1",
 		"disk#2",
 		"custom/separator",
-		"battery"
+		"memory",
+		"custom/swap",
+		"custom/separator",
+		"cpu",
 	],
 	"modules-right": [
+		"idle_inhibitor",
+		"custom/separator",
 		"custom/covid",
 		"custom/separator",
 		"custom/weather",
@@ -64,8 +66,6 @@
 		"custom/separator",
 		"pulseaudio",
 		"custom/separator",
-		//"tray",
-		//"custom/separator",
 		"custom/reboot",
 		"custom/shutdown"
 	],
@@ -89,9 +89,6 @@
 			"activated": "",
 			"deactivated": ""
 		}
-	},
-	"sway/mode": {
-		"format": "{}"
 	},
 	"backlight": {
 		"format": "{icon} {percent}%",

@@ -66,7 +66,7 @@ for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [app_id=file-roller] floating enable
-for_window [app_id="Vivaldi-stable" title="Open Files"] floating enable
+for_window [title="Open Files"] floating enable
 for_window [app_id=gedit] floating enable
 for_window [app_id=".*"] border pixel 2
 
