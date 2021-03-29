@@ -37,10 +37,10 @@
 	"margin-right": 5,
 	"margin-left": 5,
 	"modules-center": [
-		"clock",
+		"sway/workspaces",
 	],
 	"modules-left": [
-		"sway/workspaces",
+		"clock",
 		"custom/separator",
 		"battery",
 		"custom/separator",

@@ -1,16 +1,14 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
-@define-color text    @foreground;
+@define-color text    @color3;
 @define-color warn    @color5;
 @define-color crit    @color6;
 @define-color accent  @color4;
-@define-color hilight @color4;
+@define-color hilight @color5;
 
 * {
 	font-size: 12px;
 	font-family: "Source Code Pro Medium", "Font Awesome 5 Free";
-	/*font-weight: bold;*/
-	/*font-family: "Kanit Medium", "Siji";*/
 }
 
 window#waybar {
@@ -27,6 +25,7 @@ window#waybar.left {
 }
 
 window#waybar.top {
+	padding-top: 3px;
 	background: @background;
 	border-bottom-left-radius: 0px;
 	margin: 0;
@@ -35,7 +34,6 @@ window#waybar.top {
 .modules-left,
 .modules-center,
 .modules-right {
-	/*background: @color6;*/
 	margin: 0;
 	padding: 0;
 }
@@ -56,7 +54,6 @@ window#waybar.top {
 #custom-updates,
 #custom-auroch,
 #custom-swap,
-#custom-spotify,
 #custom-separator,
 #custom-shutdown,
 #custom-reboot,
@@ -79,7 +76,7 @@ window#waybar.top {
 	color: @text;
 	margin: 0;
 	padding: 0px 5px 0px 5px;
-	border-radius: 6px;
+	border-radius: 0px;
 }
 #workspaces button.focused {
 	color: @hilight;
@@ -94,18 +91,12 @@ window#waybar.top {
 #custom-reboot,
 #custom-updates {
 	padding-right: 5px;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-right: 0px;
 }
 #disk.2,
 #custom-swap,
 #custom-shutdown,
 #custom-auroch {
 	padding-left: 5px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-left: 0px;
 }
 
 #battery.warning,
