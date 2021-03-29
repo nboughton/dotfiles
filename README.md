@@ -1,9 +1,6 @@
 # Notes:
 
-* GTK Theme: Nordic-darker
-* waybar taskbar icon theme: https://github.com/nboughton/DarK-fork (use grep+sed to replace colour ids in the SVG src and then rebuild the SVG icons to get colours)
-* wallpaper: https://github.com/dxnst/nord-backgrounds
-* Font: Kanit
+The current config is designed to source some of its color definitions and config files from ~/.cache/wal/ because I'm lazy. Make sure you've generated a colour scheme with pywal before trying to use these dotfiles as is. The config files that are generated through wal have templates that are committed here too.
 
 Most people probably want to disable the custom/auroch module in the waybar config as it's pretty specific to me for letting me know when AUR packages that I maintain are out of date.
 
