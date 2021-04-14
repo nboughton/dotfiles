@@ -182,7 +182,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 gaps inner 10
-gaps top 45
+gaps top 40
 
 #
 # Titlebars
