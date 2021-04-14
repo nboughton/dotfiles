@@ -46,7 +46,7 @@ exec swayidle -w \
 ### Autostart
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec persway -a -o 1
+exec autotiling
 exec nm-applet --indicator
 exec gammastep-indicator
 exec insync start

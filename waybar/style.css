@@ -70,7 +70,6 @@ window#waybar.top {
 
 #workspaces {
 	padding: 0px;
-	margin-left: 0px;
 }
 #workspaces button {
 	color: @text;

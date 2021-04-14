@@ -1,11 +1,11 @@
 [colors]
-background = #2e3440
-background-alt = #3b4252
-foreground = #8fbcbb
-foreground-alt = #88c0d0
-primary = #5e81ac
-secondary = #81a1c1
-alert = #bf616a
+background = ${xrdb:background:#222}
+background-alt = ${xrdb:color0:#222}
+foreground = ${xrdb:color3:#222}
+foreground-alt = ${xrdb:color3:#222}
+primary = ${xrdb:color4:#222}
+secondary = ${xrdb:color5:#222}
+alert = ${xrdb:color6:#222}
 
 [bar/mybar]
 monitor = ${env:MONITOR:}
@@ -15,7 +15,7 @@ override-redirect = true
 wm-restack = i3
 offset-x = 10
 offset-y = 10
-radius = 0.0
+radius = 10.0
 fixed-center = true
 
 background = ${colors.background}
@@ -24,21 +24,27 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = ${colors.foreground}
 
-border-size = 2
+border-size = 0
 border-color = ${colors.primary}
 
-padding-left = 0
-padding-right = 2
+padding-left = 3
+padding-right = 3
 
 module-margin-left = 3
 module-margin-right = 3
 
-font-0 = kanitMedium:fontformat=truetype:size=8:antialias=true;2
-font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
-font-2 = siji:pixelsize=10;2
+;font-0 = kanitMedium:fontformat=truetype:size=8:antialias=true;2
+;font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
+;font-2 = siji:pixelsize=10;2
 
-modules-left = i3 xwindow
-modules-center = cpu memory swap date root_storage home_storage battery
+font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
+font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
+font-3 = Font Awesome 5 Brands:pixelsize=8;2
+font-4 = Font Awesome 5 Regular:pixelsize=8;2
+font-0 = Kanit Medium:style=Regular:size=8;2
+
+modules-left = date battery root_storage home_storage memory swap cpu
+modules-center = i3
 modules-right = covid weather updates my-updates backlight-acpi pulseaudio powermenu
 
 tray-position = right
@@ -53,7 +59,7 @@ exec = ~/.config/polybar/modules/updates
 exec-if = file ~/tmp/updates.json
 interval = 5
 click-left = update-system; systemctl --user start updates.service
-label = "%output%"
+label = " %output%"
 
 [module/my-updates]
 type = custom/script
@@ -61,7 +67,7 @@ exec = ~/.config/polybar/modules/my-updates
 exec-if = file ~/tmp/auroch.json
 interval = 5
 click-left = systemctl --user start auroch.service
-label = " %output%"
+label = "  %output%"
 
 [module/covid]
 type = custom/script
@@ -76,7 +82,7 @@ interval = 3600
 [module/swap]
 type = custom/script
 exec = free -h | grep Swap | awk '{print $3}'
-label = "%output%"
+label = " %output%"
 interval = 5
 
 [module/xwindow]
@@ -86,13 +92,13 @@ label = %title:0:30:...%
 [module/home_storage]
 type = custom/script
 exec = df -h 2>/dev/null | grep sda3 | awk '{print $5}'
-label = "%output%"
+label = " %output%"
 interval = 30
 
 [module/root_storage]
 type = custom/script
 exec =  df -h 2>/dev/null | grep sda2 | awk '{print $5}'
-label = "%output%"
+label = " %output%"
 interval = 30
 
 [module/i3]
@@ -110,7 +116,7 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.color4}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -134,7 +140,7 @@ label-urgent-padding = 2
 type = internal/xbacklight
 
 format = <label> 
-label =  %percentage%
+label =   %percentage%
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -144,14 +150,14 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 1
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
 
@@ -173,10 +179,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-label-volume =  %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 
+label-muted =  
 label-muted-foreground = ${colors.foreground}
 
 interval = 1
@@ -190,23 +196,23 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 format-discharging = <animation-discharging> <label-discharging>
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -217,9 +223,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open =  
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}

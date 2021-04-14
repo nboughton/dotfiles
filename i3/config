@@ -72,7 +72,7 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+d exec --no-startup-id "~/.config/rofi/bin/launcher_colorful"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
@@ -158,7 +158,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'End session?' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -192,14 +192,22 @@ default_floating_border normal
 hide_edge_borders none
 #titlebar_border_thickness 2
 #titlebar_padding 5 2
-#
-# Colors #93cee9
-#
+
+
+# Colors
+set_from_resource $fg i3wm.foreground
+set_from_resource $bg i3wm.background
+set_from_resource $c1 i3wm.color1
+set_from_resource $c2 i3wm.color2
+set_from_resource $c3 i3wm.color3
+set_from_resource $c6 i3wm.color6
+set_from_resource $c7 i3wm.color7
+
 # class                     border  backgr. text  indicator child_border
-    client.focused          #5e81ac #2e3440 #d8dee9 #5e81ac #5e81ac
-    client.focused_inactive #3b4252 #3b4252 #d8dee9 #4c566a #4c566a
-    client.unfocused        #434c5e #434c5e #d8dee9 #4c566a #4c566a
-    client.urgent           #bf616a #bf616a #d8dee9 #d08770 #d08770
+    client.focused          $c6     $bg     $fg   $c6       $c6
+    client.focused_inactive $c3     $bg     $fg   $c3       $c3
+    client.unfocused        $c2     $bg     $c1   $c2       $c2
+    client.urgent           $fg     $bg     $c7   $fg       $fg
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
