@@ -69,7 +69,7 @@ for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [app_id=file-roller] floating enable
 for_window [title="Open Files"] floating enable
 for_window [app_id=gedit] floating enable
-for_window [app_id=".*"] border pixel 5
+for_window [app_id=".*"] border pixel 2
 
 ### Key bindings
 #
@@ -246,7 +246,7 @@ smart_gaps off
 # Titlebars
 #
 font pango:KanitMedium 10
-default_border pixel 5
+default_border pixel 2
 default_floating_border normal
 hide_edge_borders none
 titlebar_border_thickness 2
