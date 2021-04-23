@@ -1,10 +1,10 @@
 show=drun
 prompt=
-term=alacritty
+term=kitty
 layer=overlay
 always_parse_args=true
 allow_images=true
-image_size=16
+image_size=24
 width=25%
 insensitive=true
 key_expand=Shift_L-Right

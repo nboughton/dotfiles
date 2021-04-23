@@ -7,7 +7,7 @@ icon-path=~/.icons/DarK-svg
 width=400
 height=150
 margin=20
-border-size=3
+border-size=5
 border-radius=10
 max-icon-size=32
 

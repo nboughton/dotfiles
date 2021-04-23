@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term alacritty
+set $term kitty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,7 +33,7 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id redshift-gtk
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
 exec --no-startup-id nm-applet --indicator
 exec --no-startup-id insync start
 
@@ -48,10 +48,11 @@ for_window [class="eog"] floating enable
 for_window [class="Transmission-gtk"] floating enable
 for_window [class="io.github.celluloid_player.Celluloid"] floating enable
 for_window [class="Alacritty"] floating enable
+for_window [class="kitty"] floating enable
 for_window [class="URxvt"] floating enable
 for_window [class="zenity"] floating enable
 for_window [class="apostrophe" title="Export"] floating enable
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 5
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -76,7 +77,7 @@ bindsym $mod+d exec --no-startup-id "~/.config/rofi/bin/launcher_colorful"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+l exec --no-startup-id i3lock -c 000000
+bindsym $mod+l exec --no-startup-id "i3lock -c 000000"
 
 # change focus
 bindsym $mod+Left focus left
@@ -187,7 +188,7 @@ gaps top 40
 #
 # Titlebars
 #
-default_border pixel 2
+default_border pixel 5
 default_floating_border normal
 hide_edge_borders none
 #titlebar_border_thickness 2

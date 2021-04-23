@@ -8,7 +8,8 @@
 
 * {
 	font-size: 12px;
-	font-family: "Source Code Pro Medium", "Font Awesome 5 Free";
+	/*font-family: "Source Code Pro Medium", "Font Awesome 5 Free";*/
+	font-family: "Kanit Medium", "Font Awesome 5 Free";
 }
 
 window#waybar {

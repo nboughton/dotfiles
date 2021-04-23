@@ -16,6 +16,7 @@ set $mod Mod4
 set $term kitty
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
+#set $menu nwggrid -f
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -68,7 +69,7 @@ for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [app_id=file-roller] floating enable
 for_window [title="Open Files"] floating enable
 for_window [app_id=gedit] floating enable
-for_window [app_id=".*"] border pixel 2
+for_window [app_id=".*"] border pixel 5
 
 ### Key bindings
 #
@@ -245,7 +246,7 @@ smart_gaps off
 # Titlebars
 #
 font pango:KanitMedium 10
-default_border pixel 2
+default_border pixel 5
 default_floating_border normal
 hide_edge_borders none
 titlebar_border_thickness 2
