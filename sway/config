@@ -264,7 +264,7 @@ output "*" background /home/nick/Pictures/Wallpapers/sadkitty1.jpg fill
 # class                     border      backgr.     text        indicator   child_border
     client.focused          #444444     $background $foreground #444444     #444444
     client.focused_inactive $background $background $foreground $background $background
-    client.unfocused        $background $background $color2     $background $background
+    client.unfocused        $background $background $color6     $background $background
     client.urgent           $foreground $background $color1     $foreground $foreground
 
 include /etc/sway/config.d/*

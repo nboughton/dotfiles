@@ -13,7 +13,7 @@
 @define-color warn    @color3;
 @define-color crit    @color1;
 @define-color accent  @color2;
-@define-color hilight @color2;
+@define-color hilight @color6;
 
 * {
 	font-size: 12px;
