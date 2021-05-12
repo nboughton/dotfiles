@@ -17,36 +17,31 @@
 
 * {
 	font-size: 12px;
-	/*font-family: "Source Code Pro Medium", "Font Awesome 5 Free";*/
-	font-family: "Kanit Medium", "Font Awesome 5 Free";
+	font-family: "Fira Code", "Font Awesome 5 Free";
+	font-weight: bold;
+	/*font-family: "Kanit Medium", "Font Awesome 5 Free";*/
 }
 
 window#waybar {
 	color: @text;
-	border-radius: 4px;
 }
 
 window#waybar.bottom {
-	/*background: none;*/
-	background: @background;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-top: none;
+	background: none;
 	margin: 0;
 }
 
 window#waybar.top {
 	padding-top: 3px;
-	/*background: none;*/
-	background: @background;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+	background: none;
 	margin: 0;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
+	background: @background;
+	border-radius: 4px;
 	margin: 0;
 	padding: 0;
 }
@@ -88,7 +83,7 @@ window#waybar.top {
 	color: @text;
 	margin: 0;
 	padding: 0px 5px 0px 5px;
-	border-radius: 0px;
+	border-radius: 4px;
 }
 #workspaces button.focused {
 	color: @hilight;

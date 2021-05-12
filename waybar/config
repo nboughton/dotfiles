@@ -181,7 +181,7 @@
 		"interval": 5,
 		"exec": "cat ~/tmp/updates.json",
 		"exec-if": "file  ~/tmp/updates.json",
-		"on-click": "kitty --class aptus-upgrade ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
+		"on-click": "alacritty --class aptus-upgrade -e ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
 		"tooltip": true
 	},
 	"custom/auroch": {

@@ -13,7 +13,7 @@ input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 #set $menu nwggrid -f
@@ -31,7 +31,7 @@ exec_always {
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
 }
 
 
@@ -239,15 +239,15 @@ bar {
 #
 # gaps
 #
-gaps inner 0
-gaps right 5
-gaps left 5
+gaps inner 5
+#gaps right 5
+#gaps left 5
 smart_gaps off
 
 #
 # Titlebars
 #
-font pango:KanitMedium 10
+font pango:Roboto 10
 default_border pixel 2
 default_floating_border normal
 hide_edge_borders none
@@ -259,12 +259,12 @@ titlebar_padding 5 2
 #
 include ~/.cache/wal/colors-sway
 #output "*" background $wallpaper fill
-output "*" background /home/nick/Pictures/Wallpapers/sadkitty1.jpg fill
+output "*" background /home/nick/Pictures/Wallpapers/febjao0fxvv61.jpg fill
 
 # class                     border      backgr.     text        indicator   child_border
-    client.focused          #444444     $background $foreground #444444     #444444
+    client.focused          #504945     $background $color6     #504945     #504945
     client.focused_inactive $background $background $foreground $background $background
-    client.unfocused        $background $background $color6     $background $background
+    client.unfocused        #3c3836     $background $foreground #3c3836     #3c3836
     client.urgent           $foreground $background $color1     $foreground $foreground
 
 include /etc/sway/config.d/*
