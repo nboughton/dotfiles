@@ -18,6 +18,8 @@ set $term kitty
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 #set $menu nwggrid -f
 
+xwayland enable
+
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -110,7 +112,7 @@ for_window [app_id=".*"] border pixel 2
     bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     #bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     # My keyboard doesn't have a micmute button
-    bindsym $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+    bindsym $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
@@ -237,9 +239,9 @@ bar {
 #
 # gaps
 #
-gaps inner 5
-#gaps right 5
-#gaps bottom 5
+gaps inner 0
+gaps right 5
+gaps left 5
 smart_gaps off
 
 #
@@ -256,12 +258,13 @@ titlebar_padding 5 2
 # Colors & background
 #
 include ~/.cache/wal/colors-sway
-output "*" background $wallpaper fill
+#output "*" background $wallpaper fill
+output "*" background /home/nick/Pictures/Wallpapers/sadkitty1.jpg fill
 
 # class                     border      backgr.     text        indicator   child_border
-    client.focused          $color6     $background $foreground $color6     $color6
-    client.focused_inactive $color3     $background $foreground $color3     $color3
-    client.unfocused        $color2     $background $color1     $color2     $color2
-    client.urgent           $foreground $background $color7     $foreground $foreground
+    client.focused          #444444     $background $foreground #444444     #444444
+    client.focused_inactive $background $background $foreground $background $background
+    client.unfocused        $background $background $color2     $background $background
+    client.urgent           $foreground $background $color1     $foreground $foreground
 
 include /etc/sway/config.d/*

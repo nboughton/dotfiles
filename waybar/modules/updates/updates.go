@@ -63,6 +63,7 @@ func main() {
 	} else {
 		m.JSON.Class = "no-updates"
 		if n > 0 {
+			m.Summary = fmt.Sprintf("%d %s", n, m.Summary)
 			m.JSON.Class = "updates"
 			m.JSON.Tooltip = strings.Join(updates, "\n")
 			log.Println("Sending DBUS notification")

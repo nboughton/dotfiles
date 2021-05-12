@@ -1,10 +1,19 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
+/* Colorz/haishoku generally work well
 @define-color text    @color3;
 @define-color warn    @color5;
 @define-color crit    @color6;
 @define-color accent  @color4;
 @define-color hilight @color5;
+*/
+
+/* Gruvbox */
+@define-color text    @foreground;
+@define-color warn    @color3;
+@define-color crit    @color1;
+@define-color accent  @color2;
+@define-color hilight @color2;
 
 * {
 	font-size: 12px;
@@ -14,10 +23,11 @@
 
 window#waybar {
 	color: @text;
-	border-radius: 10px;
+	border-radius: 4px;
 }
 
-window#waybar.left {
+window#waybar.bottom {
+	/*background: none;*/
 	background: @background;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
@@ -27,8 +37,10 @@ window#waybar.left {
 
 window#waybar.top {
 	padding-top: 3px;
+	/*background: none;*/
 	background: @background;
 	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 	margin: 0;
 }
 
@@ -137,19 +149,18 @@ window#waybar.top {
 	padding: 0;
 	margin: 0 3px 0 3px;
 }
-#taskbar {
-	margin-top: 3px;
-}
+/*#taskbar {
+}*/
 #taskbar button {
-	color: @accent;
-	border-radius: 6px;
-	padding: 8px 3px 0px 3px;
+	color: @foreground;
+	border-radius: 4px;
+	padding: 0px 3px 0px 3px;
 }
 #taskbar button.active {
-	background: @accent;
+	color: @hilight;
 }
 
 #tray {
-	padding: 0 3px 10px 3px;
+	padding: 5px 3px 5px 3px;
 }
 
