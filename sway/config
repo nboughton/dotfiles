@@ -26,7 +26,7 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'oomox-walmat'
     gsettings set $gnome-schema icon-theme 'oomox-walmat'
     gsettings set $gnome-schema font-name 'Fira Code Medium 9'
-    gsettings set $gnome-schema monospace-font-name 'JetBrains Mono 10'
+    gsettings set $gnome-schema monospace-font-name 'Fira Code Medium 9'
     gsettings set $gnome-schema document-font-name 'Fira Code Medium 9'
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Fira Code Medium 9'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
@@ -55,22 +55,36 @@ exec gammastep-indicator
 exec insync start
 
 ### Window config
+# custom
 for_window [app_id=aptus-upgrade] floating enable
-for_window [app_id=zoom] floating enable
+
+# filemanagers
 for_window [app_id=pcmanfm] floating enable
-for_window [app_id=pavucontrol] floating enable
-for_window [app_id=eog] floating enable
+for_window [app_id=thunar] floating enable
 for_window [app_id=ranger] floating enable
-for_window [app_id=transmission-gtk] floating enable
-for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
+
+# terminals
 for_window [app_id=Alacritty] floating enable
 for_window [app_id=kitty] floating enable
+
+# dialogs
 for_window [app_id=zenity] floating enable
 for_window [app_id="apostrophe" title="Export"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
-for_window [app_id=file-roller] floating enable
 for_window [title="Open Files"] floating enable
+
+# A/V
+for_window [app_id=zoom] floating enable
+for_window [app_id=pavucontrol] floating enable
+for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
+
+# Other apps
+for_window [app_id=eog] floating enable
+for_window [app_id=transmission-gtk] floating enable
+for_window [app_id=file-roller] floating enable
 for_window [app_id=gedit] floating enable
+
+# Everything else
 for_window [app_id=".*"] border pixel 2
 
 ### Key bindings
@@ -128,7 +142,7 @@ for_window [app_id=".*"] border pixel 2
     bindsym $mod+Shift+p exec grimshot save area
     bindsym $mod+Alt+p   exec grimshot save output
     bindsym $mod+Ctrl+p  exec grimshot save window
-    bindsym $mod+g       exec $term ~/bin/swayrec
+    bindsym $mod+g       exec $term -e ~/bin/swayrec
 
 #
 # Moving around:
