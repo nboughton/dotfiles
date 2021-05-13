@@ -25,10 +25,10 @@ set $gnome-schema org.gnome.desktop.interface
 exec_always {
     gsettings set $gnome-schema gtk-theme 'oomox-walmat'
     gsettings set $gnome-schema icon-theme 'oomox-walmat'
-    gsettings set $gnome-schema font-name 'Roboto 10'
+    gsettings set $gnome-schema font-name 'Fira Code Medium 9'
     gsettings set $gnome-schema monospace-font-name 'JetBrains Mono 10'
-    gsettings set $gnome-schema document-font-name 'Roboto 10'
-    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 10'
+    gsettings set $gnome-schema document-font-name 'Fira Code Medium 9'
+    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Fira Code Medium 9'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
     gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
@@ -247,7 +247,7 @@ smart_gaps off
 #
 # Titlebars
 #
-font pango:Roboto 10
+font pango:FiraCode 9
 default_border pixel 2
 default_floating_border normal
 hide_edge_borders none

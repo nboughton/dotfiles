@@ -2,11 +2,11 @@
 
 #window {
 	border-radius: 4px;
-	border: 2px solid #444444;
+	border: 2px solid #504945;
 }
 
 #text {
-	color: #8fbcbb;
+	color: @foreground;
 	text-shadow: 1px 1px 1px @background;
 }
 
@@ -21,4 +21,9 @@
 
 #img {
   margin-right: 5px;
+}
+
+#entry:selected {
+	/*background: @color6;*/
+	color: @background;
 }
