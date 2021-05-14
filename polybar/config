@@ -15,7 +15,7 @@ override-redirect = true
 wm-restack = i3
 offset-x = 10
 offset-y = 10
-radius = 10.0
+radius = 4.0
 fixed-center = true
 
 background = ${colors.background}
@@ -27,8 +27,8 @@ line-color = ${colors.foreground}
 border-size = 0
 border-color = ${colors.primary}
 
-padding-left = 3
-padding-right = 3
+padding-left = 2
+padding-right = 2
 
 module-margin-left = 2
 module-margin-right = 2
@@ -68,7 +68,7 @@ exec = ~/.config/polybar/modules/my-updates
 exec-if = file ~/tmp/auroch.json
 interval = 5
 click-left = systemctl --user start auroch.service
-label = "  %output%"
+label = " %output%"
 
 [module/covid]
 type = custom/script
@@ -147,7 +147,7 @@ ws-icon-default = 
 type = internal/xbacklight
 
 format = <label> 
-label =   %percentage%
+label =  %percentage%
 
 [module/backlight-acpi]
 inherit = module/xbacklight
