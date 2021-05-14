@@ -254,19 +254,16 @@ bar {
 # gaps
 #
 gaps inner 5
-#gaps right 5
-#gaps left 5
 smart_gaps off
 
 #
 # Titlebars
 #
-font pango:FiraCode 9
+font pango:FiraCodeMedium 9
 default_border pixel 3
 default_floating_border normal
 hide_edge_borders none
 titlebar_border_thickness 3
-#titlebar_padding 5 2
 
 #
 # Colors & background
