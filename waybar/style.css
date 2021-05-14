@@ -16,12 +16,22 @@
 @define-color hilight @color6;
 
 * {
-	font-size: 12px;
-	font-family: "Fira Code Medium", "Font Awesome 5 Free";
+	font-size: 10px;
+	font-family: "Fira Code", "Font Awesome 5 Free";
+	font-weight: bold;
 }
 
 window#waybar {
 	color: @text;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	background: @background;
+	border-radius: 4px;
+	margin: 0;
+	padding: 0;
 }
 
 window#waybar.bottom {
@@ -32,15 +42,6 @@ window#waybar.bottom {
 window#waybar.top {
 	background: none;
 	margin: 0;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-	background: @background;
-	border-radius: 4px;
-	margin: 0;
-	padding: 0;
 }
 
 /* Base styling for modules */
@@ -65,7 +66,7 @@ window#waybar.top {
 #custom-covid,
 #taskbar,
 #tray {
-	padding: 0px 10px 0 10px;
+	padding: 2px 10px 0 10px;
 }
 
 #custom-separator {
@@ -79,7 +80,7 @@ window#waybar.top {
 #workspaces button {
 	color: @text;
 	margin: 0;
-	padding: 0px 5px 0px 5px;
+	padding: 2px 5px 0px 5px;
 	border-radius: 4px;
 }
 #workspaces button.focused {
@@ -146,7 +147,7 @@ window#waybar.top {
 #taskbar button {
 	color: @foreground;
 	border-radius: 4px;
-	padding: 0px 3px 0px 3px;
+	padding: 2px 3px 0px 3px;
 }
 #taskbar button.active {
 	color: @hilight;
