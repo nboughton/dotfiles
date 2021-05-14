@@ -1,11 +1,11 @@
 [colors]
 background = ${xrdb:background:#222}
 background-alt = ${xrdb:color0:#222}
-foreground = ${xrdb:color3:#222}
-foreground-alt = ${xrdb:color3:#222}
-primary = ${xrdb:color4:#222}
-secondary = ${xrdb:color5:#222}
-alert = ${xrdb:color6:#222}
+foreground = ${xrdb:foreground:#222}
+foreground-alt = ${xrdb:foreground:#222}
+primary = ${xrdb:color6:#222}
+secondary = ${xrdb:color3:#222}
+alert = ${xrdb:color1:#222}
 
 [bar/mybar]
 monitor = ${env:MONITOR:}
@@ -30,8 +30,8 @@ border-color = ${colors.primary}
 padding-left = 3
 padding-right = 3
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 2
+module-margin-right = 2
 
 ;font-0 = kanitMedium:fontformat=truetype:size=8:antialias=true;2
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
@@ -41,7 +41,7 @@ font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
 font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
 font-3 = Font Awesome 5 Brands:pixelsize=8;2
 font-4 = Font Awesome 5 Regular:pixelsize=8;2
-font-0 = Kanit Medium:style=Regular:size=8;2
+font-0 = Fira Code:style=Medium:size=8;2
 
 modules-left = date battery root_storage home_storage memory swap cpu
 modules-center = i3

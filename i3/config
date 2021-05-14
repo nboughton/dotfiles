@@ -10,11 +10,11 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term kitty
+set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Roboto 10
+font pango:FiraCodeMedium 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -52,7 +52,7 @@ for_window [class="kitty"] floating enable
 for_window [class="URxvt"] floating enable
 for_window [class="zenity"] floating enable
 for_window [class="apostrophe" title="Export"] floating enable
-for_window [class=".*"] border pixel 5
+for_window [class=".*"] border pixel 3
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -188,7 +188,7 @@ gaps top 40
 #
 # Titlebars
 #
-default_border pixel 5
+default_border pixel 3
 default_floating_border normal
 hide_edge_borders none
 #titlebar_border_thickness 2
@@ -205,10 +205,10 @@ set_from_resource $c6 i3wm.color6
 set_from_resource $c7 i3wm.color7
 
 # class                     border  backgr. text  indicator child_border
-    client.focused          $c6     $bg     $fg   $c6       $c6
-    client.focused_inactive $c3     $bg     $fg   $c3       $c3
-    client.unfocused        $c2     $bg     $c1   $c2       $c2
-    client.urgent           $fg     $bg     $c7   $fg       $fg
+    client.focused          #504945 $bg     $c6   #504945   #504945
+    client.focused_inactive $bg     $bg     $fg   $bg       $bg
+    client.unfocused        #3c3836 $bg     $fg   #3c3836   #3c3836
+    client.urgent           $fg     $bg     $c1   $fg       $fg
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
