@@ -17,9 +17,7 @@
 
 * {
 	font-size: 12px;
-	font-family: "Fira Code", "Font Awesome 5 Free";
-	font-weight: bold;
-	/*font-family: "Kanit Medium", "Font Awesome 5 Free";*/
+	font-family: "Fira Code Medium", "Font Awesome 5 Free";
 }
 
 window#waybar {
@@ -32,7 +30,6 @@ window#waybar.bottom {
 }
 
 window#waybar.top {
-	padding-top: 3px;
 	background: none;
 	margin: 0;
 }
