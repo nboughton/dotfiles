@@ -85,7 +85,7 @@ for_window [app_id=file-roller] floating enable
 for_window [app_id=gedit] floating enable
 
 # Everything else
-for_window [app_id=".*"] border pixel 2
+for_window [app_id=".*"] border pixel 3
 
 ### Key bindings
 #
@@ -262,11 +262,11 @@ smart_gaps off
 # Titlebars
 #
 font pango:FiraCode 9
-default_border pixel 2
+default_border pixel 3
 default_floating_border normal
 hide_edge_borders none
-titlebar_border_thickness 2
-titlebar_padding 5 2
+titlebar_border_thickness 3
+#titlebar_padding 5 2
 
 #
 # Colors & background
