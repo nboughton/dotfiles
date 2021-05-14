@@ -6,8 +6,8 @@
 	"margin-right": 5,
 	"margin-left": 5,
 	"margin-bottom": 5,
-	"modules-left": ["wlr/taskbar"],
-	"modules-center": ["sway/mode"],
+	"modules-left": ["sway/mode", "wlr/taskbar"],
+	"modules-center": [],
 	"modules-right": ["tray"],
 	"wlr/taskbar": {
 		"all-outputs": false,
@@ -19,11 +19,10 @@
 		"on-right-click": "minimize"
 	},
 	"sway/window": {
-		"rotate": 90
+		//"rotate": 90
 	},
 	"sway/mode": {
 		"format": "{}",
-		"rotate": 90
 	},
 	"tray": {
 		"icon-size": 14,
