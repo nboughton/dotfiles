@@ -23,6 +23,8 @@
 
 window#waybar {
 	color: @text;
+	background: none;
+	margin: 0;
 }
 
 .modules-left,
@@ -32,16 +34,6 @@ window#waybar {
 	border-radius: 4px;
 	margin: 0;
 	padding: 0;
-}
-
-window#waybar.bottom {
-	background: none;
-	margin: 0;
-}
-
-window#waybar.top {
-	background: none;
-	margin: 0;
 }
 
 /* Base styling for modules */
@@ -142,8 +134,6 @@ window#waybar.top {
 	padding: 0;
 	margin: 0 3px 0 3px;
 }
-/*#taskbar {
-}*/
 #taskbar button {
 	color: @foreground;
 	border-radius: 4px;
