@@ -123,10 +123,10 @@ colors:
     foreground: '{foreground}'
     dim_foreground: '{foreground}'
   cursor:
-    text: '{foreground}'
+    text: '{background}'
     cursor: '{foreground}'
   vi_mode_cursor:
-    text: '{foreground}'
+    text: '{background}'
     cursor: '{foreground}'
   selection:
     text: CellForeground
