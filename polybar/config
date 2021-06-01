@@ -7,53 +7,6 @@ primary = ${xrdb:color6:#222}
 secondary = ${xrdb:color3:#222}
 alert = ${xrdb:color1:#222}
 
-[bar/mybar]
-monitor = ${env:MONITOR:}
-width = 1900
-height = 30
-override-redirect = true
-wm-restack = i3
-offset-x = 10
-offset-y = 10
-radius = 4.0
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = ${colors.foreground}
-
-border-size = 0
-border-color = ${colors.primary}
-
-padding-left = 2
-padding-right = 2
-
-module-margin-left = 2
-module-margin-right = 2
-
-;font-0 = kanitMedium:fontformat=truetype:size=8:antialias=true;2
-;font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
-;font-2 = siji:pixelsize=10;2
-
-font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
-font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
-font-3 = Font Awesome 5 Brands:pixelsize=8;2
-font-4 = Font Awesome 5 Regular:pixelsize=8;2
-font-0 = Fira Code:style=Medium:size=8;2
-
-modules-left = date battery root_storage home_storage memory swap cpu
-modules-center = i3
-modules-right = covid weather updates my-updates backlight-acpi pulseaudio powermenu
-
-tray-position = center
-tray-offset-x = 530
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 [module/updates]
 type = custom/script
 exec = ~/.config/polybar/modules/updates
@@ -253,10 +206,88 @@ menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
+
+[bar/top]
+monitor = ${env:MONITOR:}
+width = 1900
+height = 30
+override-redirect = true
+wm-restack = i3
+offset-x = 10
+offset-y = 10
+radius = 4.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = ${colors.foreground}
+
+border-size = 0
+border-color = ${colors.primary}
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
+font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
+font-3 = Font Awesome 5 Brands:pixelsize=8;2
+font-4 = Font Awesome 5 Regular:pixelsize=8;2
+font-0 = Fira Code:style=Medium:size=8;2
+
+modules-left = date battery root_storage home_storage memory swap cpu
+modules-center = i3
+modules-right = covid weather updates my-updates backlight-acpi pulseaudio powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+tray-position = right
+tray-padding = 2
+;tray-offset-x = 100
+;tray-background = #00000000
+
+;[bar/bottom]
+;bottom = true
+;width = 300
+;height = 30
+;override-redirect = true
+;wm-restack = i3
+;offset-x = 10
+;offset-y = 10
+;radius = 4.0
+;fixed-center = true
+
+;background = ${colors.background}
+;foreground = ${colors.foreground}
+
+;line-size = 3
+;line-color = ${colors.foreground}
+
+;border-size = 0
+;border-color = ${colors.primary}
+
+;padding-left = 2
+;padding-right = 2
+
+;module-margin-left = 2
+;module-margin-right = 2
+
+;font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
+;font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
+;font-3 = Font Awesome 5 Brands:pixelsize=8;2
+;font-4 = Font Awesome 5 Regular:pixelsize=8;2
+;font-0 = Fira Code:style=Medium:size=8;2
+
+;modules-left = 
+;modules-center =
+;modules-right = powermenu
+
+;tray-position = center
+;tray-padding = 2
 
 ; vim:ft=dosini

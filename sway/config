@@ -49,7 +49,7 @@ exec swayidle -w \
 ### Autostart
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec autotiling
+exec persway -a -o 1
 exec nm-applet --indicator
 exec gammastep-indicator
 exec insync start
@@ -253,7 +253,7 @@ bar {
 #
 # gaps
 #
-gaps inner 5
+gaps inner 10
 smart_gaps off
 
 #

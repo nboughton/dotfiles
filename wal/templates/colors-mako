@@ -4,9 +4,9 @@ max-visible=5
 anchor=top-right
 
 width=400
-height=150
+height=1000
 margin=20
-border-size=2
+border-size=3
 border-radius=4
 max-icon-size=32
 

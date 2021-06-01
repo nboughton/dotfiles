@@ -147,24 +147,6 @@ colors:
     magenta: '{color5}'
     cyan: '{color6}'
     white: '{color7}'
-  bright:
-    black: '{background}'
-    red: '{color1}'
-    green: '{color2}'
-    yellow: '{color3}'
-    blue: '{color4}'
-    magenta: '{color5}'
-    cyan: '{color6}'
-    white: '{color7}'
-  dim:
-    black: '{background}'
-    red: '{color1}'
-    green: '{color2}'
-    yellow: '{color3}'
-    blue: '{color4}'
-    magenta: '{color5}'
-    cyan: '{color6}'
-    white: '{color7}'
 
   # Indexed Colors
   #
@@ -239,19 +221,6 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
-
-  url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    launcher: xdg-open
-
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    #modifiers: Control|Shift
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{{}}<>"

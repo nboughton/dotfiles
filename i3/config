@@ -33,7 +33,7 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id redshift-gtk
 exec --no-startup-id picom -b
 exec --no-startup-id dunst
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
 exec --no-startup-id nm-applet --indicator
 exec --no-startup-id insync start
 

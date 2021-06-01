@@ -1,12 +1,9 @@
-decoration {
-	box-shadow: none;
-}
-
+decoration,
 decoration:backdrop {
 	box-shadow: none;
 }
 
 .titlebar,
 .titlebar .background {
-	border-radius: 0;
+	border-radius: 0px;
 }
