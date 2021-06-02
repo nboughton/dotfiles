@@ -27,7 +27,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # they are included here as an example. Modify as you see fit.
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id ~/.screenlayout/default.sh 
+exec --no-startup-id ~/.screenlayout/default.sh
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id redshift-gtk

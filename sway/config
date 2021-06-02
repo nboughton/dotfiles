@@ -85,7 +85,7 @@ for_window [app_id=file-roller] floating enable
 for_window [app_id=gedit] floating enable
 
 # Everything else
-for_window [app_id=".*"] border pixel 3
+for_window [app_id=".*"] border none
 
 ### Key bindings
 #
@@ -253,15 +253,15 @@ bar {
 #
 # gaps
 #
-gaps inner 10
+gaps inner 14
 smart_gaps off
 
 #
 # Titlebars
 #
 font pango:FiraCodeMedium 9
-default_border pixel 3
-default_floating_border normal
+default_border none
+default_floating_border none
 hide_edge_borders none
 titlebar_border_thickness 3
 
@@ -273,9 +273,14 @@ include ~/.cache/wal/colors-sway
 output "*" background /home/nick/Pictures/Wallpapers/febjao0fxvv61.jpg fill
 
 # class                     border      backgr.     text        indicator   child_border
-    client.focused          #504945     $background $color6     #504945     #504945
+    client.focused          $background $background $color6     $background $background
     client.focused_inactive $background $background $foreground $background $background
-    client.unfocused        #3c3836     $background $foreground #3c3836     #3c3836
+    client.unfocused        $background $background $foreground $background $background
     client.urgent           $foreground $background $color1     $foreground $foreground
+
+border_images.focused /home/nick/.config/sway/rounded_and_shadows_focused.png
+border_images.focused_inactive /home/nick/.config/sway/rounded_and_shadows.png
+border_images.unfocused /home/nick/.config/sway/rounded_and_shadows.png
+border_images.urgent /home/nick/.config/sway/rounded_and_shadows.png
 
 include /etc/sway/config.d/*
