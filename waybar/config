@@ -169,7 +169,7 @@
 		"rotate": 90
 	},
 	"tray": {
-		"icon-size": 14,
+		"icon-size": 12,
 		"spacing": 10
 	},
 	"custom/updates": {

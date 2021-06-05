@@ -123,9 +123,9 @@
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
 gradient_count = 3
-gradient_color_1 = '{color6}'
-gradient_color_2 = '{color2}'
-gradient_color_3 = '{color1}'
+gradient_color_1 = '{color1}'
+gradient_color_2 = '{color4}'
+gradient_color_3 = '{color6}'
 
 
 

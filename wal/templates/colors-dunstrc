@@ -65,7 +65,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#504945"
+    frame_color = {color5}
 
     # Define a color for the separator.
     # possible values are:
@@ -87,7 +87,7 @@
 
     ### Text ###
 
-    font = Fira Code Medium 9
+    font = Kanit Medium 9
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

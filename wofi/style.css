@@ -2,7 +2,7 @@
 
 #window {
 	border-radius: 4px;
-	border: 2px solid #504945;
+	border: 2px solid @color6;
 }
 
 #text {

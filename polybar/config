@@ -3,9 +3,9 @@ background = ${xrdb:background:#222}
 background-alt = ${xrdb:color0:#222}
 foreground = ${xrdb:foreground:#222}
 foreground-alt = ${xrdb:foreground:#222}
-primary = ${xrdb:color6:#222}
-secondary = ${xrdb:color3:#222}
-alert = ${xrdb:color1:#222}
+primary = ${xrdb:color5:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color6:#222}
 
 [module/updates]
 type = custom/script
@@ -64,17 +64,17 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 4
 label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index% %icon%
 label-focused-foreground = ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 4
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index% %icon%
-label-unfocused-padding = 2
+label-unfocused-padding = 4
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index% %icon%
@@ -84,7 +84,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %index% %icon%
 label-urgent-foreground = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -227,17 +227,17 @@ line-color = ${colors.foreground}
 border-size = 0
 border-color = ${colors.primary}
 
-padding-left = 2
-padding-right = 2
+padding-left = 3
+padding-right = 3
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 4
+module-margin-right = 4
 
 font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
 font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
 font-3 = Font Awesome 5 Brands:pixelsize=8;2
 font-4 = Font Awesome 5 Regular:pixelsize=8;2
-font-0 = Fira Code:style=Medium:size=8;2
+font-0 = Kanit Medium:size=8;2
 
 modules-left = date battery root_storage home_storage memory swap cpu
 modules-center = i3

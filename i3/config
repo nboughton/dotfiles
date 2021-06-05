@@ -14,7 +14,7 @@ set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:FiraCodeMedium 9
+font pango:KanitMedium 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -52,6 +52,7 @@ for_window [class="kitty"] floating enable
 for_window [class="URxvt"] floating enable
 for_window [class="zenity"] floating enable
 for_window [class="apostrophe" title="Export"] floating enable
+for_window [title="Catfish"] floating enable
 for_window [class=".*"] border pixel 3
 
 # Use pactl to adjust volume in PulseAudio.
@@ -72,6 +73,8 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+f exec --no-startup-id catfish
+
 # A more modern dmenu replacement is rofi:
 #bindsym $mod+d exec --no-startup-id "~/.config/rofi/bin/launcher_colorful"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -201,13 +204,15 @@ set_from_resource $bg i3wm.background
 set_from_resource $c1 i3wm.color1
 set_from_resource $c2 i3wm.color2
 set_from_resource $c3 i3wm.color3
+set_from_resource $c4 i3wm.color4
+set_from_resource $c5 i3wm.color5
 set_from_resource $c6 i3wm.color6
 set_from_resource $c7 i3wm.color7
 
 # class                     border  backgr. text  indicator child_border
-    client.focused          #504945 $bg     $c6   #504945   #504945
-    client.focused_inactive $bg     $bg     $fg   $bg       $bg
-    client.unfocused        #3c3836 $bg     $fg   #3c3836   #3c3836
+    client.focused          $c5     $bg     $c5   $c5       $c5
+    client.focused_inactive $c2     $bg     $fg   $c2       $c2
+    client.unfocused        $c2     $bg     $fg   $c2       $c2
     client.urgent           $fg     $bg     $c1   $fg       $fg
 
 # Start i3bar to display a workspace bar (plus the system information i3status
