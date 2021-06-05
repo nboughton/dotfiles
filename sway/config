@@ -267,14 +267,13 @@ font pango:FiraCodeMedium 9
 default_border pixel 3
 default_floating_border none
 hide_edge_borders none
-titlebar_border_thickness 3
+titlebar_border_thickness 0
 
 #
 # Colors & background
 #
 include ~/.cache/wal/colors-sway
 output "*" background $wallpaper fill
-#output "*" background /home/nick/Pictures/Wallpapers/febjao0fxvv61.jpg fill
 
 # class                     border      backgr.     text        indicator   child_border
     client.focused          $color5     $background $color5     $color5     $color5
