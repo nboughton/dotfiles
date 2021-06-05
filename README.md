@@ -11,8 +11,6 @@ If you want to use the custom/updates (obligatory "I use arch btw") module you'l
 * Run ````systemctl --user daemon-reload````
 * Run ````systemctl --user enable updates.timer````
 
-The reboot/shutdown buttons require Zenity to provide a confirmation dialog.
-
 ## Screenshot
 
 ![screenshot](/screenshot.png)
