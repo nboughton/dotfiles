@@ -38,21 +38,33 @@ exec --no-startup-id nm-applet --indicator
 exec --no-startup-id insync start
 
 ### Window config
+# custom
 for_window [class="aptus-upgrade"] floating enable
+
+# filemanagers/utils
+for_window [class="Thunar"] floating enable
 for_window [class="catfish"] floating enable
-for_window [class="Zoom"] floating enable
-for_window [class="zoom"] floating enable
-for_window [class="Pcmanfm"] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="eog"] floating enable
-for_window [class="Transmission-gtk"] floating enable
-for_window [class="io.github.celluloid_player.Celluloid"] floating enable
+for_window [title="Catfish"] floating enable
+
+# terminals
 for_window [class="Alacritty"] floating enable
 for_window [class="kitty"] floating enable
 for_window [class="URxvt"] floating enable
-for_window [class="zenity"] floating enable
+
+# dialogs
 for_window [class="apostrophe" title="Export"] floating enable
-for_window [title="Catfish"] floating enable
+for_window [class="zenity"] floating enable
+
+# a/v
+for_window [class="Zoom"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="Pavucontrol"] floating enable
+
+# other
+for_window [class="eog"] floating enable
+for_window [class="Transmission-gtk"] floating enable
+for_window [class="io.github.celluloid_player.Celluloid"] floating enable
+
 for_window [class=".*"] border pixel 3
 
 # Use pactl to adjust volume in PulseAudio.

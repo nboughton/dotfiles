@@ -23,7 +23,7 @@ xwayland enable
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-blue'
+    gsettings set $gnome-schema gtk-theme 'Materia-dark-compact'
     gsettings set $gnome-schema icon-theme 'Tela-circle-blue-dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
     gsettings set $gnome-schema monospace-font-name 'Roboto Regular 10'
@@ -59,7 +59,7 @@ exec insync start
 for_window [app_id=aptus-upgrade] floating enable
 
 # filemanagers
-for_window [app_id=Thunar] floating enable
+for_window [app_id=thunar] floating enable
 for_window [app_id=ranger] floating enable
 for_window [title="Catfish"] floating enable
 
@@ -263,7 +263,7 @@ smart_gaps off
 #
 # Titlebars
 #
-font pango:FiraCodeMedium 9
+font pango:KanitMedium 9
 default_border pixel 3
 default_floating_border none
 hide_edge_borders none
