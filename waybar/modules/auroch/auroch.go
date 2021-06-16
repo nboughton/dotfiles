@@ -55,6 +55,11 @@ var packages = []*pkg{
 		UpstreamName: "cortesi/devd",
 		UpstreamType: ghub,
 	},
+	{
+		AurName:      "yapa",
+		UpstreamName: "nboughton/yapa",
+		UpstreamType: ghub,
+	},
 }
 
 func main() {

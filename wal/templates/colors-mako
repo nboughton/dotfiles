@@ -14,5 +14,8 @@ background-color={background}ee
 text-color={foreground}
 border-color={color5}
 
+icon-location=left
+text-alignment=left
+
 default-timeout=10000
 ignore-timeout=1

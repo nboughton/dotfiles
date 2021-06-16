@@ -12,7 +12,7 @@
 {
 	"position": "top",
 	"layer": "bottom",
-	"margin-top": 10,
+	"margin-top": 5,
 	"margin-right": 10,
 	"margin-left": 10,
 	"modules-center": [
@@ -169,7 +169,7 @@
 		"rotate": 90
 	},
 	"tray": {
-		"icon-size": 12,
+		"icon-size": 14,
 		"spacing": 10
 	},
 	"custom/updates": {

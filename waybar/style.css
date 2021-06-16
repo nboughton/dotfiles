@@ -1,12 +1,19 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
 /* Colorz/haishoku generally work well */
-@define-color text    @color3;
+@define-color text    @foreground;
 @define-color warn    @color5;
 @define-color crit    @color6;
 @define-color accent  @color4;
 @define-color hilight @color5;
 
+/* Nord 
+@define-color text    @foreground;
+@define-color warn    @color6;
+@define-color crit    @color2;
+@define-color accent  @color4;
+@define-color hilight @color1;
+*/
 
 /* Gruvbox
 @define-color text    @foreground;
@@ -17,17 +24,15 @@
 */
 
 * {
-	font-size: 12px;
-	font-family: "Kanit Medium", "Font Awesome 5 Free";
-	/*font-weight: bold;*/
-	border-radius: 10px;
+	font-size: 10px;
+	font-family: "Source Code Pro Medium", "Font Awesome 5 Free";
+	font-weight: bold;
+	border-radius: 20px;
 }
 
 window#waybar {
 	color: @text;
 	background: @background;
-	margin: 0;
-	/*border: 2px solid @color5;*/
 }
 
 .modules-left,
@@ -56,7 +61,7 @@ window#waybar {
 #custom-powermenu,
 #custom-covid,
 #tray {
-	padding: 4px 10px 4px 10px;
+	padding: 6px 10px 5px 10px;
 }
 
 #custom-separator {
@@ -122,7 +127,9 @@ window#waybar {
 	color: @hilight;
 }
 
-/*#tray {
-	padding: 5px 3px 5px 3px;
-}*/
-
+#custom-powermenu {
+	margin-right: 3px;
+}
+#clock {
+	margin-left: 3px;
+}

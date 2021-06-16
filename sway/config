@@ -13,7 +13,7 @@ input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 #set $menu nwggrid -f
@@ -31,7 +31,7 @@ exec_always {
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Regular 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 }
 
 
@@ -59,7 +59,7 @@ exec insync start
 for_window [app_id=aptus-upgrade] floating enable
 
 # filemanagers
-for_window [app_id=thunar] floating enable
+for_window [app_id=Thunar] floating enable
 for_window [app_id=ranger] floating enable
 for_window [title="Catfish"] floating enable
 
@@ -273,6 +273,7 @@ titlebar_border_thickness 0
 # Colors & background
 #
 include ~/.cache/wal/colors-sway
+#output "*" background /home/nick/Pictures/Wallpapers/eWiOKET.jpg fill
 output "*" background $wallpaper fill
 
 # class                     border      backgr.     text        indicator   child_border
@@ -280,10 +281,5 @@ output "*" background $wallpaper fill
     client.focused_inactive $color2     $background $foreground $color2     $color2
     client.unfocused        $color2     $background $foreground $color2     $color2
     client.urgent           $foreground $background $color1     $foreground $foreground
-
-#border_images.focused /home/nick/.config/sway/rounded_and_shadows_focused.png
-#border_images.focused_inactive /home/nick/.config/sway/rounded_and_shadows.png
-#border_images.unfocused /home/nick/.config/sway/rounded_and_shadows.png
-#border_images.urgent /home/nick/.config/sway/rounded_and_shadows.png
 
 include /etc/sway/config.d/*
