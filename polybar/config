@@ -64,17 +64,17 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 4
+label-mode-padding = 3
 label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index% %icon%
 label-focused-foreground = ${colors.primary}
-label-focused-padding = 4
+label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index% %icon%
-label-unfocused-padding = 4
+label-unfocused-padding = 3
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index% %icon%
@@ -84,7 +84,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %index% %icon%
 label-urgent-foreground = ${colors.alert}
-label-urgent-padding = 4
+label-urgent-padding = 3
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -210,11 +210,11 @@ screenchange-reload = true
 [bar/top]
 monitor = ${env:MONITOR:}
 width = 1900
-height = 30
+height = 24
 override-redirect = true
 wm-restack = i3
 offset-x = 10
-offset-y = 10
+offset-y = 5
 radius = 4.0
 fixed-center = true
 
@@ -227,67 +227,45 @@ line-color = ${colors.foreground}
 border-size = 0
 border-color = ${colors.primary}
 
-padding-left = 3
-padding-right = 3
+padding-left = 2
+padding-right = 2
 
-module-margin-left = 4
-module-margin-right = 4
+module-margin-left = 2
+module-margin-right = 2
 
 font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
 font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
 font-3 = Font Awesome 5 Brands:pixelsize=8;2
 font-4 = Font Awesome 5 Regular:pixelsize=8;2
-font-0 = Kanit Medium:size=8;2
+font-5 = Noto Color Emoji:style=Regular:scale=12;2
+font-0 = Source Code Pro Medium:weight=700:size=8;2
 
-modules-left = battery root_storage home_storage memory swap cpu
+modules-left = date battery root_storage home_storage memory swap cpu
 modules-center = i3
-modules-right = covid weather updates my-updates backlight-acpi pulseaudio date
+modules-right = covid weather updates my-updates backlight-acpi pulseaudio powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-tray-position = left
-tray-padding = 2
-;tray-offset-x = 100
-;tray-background = #00000000
+[bar/bottom]
+monitor = ${env:MONITOR:}
+bottom = true
+override-redirect = true
+wm-restack = i3
+radius = 4.0
+fixed-center = true
 
-;[bar/bottom]
-;bottom = true
-;width = 300
-;height = 30
-;override-redirect = true
-;wm-restack = i3
-;offset-x = 10
-;offset-y = 10
-;radius = 4.0
-;fixed-center = true
+background = none
+foreground = ${colors.foreground}
 
-;background = ${colors.background}
-;foreground = ${colors.foreground}
+line-size = 3
+line-color = ${colors.foreground}
 
-;line-size = 3
-;line-color = ${colors.foreground}
+modules-right = powermenu
 
-;border-size = 0
-;border-color = ${colors.primary}
-
-;padding-left = 2
-;padding-right = 2
-
-;module-margin-left = 2
-;module-margin-right = 2
-
-;font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;2
-;font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;2
-;font-3 = Font Awesome 5 Brands:pixelsize=8;2
-;font-4 = Font Awesome 5 Regular:pixelsize=8;2
-;font-0 = Fira Code:style=Medium:size=8;2
-
-;modules-left =
-;modules-center =
-;modules-right = powermenu
-
-;tray-position = center
-;tray-padding = 2
+tray-position = right
+tray-padding = 5
+tray-scale = 1.5
+tray-offset-y = -10
 
 ; vim:ft=dosini

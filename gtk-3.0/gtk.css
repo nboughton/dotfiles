@@ -1,3 +1,19 @@
+decoration {
+    box-shadow: none;
+}
+
+decoration:backdrop {
+    box-shadow: none;
+}
+
+.titlebar,
+.titlebar .background,
+.window-frame,
+.window-frame:backdrop {
+    border-radius: 0;
+}
+
+/*
 .window-frame, .window-frame:backdrop {
 	box-shadow: none;
 	border-style: none;
@@ -20,4 +36,4 @@
 	background-color: #061921;
 	box-shadow: none;
 }
-
+*/

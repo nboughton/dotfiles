@@ -95,11 +95,13 @@ func main() {
 		if p.UpstreamType == npm {
 			if err = p.getNpmVer(); err != nil {
 				class = errClass
+				log.Println(err)
 				break
 			}
 		} else if p.UpstreamType == ghub {
 			if err = p.getGithubVer(); err != nil {
 				class = errClass
+				log.Println(err)
 				break
 			}
 		}

@@ -12,9 +12,9 @@
 {
 	"position": "top",
 	"layer": "bottom",
-	"margin-top": 5,
-	"margin-right": 10,
-	"margin-left": 10,
+	"margin-top": 0,
+	"margin-right": 0,
+	"margin-left": 0,
 	"modules-center": [
 		"sway/workspaces",
 	],
@@ -30,10 +30,10 @@
 		"custom/swap",
 		"custom/separator",
 		"cpu",
+		"custom/separator",
+		"idle_inhibitor",
 	],
 	"modules-right": [
-		"idle_inhibitor",
-		"custom/separator",
 		"custom/covid",
 		"custom/separator",
 		"custom/weather",
@@ -71,14 +71,14 @@
 		}
 	},
 	"backlight": {
-		"format": "{icon} {percent}%",
-		"format-icons": ["", ""],
+		"format": " {percent}%",
+		"format-icons": ["", "", ""],
 		"on-scroll-up": "brightnessctl set +5%",
 		"on-scroll-down": "brightnessctl set 5%-"
 	},
 	"clock": {
 		"format": "{:%a %d %b %H:%M}",
-		"tooltip": true
+		"tooltip": false
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%  {format_source}",
@@ -169,7 +169,7 @@
 		"rotate": 90
 	},
 	"tray": {
-		"icon-size": 14,
+		"icon-size": 12,
 		"spacing": 10
 	},
 	"custom/updates": {

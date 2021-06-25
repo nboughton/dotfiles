@@ -23,8 +23,8 @@ xwayland enable
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Materia-dark-compact'
-    gsettings set $gnome-schema icon-theme 'Tela-circle-blue-dark'
+    gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-red'
+    gsettings set $gnome-schema icon-theme 'Tela-circle-red-dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
     gsettings set $gnome-schema monospace-font-name 'Roboto Regular 10'
     gsettings set $gnome-schema document-font-name 'Roboto Regular 10'
@@ -60,6 +60,7 @@ for_window [app_id=aptus-upgrade] floating enable
 
 # filemanagers
 for_window [app_id=Thunar] floating enable
+for_window [app_id=thunar] floating enable
 for_window [app_id=ranger] floating enable
 for_window [title="Catfish"] floating enable
 
