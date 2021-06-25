@@ -23,10 +23,10 @@ xwayland enable
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-red'
-    gsettings set $gnome-schema icon-theme 'Tela-circle-red-dark'
+    gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-orange'
+    gsettings set $gnome-schema icon-theme 'Tela-circle-orange-dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
-    gsettings set $gnome-schema monospace-font-name 'Roboto Regular 10'
+    gsettings set $gnome-schema monospace-font-name 'Fira Code 10'
     gsettings set $gnome-schema document-font-name 'Roboto Regular 10'
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Regular 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''

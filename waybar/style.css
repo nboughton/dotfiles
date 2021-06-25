@@ -34,9 +34,6 @@ window#waybar {
 	text-shadow: 1px 1px 1px @background;
 	background: @background;
 	border-radius: 4px;
-	/*background: rgba(0, 0, 0, 0.5);
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;*/
 }
 
 /* Base styling for modules */
@@ -58,7 +55,7 @@ window#waybar {
 #custom-powermenu,
 #custom-covid,
 #tray {
-	padding: 3px 10px 0px 10px;
+	padding: 2px 10px 0px 10px;
 }
 
 #custom-separator {
