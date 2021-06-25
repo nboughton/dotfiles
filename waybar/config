@@ -12,9 +12,9 @@
 {
 	"position": "top",
 	"layer": "bottom",
-	"margin-top": 0,
-	"margin-right": 0,
-	"margin-left": 0,
+	"margin-top": 5,
+	"margin-right": 10,
+	"margin-left": 10,
 	"modules-center": [
 		"sway/workspaces",
 	],

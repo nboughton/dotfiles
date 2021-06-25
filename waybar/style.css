@@ -32,7 +32,8 @@
 window#waybar {
 	color: @text;
 	text-shadow: 1px 1px 1px @background;
-	background: none;
+	background: @background;
+	border-radius: 4px;
 	/*background: rgba(0, 0, 0, 0.5);
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;*/
@@ -57,7 +58,7 @@ window#waybar {
 #custom-powermenu,
 #custom-covid,
 #tray {
-	padding: 5px 10px 0px 10px;
+	padding: 3px 10px 0px 10px;
 }
 
 #custom-separator {
@@ -71,7 +72,7 @@ window#waybar {
 #workspaces button {
 	color: @text;
 	margin: 0;
-	padding: 2px 10px 0px 10px;
+	padding: 2px 15px 0px 15px;
 	border-radius: 0px;
 }
 #workspaces button.focused {
@@ -124,6 +125,8 @@ window#waybar {
 }
 
 #custom-powermenu {
+	color: @color2;
+	padding-top: 1px;
 	margin-right: 3px;
 }
 #clock {
