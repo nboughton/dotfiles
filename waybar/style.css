@@ -1,11 +1,20 @@
 @import "/home/nick/.cache/wal/colors-waybar.css";
 
-/* Colorz/haishoku generally work well */
+/* Colorz/haishoku generally work well
 @define-color text    @foreground;
 @define-color warn    @color5;
 @define-color crit    @color4;
 @define-color accent  @color6;
 @define-color hilight @color6;
+*/
+
+/* Tempus
+@define-color text    @foreground;
+@define-color warn    @color3;
+@define-color crit    @color1;
+@define-color accent  @color4;
+@define-color hilight @color5;
+*/
 
 /* Nord
 @define-color text    @foreground;
@@ -15,11 +24,18 @@
 @define-color hilight @color1;
 */
 
-/* Gruvbox
+/* Gruvbox */
 @define-color text    @foreground;
 @define-color warn    @color3;
 @define-color crit    @color1;
-@define-color accent  @color2;
+@define-color accent  @color4;
+@define-color hilight @color4;
+
+/* Sexy
+@define-color text    @foreground;
+@define-color warn    @color2;
+@define-color crit    @color1;
+@define-color accent  @color4;
 @define-color hilight @color6;
 */
 
@@ -31,7 +47,7 @@
 
 window#waybar {
 	color: @text;
-	text-shadow: 1px 1px 1px @background;
+	text-shadow: 1px 1px 1px black;
 	background: @background;
 	border-radius: 4px;
 }
@@ -69,7 +85,7 @@ window#waybar {
 #workspaces button {
 	color: @text;
 	margin: 0;
-	padding: 2px 15px 0px 15px;
+	padding: 3px 5px 0px 5px;
 	border-radius: 0px;
 }
 #workspaces button.focused {
@@ -122,7 +138,7 @@ window#waybar {
 }
 
 #custom-powermenu {
-	color: @color2;
+	color: @crit;
 	padding-top: 1px;
 	margin-right: 3px;
 }

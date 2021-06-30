@@ -3,9 +3,9 @@ background = ${xrdb:background:#222}
 background-alt = ${xrdb:color0:#222}
 foreground = ${xrdb:foreground:#222}
 foreground-alt = ${xrdb:foreground:#222}
-primary = ${xrdb:color5:#222}
-secondary = ${xrdb:color2:#222}
-alert = ${xrdb:color6:#222}
+primary = ${xrdb:color4:#222}
+secondary = ${xrdb:color5:#222}
+alert = ${xrdb:color1:#222}
 
 [module/updates]
 type = custom/script

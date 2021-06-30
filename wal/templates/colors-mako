@@ -1,18 +1,19 @@
-layer=top
+layer=overlay
 font=Kanit Medium 10
 max-visible=5
-anchor=top-right
+anchor=top-center
 
 width=350
 height=1000
-margin=20
-border-size=3
+margin=15
+padding=10
+border-size=1
 border-radius=4
 max-icon-size=32
 
 background-color={background}ee
 text-color={foreground}
-border-color={color5}
+border-color={foreground}
 
 icon-location=left
 text-alignment=left

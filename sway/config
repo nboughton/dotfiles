@@ -18,13 +18,11 @@ set $term kitty
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 #set $menu nwggrid -f
 
-xwayland enable
-
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-orange'
-    gsettings set $gnome-schema icon-theme 'Tela-circle-orange-dark'
+    gsettings set $gnome-schema gtk-theme 'Gruvbox-Material-Dark'
+    gsettings set $gnome-schema icon-theme 'Tela-circle-grey-dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
     gsettings set $gnome-schema monospace-font-name 'Fira Code 10'
     gsettings set $gnome-schema document-font-name 'Roboto Regular 10'
@@ -40,8 +38,6 @@ exec swayidle -w \
           timeout 300 'swaylock -f' \
           timeout 305 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f'
-
-#
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -53,6 +49,7 @@ exec persway -a -o 1
 exec nm-applet --indicator
 exec gammastep-indicator
 exec insync start
+xwayland enable
 
 ### Window config
 # custom
@@ -259,7 +256,9 @@ bar {
 # gaps
 #
 gaps inner 10
+gaps top -10
 smart_gaps off
+smart_borders on
 
 #
 # Titlebars
@@ -274,13 +273,13 @@ titlebar_border_thickness 0
 # Colors & background
 #
 include ~/.cache/wal/colors-sway
-#output "*" background /home/nick/Pictures/Wallpapers/eWiOKET.jpg fill
-output "*" background $wallpaper fill
+output "*" background /home/nick/Pictures/Wallpapers/gruvbox_photo-1517999179346-a7078f1e40a6.jpeg fill
+#output "*" background $wallpaper fill
 
 # class                     border      backgr.     text        indicator   child_border
-    client.focused          $color5     $background $color5     $color5     $color5
-    client.focused_inactive $color2     $background $foreground $color2     $color2
-    client.unfocused        $color2     $background $foreground $color2     $color2
+    client.focused          $foreground $background $color4     $foreground $foreground
+    client.focused_inactive $color8     $background $foreground $color8     $color8
+    client.unfocused        $color8     $background $foreground $color8     $color8
     client.urgent           $foreground $background $color1     $foreground $foreground
 
 include /etc/sway/config.d/*

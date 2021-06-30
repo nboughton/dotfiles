@@ -1,5 +1,9 @@
 decoration {
     box-shadow: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 decoration:backdrop {
@@ -10,7 +14,11 @@ decoration:backdrop {
 .titlebar .background,
 .window-frame,
 .window-frame:backdrop {
-    border-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: none;
 }
 
 /*
@@ -19,12 +27,6 @@ decoration:backdrop {
 	border-style: none;
 	margin: 0;
 	border-radius: 0px;
-}
-
-.titlebar,
-.titlebar .background {
-	border-radius: 0px;
-	box-shadow: none;
 }
 
 .window-frame.csd.popup {
