@@ -1,7 +1,7 @@
 [
   {
     "name": "Lock screen",
-    "exec": "swaylock -f",
+    "exec": "swaylock -f -c 000000",
     "icon": "system-lock-screen"
   },
   {

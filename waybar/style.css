@@ -52,6 +52,16 @@ window#waybar {
 	border-radius: 4px;
 }
 
+window#waybar.top {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+window#waybar.bottom {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
 /* Base styling for modules */
 #workspaces,
 #mode,
@@ -63,6 +73,7 @@ window#waybar {
 #battery,
 #backlight,
 #disk,
+#taskbar,
 #custom-weather,
 #custom-updates,
 #custom-auroch,
@@ -70,13 +81,17 @@ window#waybar {
 #custom-separator,
 #custom-powermenu,
 #custom-covid,
+#custom-gputemp,
+#custom-gpuuse,
+#custom-cputemp,
 #tray {
 	padding: 2px 10px 0px 10px;
 }
 
 #custom-separator {
-	opacity: 0;
-	padding: 0px;
+	color: @color8;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #workspaces {
@@ -97,12 +112,17 @@ window#waybar {
 }
 
 #disk.1,
+#custom-gpuuse,
+#custom-gputemp,
 #memory {
 	padding-right: 5px;
 }
 #disk.2,
+#cpu,
 #custom-swap,
-#custom-auroch {
+#custom-auroch,
+#custom-gputemp,
+#custom-cputemp {
 	padding-left: 5px;
 }
 
@@ -111,6 +131,9 @@ window#waybar {
 #cpu.warning,
 #custom-updates.checking,
 #custom-auroch.checking,
+#custom-gputemp.warning,
+#custom-gpuuse.warning,
+#custom-cputemp.warning,
 #disk.1.warning,
 #disk.2.warning,
 #memory.warning {
@@ -121,6 +144,9 @@ window#waybar {
 #cpu.critical,
 #custom-auroch.error,
 #custom-updates.error,
+#custom-gputemp.critical,
+#custom-gpuuse.critical,
+#custom-cputemp.critical,
 #disk.1.critical,
 #disk.2.critical,
 #memory.critical {
@@ -144,4 +170,25 @@ window#waybar {
 }
 #clock {
 	margin-left: 3px;
+}
+
+#taskbar {
+	padding-left: 0;
+}
+#taskbar button {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+#taskbar button.active {
+	color: @accent;
+}
+
+/* Pad the tray so the bottom bar doesn't change size when no windows are open */
+#tray {
+	padding-top: 7px;
+	padding-bottom: 7px;
 }

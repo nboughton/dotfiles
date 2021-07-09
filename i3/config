@@ -65,7 +65,7 @@ for_window [class="eog"] floating enable
 for_window [class="Transmission-gtk"] floating enable
 for_window [class="io.github.celluloid_player.Celluloid"] floating enable
 
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 1
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -203,7 +203,7 @@ gaps top 30
 #
 # Titlebars
 #
-default_border pixel 3
+default_border pixel 1
 default_floating_border normal
 hide_edge_borders none
 

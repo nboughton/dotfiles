@@ -1,0 +1,12 @@
+#!/bin/bash
+
+n=$(cat /sys/class/drm/card0/device/gpu_busy_percent)
+class="normal"
+
+if [[ $n -gt 60 ]]; then
+   class="warning"
+elif [[ $n -gt 80 ]]; then
+  class="critical"
+fi
+
+echo "{ \"text\": \"$(printf '%2d' $n)\", \"percentage\": $n, \"class\": \"$class\" }"

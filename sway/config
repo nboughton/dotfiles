@@ -3,7 +3,7 @@ input * {
     xkb_layout "gb"
 }
 
-input "1739:32402:DELL0767:00_06CB:7E92_Touchpad" {
+input "type:touchpad" {
     dwt enabled
     tap enabled
 }
@@ -72,7 +72,7 @@ for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [title="Open Files"] floating enable
 
 # A/V
-for_window [app_id=zoom] floating enable
+for_window [class=zoom] floating enable
 for_window [app_id=pavucontrol] floating enable
 for_window [app_id=io.github.celluloid_player.Celluloid] floating enable
 
@@ -84,7 +84,7 @@ for_window [app_id=gedit] floating enable
 for_window [title="Customise Look and Feel"] floating enable
 
 # Everything else
-for_window [app_id=".*"] border pixel 3
+for_window [app_id=".*"] border pixel 1
 
 ### Key bindings
 #
@@ -255,8 +255,9 @@ bar {
 #
 # gaps
 #
-gaps inner 10
+gaps outer 10
 gaps top -10
+gaps bottom -10
 smart_gaps off
 smart_borders on
 
@@ -264,8 +265,8 @@ smart_borders on
 # Titlebars
 #
 font pango:KanitMedium 9
-default_border pixel 3
-default_floating_border none
+default_border pixel 1
+default_floating_border pixel 1
 hide_edge_borders none
 titlebar_border_thickness 0
 
@@ -273,7 +274,7 @@ titlebar_border_thickness 0
 # Colors & background
 #
 include ~/.cache/wal/colors-sway
-output "*" background /home/nick/Pictures/Wallpapers/gruvbox_photo-1517999179346-a7078f1e40a6.jpeg fill
+output "*" background /home/nick/Pictures/Wallpapers/photo-1517999179346-a7078f1e40a6.jpeg fill
 #output "*" background $wallpaper fill
 
 # class                     border      backgr.     text        indicator   child_border

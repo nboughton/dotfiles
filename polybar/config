@@ -33,6 +33,12 @@ type = custom/script
 exec = ~/.config/waybar/modules/weather.sh
 interval = 3600
 
+[module/gpu]
+type = custom/script
+exec = ~/.config/waybar/modules/gpu/temp | jq '.text' | sed 's/"//g'
+label = " %output%"
+interval = 2
+
 [module/swap]
 type = custom/script
 exec = free -h | grep Swap | awk '{print $3}'
@@ -45,13 +51,13 @@ label = %title:0:30:...%
 
 [module/home_storage]
 type = custom/script
-exec = df -h 2>/dev/null | grep sda3 | awk '{print $5}'
+exec = df -h 2>/dev/null | grep nvme0n1p3 | awk '{print $5}'
 label = " %output%"
 interval = 30
 
 [module/root_storage]
 type = custom/script
-exec =  df -h 2>/dev/null | grep sda2 | awk '{print $5}'
+exec =  df -h 2>/dev/null | grep nvme0n1p2 | awk '{print $5}'
 label = " %output%"
 interval = 30
 
@@ -240,9 +246,9 @@ font-4 = Font Awesome 5 Regular:pixelsize=8;2
 font-5 = Noto Color Emoji:style=Regular:scale=12;2
 font-0 = Source Code Pro Medium:weight=700:size=8;2
 
-modules-left = date battery root_storage home_storage memory swap cpu
+modules-left = date battery root_storage home_storage memory cpu
 modules-center = i3
-modules-right = covid weather updates my-updates backlight-acpi pulseaudio powermenu
+modules-right = gpu covid weather updates my-updates backlight-acpi pulseaudio powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize

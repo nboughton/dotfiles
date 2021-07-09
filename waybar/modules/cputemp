@@ -1,0 +1,13 @@
+#!/bin/bash
+temp=$(sensors -A dell_smm-virtual-0 | grep CPU | awk '{print $2}' | sed -e 's/+//' -e 's/\.0//')
+class="normal"
+pct=$(echo $temp | sed -e 's/°C//')
+
+if [[ $pct -gt 79 ]]; then
+	class="warning"
+elif [[ $pct -gt 99 ]]; then
+	class="critical"
+fi
+
+echo "{\"text\": \"$temp\", \"class\": \"$class\", \"percentage\": $pct }"
+
