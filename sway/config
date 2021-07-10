@@ -267,7 +267,7 @@ smart_borders on
 font pango:KanitMedium 9
 default_border pixel 1
 default_floating_border pixel 1
-hide_edge_borders none
+hide_edge_borders both
 titlebar_border_thickness 0
 
 #
