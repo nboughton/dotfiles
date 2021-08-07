@@ -22,7 +22,7 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Gruvbox-Material-Dark'
-    gsettings set $gnome-schema icon-theme 'Tela-circle-grey-dark'
+    gsettings set $gnome-schema icon-theme 'Gruvbox-Material-Dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
     gsettings set $gnome-schema monospace-font-name 'Fira Code 10'
     gsettings set $gnome-schema document-font-name 'Roboto Regular 10'
@@ -140,7 +140,7 @@ for_window [app_id=".*"] border pixel 1
 #
 # Screenshots
 #
-    bindsym $mod+p       exec grimshot save active
+    bindsym $mod+p       exec grimshot save screen
     bindsym $mod+Shift+p exec grimshot save area
     bindsym $mod+Alt+p   exec grimshot save output
     bindsym $mod+Ctrl+p  exec grimshot save window
@@ -275,6 +275,7 @@ titlebar_border_thickness 0
 #
 include ~/.cache/wal/colors-sway
 output "*" background /home/nick/Pictures/Wallpapers/photo-1517999179346-a7078f1e40a6.jpeg fill
+#output "*" background /home/nick/Pictures/Wallpapers/5b1iuo0xlth61.png fill
 #output "*" background $wallpaper fill
 
 # class                     border      backgr.     text        indicator   child_border
