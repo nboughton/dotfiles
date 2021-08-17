@@ -24,7 +24,7 @@
 		"wlr/taskbar": {
 			"all-outputs": false,
 			"format": "{icon} {title:.15}",
-			"icon-theme": "Gruvbox-Material-Dark",
+			"icon-theme": "Tela-circle-blue-dark",
 			"icon-size": 14,
 			"on-click": "activate",
 			"on-middle-click": "close",
@@ -46,7 +46,7 @@
 		"custom/gputemp": {
 			"interval": 2,
 			"return-type": "json",
-			"format": "{icon} {}",
+			"format": "{icon}",
 			"format-icons": [
 				"",
 				"",
@@ -59,7 +59,7 @@
 		"custom/gpuuse": {
 			"interval": 2,
 			"return-type": "json",
-			"format": " {}%",
+			"format": " ",
 			"exec": "~/.config/waybar/modules/gpu/usage"
 		}
 	},
@@ -76,10 +76,10 @@
 			"clock",
 			"custom/separator",
 			"battery",
-			"custom/separator",
+			//"custom/separator",
 			"disk#1",
 			"disk#2",
-			"custom/separator",
+			//"custom/separator",
 			"memory",
 			"cpu",
 			"custom/cputemp"
@@ -88,12 +88,12 @@
 			"idle_inhibitor",
 			"custom/separator",
 			"custom/covid",
-			"custom/separator",
+			//"custom/separator",
 			"custom/updates",
 			"custom/auroch",
-			"custom/separator",
+			//"custom/separator",
 			"backlight",
-			"custom/separator",
+			//"custom/separator",
 			"pulseaudio",
 			"custom/separator",
 			"custom/powermenu"
@@ -161,7 +161,7 @@
 				"critical": 80
 			},
 			"interval": 5,
-			"format": " {}%"
+			"format": ""
 		},
 		"cpu": {
 			"states": {
@@ -170,7 +170,7 @@
 				"critical": 95
 			},
 			"interval": 1,
-			"format": " {usage:2}%"
+			"format": ""
 		},
 		"battery": {
 			"states": {
@@ -178,7 +178,7 @@
 				"warning": 30,
 				"critical": 15
 			},
-			"format": "{icon} {capacity}%",
+			"format": "{icon}",
 			"format-icons": [
 				"",
 				"",
@@ -194,7 +194,7 @@
 				"critical": 95
 			},
 			"interval": 5,
-			"format": " {percentage_used:2}%",
+			"format": "",
 			"path": "/"
 		},
 		"disk#2": {
@@ -204,7 +204,7 @@
 				"critical": 95
 			},
 			"interval": 5,
-			"format": " {percentage_used:2}%",
+			"format": "",
 			"path": "/home"
 		},
 		"custom/updates": {
@@ -213,7 +213,7 @@
 			"interval": 5,
 			"exec": "cat ~/tmp/updates.json",
 			"exec-if": "file  ~/tmp/updates.json",
-			"on-click": "kitty ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
+			"on-click": "alacritty -e ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
 			"tooltip": true
 		},
 		"custom/auroch": {
@@ -233,7 +233,7 @@
 		"custom/cputemp": {
 			"interval": 2,
 			"return-type": "json",
-			"format": "{icon} {}",
+			"format": "{icon}",
 			"format-icons": [
 				"",
 				"",

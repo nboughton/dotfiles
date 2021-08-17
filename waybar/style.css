@@ -26,10 +26,11 @@
 
 /* Gruvbox */
 @define-color text    @foreground;
+@define-color good    @color2;
 @define-color warn    @color3;
 @define-color crit    @color1;
-@define-color accent  @color4;
-@define-color hilight @color4;
+@define-color accent  @color6;
+@define-color hilight @color6;
 
 /* Sexy
 @define-color text    @foreground;
@@ -100,7 +101,7 @@ window#waybar.bottom {
 #workspaces button {
 	color: @text;
 	margin: 0;
-	padding: 3px 5px 0px 5px;
+	padding: 3px 15px 0px 15px;
 	border-radius: 0px;
 }
 #workspaces button.focused {
@@ -111,19 +112,22 @@ window#waybar.bottom {
 	color: @warn;
 }
 
-#disk.1,
-#custom-gpuuse,
-#custom-gputemp,
-#memory {
-	padding-right: 5px;
-}
-#disk.2,
-#cpu,
-#custom-swap,
-#custom-auroch,
-#custom-gputemp,
-#custom-cputemp {
+#custom-auroch {
 	padding-left: 5px;
+}
+
+#battery.good,
+#custom-covid.DOWN,
+#cpu.good,
+#custom-updates.no-updates,
+#custom-auroch.no-updates,
+#custom-cputemp.normal,
+#custom-gputemp.normal,
+#custom-gpuuse.normal,
+#disk.1.good,
+#disk.2.good,
+#memory.good {
+	color: @good;
 }
 
 #battery.warning,
@@ -137,6 +141,7 @@ window#waybar.bottom {
 #disk.1.warning,
 #disk.2.warning,
 #memory.warning {
+	background: @background;
 	color: @warn;
 }
 
@@ -150,14 +155,17 @@ window#waybar.bottom {
 #disk.1.critical,
 #disk.2.critical,
 #memory.critical {
+	background: @background;
 	color: @crit;
 }
 
+/*
 #custom-auroch.no-updates,
 #custom-covid.DOWN,
 #custom-updates.no-updates {
 	color: @text;
 }
+*/
 #custom-updates.updates,
 #custom-auroch.updates {
 	color: @hilight;

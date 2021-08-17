@@ -13,7 +13,7 @@ input "type:touchpad" {
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 # Your preferred application launcher
 set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 #set $menu nwggrid -f
@@ -21,15 +21,15 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Gruvbox-Material-Dark'
-    gsettings set $gnome-schema icon-theme 'Gruvbox-Material-Dark'
+    gsettings set $gnome-schema gtk-theme 'Nordic-darker'
+    gsettings set $gnome-schema icon-theme 'Tela-circle-blue-dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
     gsettings set $gnome-schema monospace-font-name 'Fira Code 10'
     gsettings set $gnome-schema document-font-name 'Roboto Regular 10'
     gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto Regular 10'
     gsettings set org.gnome.desktop.wm.preferences button-layout ''
     gsettings set org.gnome.desktop.default-applications.terminal exec $term
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
 }
 
 
@@ -274,12 +274,13 @@ titlebar_border_thickness 0
 # Colors & background
 #
 include ~/.cache/wal/colors-sway
-output "*" background /home/nick/Pictures/Wallpapers/photo-1517999179346-a7078f1e40a6.jpeg fill
+output "*" background /home/nick/Pictures/Wallpapers/wl0fdl62lik41.jpg fill
+
 #output "*" background /home/nick/Pictures/Wallpapers/5b1iuo0xlth61.png fill
 #output "*" background $wallpaper fill
 
 # class                     border      backgr.     text        indicator   child_border
-    client.focused          $foreground $background $color4     $foreground $foreground
+    client.focused          $foreground $background $color6     $foreground $foreground
     client.focused_inactive $color8     $background $foreground $color8     $color8
     client.unfocused        $color8     $background $foreground $color8     $color8
     client.urgent           $foreground $background $color1     $foreground $foreground

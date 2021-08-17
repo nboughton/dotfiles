@@ -9,4 +9,4 @@ elif [[ $n -gt 80 ]]; then
   class="critical"
 fi
 
-echo "{ \"text\": \"$(printf '%2d' $n)\", \"percentage\": $n, \"class\": \"$class\" }"
+echo "{ \"text\": \"$(printf '%2d' $n)\", \"tooltip\":  \"$n%\",  \"percentage\": $n, \"class\": \"$class\" }"

@@ -9,5 +9,5 @@ elif [[ $pct -gt 99 ]]; then
 	class="critical"
 fi
 
-echo "{\"text\": \"$temp\", \"class\": \"$class\", \"percentage\": $pct }"
+echo "{\"text\": \"$temp\", \"tooltip\": \" ${temp}\", \"class\": \"$class\", \"percentage\": $pct }"
 
