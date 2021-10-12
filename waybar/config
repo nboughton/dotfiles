@@ -54,13 +54,15 @@
 				"",
 				""
 			],
-			"exec": "~/.config/waybar/modules/gpu/temp"
+			"exec": "~/.config/waybar/modules/gpu/temp",
+			"on-click": "kitty radeontop"
 		},
 		"custom/gpuuse": {
 			"interval": 2,
 			"return-type": "json",
 			"format": " ",
-			"exec": "~/.config/waybar/modules/gpu/usage"
+			"exec": "~/.config/waybar/modules/gpu/usage",
+			"on-click": "kitty radeontop"
 		}
 	},
 	{
@@ -161,7 +163,8 @@
 				"critical": 80
 			},
 			"interval": 5,
-			"format": ""
+			"format": "",
+			"on-click": "kitty bpytop"
 		},
 		"cpu": {
 			"states": {
@@ -170,7 +173,8 @@
 				"critical": 95
 			},
 			"interval": 1,
-			"format": ""
+			"format": "",
+			"on-click": "kitty bpytop"
 		},
 		"battery": {
 			"states": {
@@ -213,7 +217,7 @@
 			"interval": 5,
 			"exec": "cat ~/tmp/updates.json",
 			"exec-if": "file  ~/tmp/updates.json",
-			"on-click": "alacritty -e ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
+			"on-click": "kitty ~/.config/waybar/modules/updates/updates.sh; systemctl --user start updates.service",
 			"tooltip": true
 		},
 		"custom/auroch": {
@@ -241,7 +245,8 @@
 				"",
 				""
 			],
-			"exec": "~/.config/waybar/modules/cputemp"
+			"exec": "~/.config/waybar/modules/cputemp",
+			"on-click": "kitty bpytop"
 		},
 		"custom/separator": {
 			"format": "|",

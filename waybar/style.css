@@ -26,7 +26,7 @@
 
 /* Gruvbox */
 @define-color text    @foreground;
-@define-color good    @color2;
+@define-color good    @color6;
 @define-color warn    @color3;
 @define-color crit    @color1;
 @define-color accent  @color6;
