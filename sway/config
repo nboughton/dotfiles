@@ -21,7 +21,7 @@ set $menu wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css -I
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'oomox-nord'
+    gsettings set $gnome-schema gtk-theme 'Nordic-darker'
     gsettings set $gnome-schema icon-theme 'Tela-circle-dark'
     gsettings set $gnome-schema font-name 'Roboto Regular 10'
     gsettings set $gnome-schema monospace-font-name 'Fira Code 10'
