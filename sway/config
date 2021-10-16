@@ -255,9 +255,9 @@ bar {
 #
 # gaps
 #
-gaps outer 10
-gaps top -10
-gaps bottom -10
+#gaps outer 10
+#gaps top -10
+#gaps bottom -10
 smart_gaps off
 smart_borders on
 

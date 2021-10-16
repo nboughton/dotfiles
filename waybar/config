@@ -1,76 +1,30 @@
 // -*- mode: json -*-
-[
-	{
-		"position": "bottom",
-		"layer": "bottom",
-		"margin-left": 10,
-		"margin-right": 10,
-		"margin-bottom": 10,
-		"modules-left": [
-			"sway/mode",
-			"wlr/taskbar"
-		],
-		"modules-right": [
-			"custom/gpuuse",
-			"custom/gputemp",
-			"custom/separator",
-			"custom/weather",
-			"custom/separator",
-			"tray"
-		],
-		"sway/mode": {
-			"format": "{}"
-		},
-		"wlr/taskbar": {
-			"all-outputs": false,
-			"format": "{icon} {title:.15}",
-			"icon-theme": "Tela-circle-blue-dark",
-			"icon-size": 14,
-			"on-click": "activate",
-			"on-middle-click": "close",
-			"on-right-click": "minimize"
-		},
-		"tray": {
-			"icon-size": 12,
-			"spacing": 10
-		},
-		"custom/separator": {
-			"format": "|",
-			"tooltip": false
-		},
-		"custom/weather": {
-			"format": "{}",
-			"exec": "~/.config/waybar/modules/weather.sh",
-			"interval": 3600
-		},
-		"custom/gputemp": {
-			"interval": 2,
-			"return-type": "json",
-			"format": "{icon}",
-			"format-icons": [
-				"",
-				"",
-				"",
-				"",
-				""
-			],
-			"exec": "~/.config/waybar/modules/gpu/temp",
-			"on-click": "kitty radeontop"
-		},
-		"custom/gpuuse": {
-			"interval": 2,
-			"return-type": "json",
-			"format": " ",
-			"exec": "~/.config/waybar/modules/gpu/usage",
-			"on-click": "kitty radeontop"
-		}
-	},
+//[
+//	{
+//		"position": "bottom",
+//		"layer": "bottom",
+//		"margin-left": 10,
+//		"margin-right": 10,
+//		"margin-bottom": 10,
+//		"modules-left": [
+//			"sway/mode",
+//			"wlr/taskbar"
+//		],
+//		"modules-right": [
+//			"custom/gpuuse",
+//			"custom/gputemp",
+//			"custom/separator",
+//			"custom/weather",
+//			"custom/separator",
+//			"tray"
+//		],
+//	},
 	{
 		"position": "top",
 		"layer": "bottom",
-		"margin-top": 10,
-		"margin-right": 10,
-		"margin-left": 10,
+		"margin-top": 0,
+		"margin-right": 0,
+		"margin-left": 0,
 		"modules-center": [
 			"sway/workspaces"
 		],
@@ -84,10 +38,16 @@
 			//"custom/separator",
 			"memory",
 			"cpu",
-			"custom/cputemp"
+			"custom/cputemp",
+			"custom/separator",
+			"custom/gpuuse",
+			"custom/gputemp",
+			"custom/separator",
+			"idle_inhibitor",
+			"sway/mode"
 		],
 		"modules-right": [
-			"idle_inhibitor",
+			"custom/weather",
 			"custom/separator",
 			"custom/covid",
 			//"custom/separator",
@@ -97,6 +57,8 @@
 			"backlight",
 			//"custom/separator",
 			"pulseaudio",
+			"custom/separator",
+			"tray",
 			"custom/separator",
 			"custom/powermenu"
 		],
@@ -211,6 +173,52 @@
 			"format": "",
 			"path": "/home"
 		},
+		"sway/mode": {
+			"format": "{}"
+		},
+		"wlr/taskbar": {
+			"all-outputs": false,
+			"format": "{icon} {title:.15}",
+			"icon-theme": "Tela-circle-blue-dark",
+			"icon-size": 14,
+			"on-click": "activate",
+			"on-middle-click": "close",
+			"on-right-click": "minimize"
+		},
+		"tray": {
+			"icon-size": 12,
+			"spacing": 10
+		},
+		"custom/separator": {
+			"format": "|",
+			"tooltip": false
+		},
+		"custom/weather": {
+			"format": "{}",
+			"exec": "~/.config/waybar/modules/weather.sh",
+			"interval": 3600
+		},
+		"custom/gputemp": {
+			"interval": 2,
+			"return-type": "json",
+			"format": "{icon}",
+			"format-icons": [
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"exec": "~/.config/waybar/modules/gpu/temp",
+			"on-click": "kitty radeontop"
+		},
+		"custom/gpuuse": {
+			"interval": 2,
+			"return-type": "json",
+			"format": " ",
+			"exec": "~/.config/waybar/modules/gpu/usage",
+			"on-click": "kitty radeontop"
+		},
 		"custom/updates": {
 			"format": " {}",
 			"return-type": "json",
@@ -275,4 +283,4 @@
 			]
 		}
 	}
-]
+//]
